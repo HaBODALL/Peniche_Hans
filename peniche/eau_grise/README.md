@@ -1,16 +1,29 @@
-# Système : Eau Grise
+# Gestion des Eaux Grises
 
-Ce dossier regroupe la documentation et les recherches concernant la récupération, le traitement et éventuellement le recyclage des eaux grises (eaux savonneuses issues des douches, éviers, lave-linge) sur la péniche.
+Ce document détaille les solutions envisagées pour la gestion et le traitement des eaux grises (issues des douches, lavabos, éviers de cuisine et lave-linge) à bord de la péniche.
 
-## Enjeux et Réglementation
-Le rejet direct des eaux usées non traitées en zone urbaine et sur de nombreux canaux VNF (Voies Navigables de France) est strictement réglementé et de plus en plus interdit. La gestion des eaux grises est un point crucial de l'homologation écologique du bateau.
+## Réglementation et Contraintes
+Bien que historiquement toléré, le rejet direct des eaux grises non traitées dans les voies navigables est de plus en plus réglementé, voire interdit dans de nombreuses zones urbaines et sur certains réseaux (VNF durcit ses règles). L'objectif du projet est de mettre en place un système de traitement embarqué exemplaire (zéro rejet polluant).
 
-## Pistes d'aménagement (Stratégie Zéro-Rejet / Autonomie)
-Pour réduire la dépendance aux stations de pompage à quai, des solutions de traitement embarquées sont à l'étude :
-- **Cuve Tampon :** Obligatoire pour lisser les débits (300 à 500 L).
-- **Phytoépuration Compacte embarquée :** Utilisation de filtres à roseaux miniaturisés adaptés au milieu confiné. Cela permettrait de rejeter en continu une eau propre dans la rivière (ou de la réutiliser pour un usage technique/arrosage). C'est un axe fort du projet "Laboratoire" qui pourrait intéresser des partenaires comme l'Agence de l'Eau.
-- **Réduction à la source :** Utilisation stricte de savons et produits d'entretien biodégradables.
+## Système de Traitement : Phytoépuration Compacte
+Pour répondre aux contraintes écologiques et réglementaires, tout en évitant le recours exclusif à des cuves de rétention nécessitant des vidanges fréquentes, la solution retenue est la phytoépuration.
+
+- **Principe :** Les eaux grises sont d'abord pré-filtrées (pour retenir les graisses et les particules solides), puis dirigées vers des bacs de culture plantés (roseaux, plantes aquatiques spécifiques) situés sur le pont. Les micro-organismes vivant dans les racines des plantes dégradent la matière organique.
+- **Avantages :**
+  - Traitement naturel et autonome.
+  - Rejet d'une eau propre et conforme dans le milieu naturel.
+  - Quasi-absence de vidange (réduction drastique des contraintes).
+  - Intégration esthétique et création d'un "jardin" flottant (aligné avec la direction artistique Solarpunk).
+- **Contraintes :**
+  - Nécessite une surface dédiée sur le pont.
+  - L'installation doit être pensée pour résister au gel en hiver.
+  - Une cuve tampon de taille moyenne (300-500L) reste obligatoire pour lisser les débits avant traitement.
+
+> **Note Laboratoire :** Le système de phytoépuration sera monitoré (capteurs de qualité de l'eau en entrée et en sortie) dans le cadre des activités de R&D de la péniche. Les eaux de rinçage traitées pourront également être réutilisées pour l'arrosage d'un éventuel potager sur le pont.
+
+## Produits d'entretien (Stratégie Zéro-Déchet)
+Le succès d'un tel système (ainsi que la préservation générale de l'environnement fluvial) repose impérativement sur l'utilisation stricte de produits d'entretien, de vaisselle et d'hygiène corporelle 100 % biodégradables et compatibles avec la phytoépuration.
 
 ## Références et Bibliographie
-- Règlements de Voies Navigables de France (VNF) sur les rejets en eaux intérieures.
-- *À compléter avec la documentation sur la phytoépuration en milieu nautique.*
+- Règlements locaux et nationaux sur les rejets en eaux intérieures.
+- Documentation sur la phytoépuration et les filtres plantés.
