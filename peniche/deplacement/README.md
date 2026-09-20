@@ -15,7 +15,7 @@ La motorisation est envisagée comme la dernière étape du projet (après l'am�
 - **Séparation :** Le circuit de propulsion (400V DC) sera physiquement et galvaniquement isolé du circuit de l'habitat (230V AC / 24V DC).
 
 ## Manœuvrabilité
-- **Propulseur d'étrave :** Électrique, il sera indispensable pour manœuvrer un bateau de 38m dans les écluses, en particulier pour compenser les contraintes de mobilité réduite (PMR) du capitaine.
+- **Propulseur d'étrave :** Électrique, il sera indispensable pour manœuvrer un bateau de 38m dans les écluses de manière fluide et autonome, facilitant grandement la tâche du capitaine. Il permet également d'assurer un niveau de sécurité optimal lors de l'accueil de passagers, notamment ceux à mobilité réduite (PMR).
 - **Timonerie :** Doit être escamotable ou relevable pour respecter le tirant d'air des canaux Freycinet (~3,50m sous pont).
 
 ## Références et Bibliographie
