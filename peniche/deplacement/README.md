@@ -1,23 +1,35 @@
-# Système : Déplacement et Motorisation
+# Mobilité et Motorisation
 
-Ce dossier aborde la motorisation de la péniche Freycinet. L'accent est particulièrement mis sur le test et l'intégration de motorisations électriques pour la propulsion du bateau, en adéquation avec les objectifs d'autonomie et d'innovation du projet.
+Ce document traite du sous-système de déplacement de la péniche, avec un focus majeur sur la conversion à la motorisation électrique (Phase 2 / Phase 3 du projet).
 
-## Cadre Réglementaire et Sécuritaire
-Une péniche Freycinet (~38,5 mètres) n'est pas un bateau de plaisance classique ; elle relève du domaine fluvial lourd.
-- **La norme ES-TRIN :** Le Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure s'applique strictement (notamment les chapitres 10 & 11 pour les équipements électriques et la propulsion).
-- **Homologation :** L'architecture du réseau de propulsion (400V DC) devra être validée par un expert maritime agréé (ex: Bureau Veritas) à plusieurs étapes du chantier (plans, pose, essais).
-- **Habilitations :** La manipulation d'un tel système (haute puissance, batteries lithium) exigera de passer des habilitations électriques spécifiques (B2V, BR, BC, et travaux sous tension TST pour les batteries).
+## Spécificités du Projet (Format Freycinet)
 
-## Stratégie de Motorisation : Le Rétrofit Électrique (Phase 3)
-La motorisation est envisagée comme la dernière étape du projet (après l'aménagement de l'habitat).
-- **Moteur :** Moteur électrique de traction de 20 à 30 kW.
-- **Stockage :** Parc de batteries LiFePO4 de 100 à 150 kWh, avec un BMS (Battery Management System) de grade industriel.
-- **Séparation :** Le circuit de propulsion (400V DC) sera physiquement et galvaniquement isolé du circuit de l'habitat (230V AC / 24V DC).
+La péniche étant de format Freycinet (38,5 mètres de long), elle sort de la catégorie "Plaisance" (qui s'arrête à 24m) pour entrer dans le domaine du **fluvial lourd**. Cette dimension implique des contraintes réglementaires et techniques considérables.
 
-## Manœuvrabilité
-- **Propulseur d'étrave :** Électrique, il sera indispensable pour manœuvrer un bateau de 38m dans les écluses de manière fluide et autonome, facilitant grandement la tâche du capitaine. Il permet également d'assurer un niveau de sécurité optimal lors de l'accueil de passagers, notamment ceux à mobilité réduite (PMR).
-- **Timonerie :** Doit être escamotable ou relevable pour respecter le tirant d'air des canaux Freycinet (~3,50m sous pont).
+## Cadre Réglementaire (ES-TRIN)
+
+L'architecture électrique de la motorisation et l'homologation du navire sont régies par des normes européennes strictes. Travailler avec du 400V DC sur une coque en acier contenant un énorme parc de batteries au lithium nécessite une rigueur industrielle.
+
+1. **Norme ES-TRIN :** Le Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure (notamment les Chapitres 10 & 11) est la référence absolue.
+2. **Certification :** Pour obtenir le Titre de Navigation avec la nouvelle motorisation, l'installation doit être approuvée par une Société de Classification (ex: **Bureau Veritas**) ou un expert agréé.
+3. **Habilitations :** Les interventions sur le réseau de propulsion nécessitent des habilitations électriques spécifiques (B2V / BR / BC, et habilitation pour Travaux Sous Tension - TST - sur les batteries).
+
+## Stratégie de Motorisation : Le Rétrofit Électrique (Phase 2/3)
+
+La motorisation de la péniche interviendra dans un second temps (post-2028), après l'aménagement de l'habitat (Phase 1). La motorisation thermique existante (si applicable) sera déposée et revendue.
+
+L'architecture de propulsion (Bloc 2 - géré par Matt YAPADEBOULOS) sera **totalement isolée galvaniquement** du réseau domestique (Bloc 1) pour des raisons de sécurité.
+
+### Composants Clés (Estimations)
+- **Moteur :** Moteur électrique de traction de 20 à 30 kW (voire 150 kW selon les scénarios), type Torqeedo Deep Blue ou équivalent industriel (IP67).
+- **Parc Batteries :** Batteries LiFePO₄ de 100 à 150 kWh, sélectionnées pour leur stabilité (norme UN38.3, IEC 62619). Poids estimé : 800 à 1200 kg (impact majeur sur le lest et l'assiette du bateau, à anticiper dès la Phase 1).
+- **Câblage Puissance :** Câbles ignifugés (ex: 95mm² H07RN-F) avec protections spécifiques.
+- **Propulseur d'étrave :** Également électrique, indispensable pour les manœuvres (notamment en écluse, surtout pour le pilote et les aides d'éventuels passagers).
+
+## Sécurité et Monitoring
+
+Le rétrofit inclut un monitoring constant du système (BMS - Battery Management System, contrôle des températures, etc.), dont les données viendront alimenter les recherches du laboratoire embarqué.
 
 ## Références et Bibliographie
-- **ES-TRIN** : Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure.
-- Réglementation de Bureau Veritas sur l'installation électrique des bateaux fluviaux.
+- Règlements ES-TRIN (Chapitres 10 & 11).
+- Bureau Veritas : *Rules for the Classification of Inland Navigation Vessels*.

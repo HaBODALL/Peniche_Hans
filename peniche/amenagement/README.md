@@ -1,31 +1,36 @@
-# Aménagement de la Péniche
+# Aménagement et Optimisation d'Espace
 
-Ce dossier rassemble les concepts, contraintes et directions artistiques pour l'aménagement intérieur de la péniche Freycinet. L'espace utile intérieur représente un "couloir" d'environ 38,5m de long pour seulement 4,30m à 4,50m de large après isolation.
+La péniche, bien qu'offrant un volume important (190 m² de pont), est contrainte par sa largeur utile (4,30m à 4,50m). Cet espace tout en longueur s'apparente à un couloir de près de 30 mètres de long.
 
 ## Contraintes d'Accessibilité (PMR)
-L'aménagement doit obligatoirement être accessible pour une Personne à Mobilité Réduite (PMR), ce qui dicte l'ensemble du plan au sol :
-- **Giration :** Nécessité d'aires de rotation de 150 cm de diamètre pour un fauteuil. Dans un bateau de 4,40m de large, cela impose souvent une circulation centrale ou latérale unique.
-- **Largeur de passage :** 90 cm minimum.
-- **Seuils :** Aucun seuil autorisé (ou rampes inférieures à 5%).
-- **Salles d'eau :** Douche à l'italienne et barres d'appui systématiques.
 
-Loin d'être vue comme un handicap esthétique, cette contrainte est prise comme une opportunité de créer un design minimaliste, fluide et aéré, évitant l'effet "déchetterie" que peut parfois avoir l'accumulation de matériaux de récupération.
+L'aménagement doit obligatoirement répondre aux normes d'accessibilité PMR (pour le pilote et d'éventuels passagers) :
+- **Espace de giration :** Un diamètre de 150 cm minimum dans les pièces de vie.
+- **Passage :** Largeur de circulation minimale de 90 cm.
+- **Seuils :** Zéro seuil (ou rampe inférieure à 5%).
 
-## Directions Artistiques (Pistes de réflexion)
-Trois grandes voies esthétiques sont envisagées pour l'identité visuelle de l'habitat (noms de codes internes) :
+Ces contraintes rendent impossibles les cloisonnements transversaux classiques avec couloir latéral, imposant une réflexion sur une circulation centrale et un aménagement "ouvert".
 
-### 1. Solarpunk Pragmatique
-- **Concept :** La technologie au service du vivant. Les éléments techniques (tuyauteries, câblages, barres d'appui PMR) ne sont pas cachés : ils sont assumés, peints en couleur contrastante et servent de fil conducteur graphique. Utilisation de cloisons translucides pour la lumière.
-- **Palette :** Vert de gris, acier corten (rouille), ocre, blanc cassé.
+## Directions Artistiques (Red Punk Trunk)
 
-### 2. Nautique Hacker
-- **Concept :** L'esprit vaisseau d'exploration ou station polaire. Chaque fonction a une place mathématique. Profilés en aluminium standards pour le mobilier (modulable), filets au plafond pour le stockage. Marquage au sol pour délimiter les zones de passage (sécurité PMR intégrée au design).
-- **Palette :** Gris naval, noir mat, aluminium, jaune sécurité.
+Actuellement, 3 directions artistiques sont envisagées pour l'aménagement intérieur. Le choix reste à valider :
 
-### 3. Wabi-Sabi Fluvial / Atelier Frugal
-- **Concept :** L'élégance de la fonction pure et de la réparation. Mobilier massivement en contreplaqué clair (bouleau ou pin de récupération unifié), entièrement encastré pour libérer le sol. Lignes horizontales fuyantes pour allonger visuellement l'espace. Les traces d'usure des matériaux sont valorisées.
-- **Palette :** Monochromie de gris chauds, bois clair, touches de bleu indigo.
+1. **Solarpunk Pragmatique ("Le Mycélium", "Rhizome", "L'Archimède")**
+   - *Concept :* La technologie au service du vivant. Les éléments techniques (tuyauteries, câblages, barres d'appui PMR) sont assumés, peints dans une couleur contrastante, et servent de fil conducteur graphique. Utilisation de polycarbonate translucide.
+   - *Palette :* Vert de gris, acier corten (rouille), ocre, blanc cassé.
+
+2. **Nautique Hacker ("Cale 42", "Ponton Zéro", "Nautilus Lab")**
+   - *Concept :* Esprit vaisseau d'exploration ou station polaire. L'aspect fonctionnel et mathématique prime.
+   - *Aménagement :* Marquage au sol industriel pour délimiter les zones de passage et de giration PMR. Profilés en aluminium standards (type V-Slot) pour tout le mobilier, permettant des modifications rapides. Filets de stockage au plafond.
+   - *Palette :* Gris naval, noir mat, aluminium, jaune sécurité.
+
+3. **Atelier Frugal / Wabi-Sabi ("L'Étale", "Le Sas", "La Dérive")**
+   - *Concept :* L'élégance de la fonction pure et de la réparation, misant sur le minimalisme pour un espace apaisé.
+   - *Aménagement :* Utilisation massive de contreplaqué clair (bouleau ou pin de récupération unifié par ponçage). Mobilier entièrement encastré pour libérer le sol. Les traces d'usure des matériaux de récupération sont valorisées.
+   - *Palette :* Monochromie de gris chauds, bois clair, touches de bleu indigo.
+
+> ⚠️ **Règle d'Unification :** Quel que soit le choix, le recours aux matériaux de récupération et au DIY impose une règle stricte d'unification (par la peinture, la texture ou les lignes) pour éviter l'effet "déchetterie" et maintenir la lisibilité de l'espace. Les contraintes PMR doivent être vues comme une opportunité pour un design minimaliste et aéré.
 
 ## Références et Bibliographie
-- Normes d'accessibilité PMR pour l'habitat.
-- *À compléter avec les moodboards et chartes graphiques définitives.*
+- Normes PMR et design inclusif.
+- Principes de l'architecture intérieure navale et fluviale.
