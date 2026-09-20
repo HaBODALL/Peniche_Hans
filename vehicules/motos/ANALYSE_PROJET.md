@@ -41,5 +41,11 @@ Face au coût de l'achat neuf, la possibilité de concevoir ou d'assembler soi-m
 
 La suite de la documentation se concentrera sur l'aspect réglementaire de cette démarche DIY en France.
 
+### Stratégie retenue pour les gros volumes (> 50cc)
+Suite à l'analyse approfondie des contraintes réglementaires françaises (qui rendent la démarche DIY financièrement non viable pour une mise sur la voie publique), et considérant que les budgets pour du neuf ne sont actuellement ni validés ni disponibles, l'orientation actuelle du projet pour les motos équivalent > 50cc (catégorie L3e) est de :
+1. **Privilégier le marché de l'occasion**, avec une veille active sur les modèles performants comme ceux de chez **Zero Motorcycles** (modèles S ou SR/F).
+2. **Garder en veille l'option du rétrofit**, sous réserve qu'il soit effectué par des professionnels homologués.
+
 ## Références et Bibliographie
-- *À compléter au fur et à mesure des recherches sur les modèles du marché et les composants DIY.*
+- [Zero Motorcycles - Modèles S et SR/F (Documentation constructeur)](https://www.zeromotorcycles.com/fr-fr/)
+- *À compléter au fur et à mesure des recherches sur les autres modèles d'occasion et les composants DIY.*
