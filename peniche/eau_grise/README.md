@@ -26,4 +26,10 @@ Le succès d'un tel système (ainsi que la préservation générale de l'environ
 
 ## Références et Bibliographie
 - Règlements locaux et nationaux sur les rejets en eaux intérieures.
-- Documentation sur la phytoépuration et les filtres plantés.
+- [Guide technique Aquatiris sur l'assainissement écologique par phytoépuration (adaptations pour l'habitat léger et mobile)](./bibliographie/Aquatiris_Guide.pdf).
+- [Directive Européenne ES-TRIN (Prescriptions techniques applicables aux bateaux de navigation intérieure) - Section sur le traitement des eaux usées](./bibliographie/ES_TRIN_Directive.pdf).
+- [Réseau Assainissement Écologique (RAE) - Documentation sur les filtres plantés pour habitats alternatifs](./bibliographie/RAE_Documentation.pdf).
+- Retours d'expérience et études de cas de l'Agence de l'Eau sur les solutions de traitement zéro-rejet pour bateaux à passagers et péniches.
+- [Tutoriels et guides du Low-Tech Lab sur l'auto-construction (DIY) de filtres à roseaux et systèmes d'épuration low-tech à faible encombrement](./bibliographie/LowTechLab_Filtres.pdf).
+- Publications sur l'intégration récente des Bioréacteurs à Membranes (MBR) ultra-compacts couplés aux solutions naturelles.
+- Projets expérimentaux de "Jardins Flottants" (Floating Treatment Wetlands) et filtres à mousse de sphaigne pour le traitement sécurisé en milieu confiné.
