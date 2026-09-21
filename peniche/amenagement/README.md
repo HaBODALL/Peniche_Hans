@@ -31,6 +31,16 @@ Actuellement, 3 directions artistiques sont envisagées pour l'aménagement int�
 
 > ⚠️ **Règle d'Unification :** Quel que soit le choix, le recours aux matériaux de récupération et au DIY impose une règle stricte d'unification (par la peinture, la texture ou les lignes) pour éviter l'effet "déchetterie" et maintenir la lisibilité de l'espace. Les contraintes PMR doivent être vues comme une opportunité pour un design minimaliste et aéré.
 
+## Références Visuelles et Moodboards
+
+Voici le récapitulatif des références et chartes graphiques pour les 3 directions artistiques envisagées :
+
+| Direction Artistique | Concept | Palette Principale | Moodboard (PDF) |
+| :--- | :--- | :--- | :--- |
+| **Solarpunk Pragmatique** | Technologie au service du vivant, machinerie apparente, végétal | Vert de gris, Acier Corten, Ocre, Blanc Cassé | [Voir le document](./bibliographie/moodboard_solarpunk.pdf) |
+| **Nautique Hacker** | Esprit vaisseau d'exploration, priorité à la fonction et l'adaptabilité | Gris Naval, Noir Mat, Aluminium, Jaune Sécurité | [Voir le document](./bibliographie/moodboard_nautique_hacker.pdf) |
+| **Atelier Frugal / Wabi-Sabi** | Élégance de la réparation, minimalisme, espace apaisé | Gris Chauds, Bois Clair, Bleu Indigo, Noir Encre | [Voir le document](./bibliographie/moodboard_atelier_frugal.pdf) |
+
 ## Références et Bibliographie
 - Normes PMR et design inclusif.
 - Principes de l'architecture intérieure navale et fluviale.
