@@ -41,6 +41,16 @@ Face au coût de l'achat neuf, la possibilité de concevoir ou d'assembler soi-m
 
 La suite de la documentation se concentrera sur l'aspect réglementaire de cette démarche DIY en France.
 
+> **Note sur la Stratégie Actuelle et Contradiction Historique :**
+> Bien que la démarche DIY / Low-Tech soit toujours valorisée pour son aspect éducatif, expérimental et réparable au sein de l'atelier, **la stratégie actuelle a évolué et s'oriente vers le marché de l'occasion ou le rétrofit professionnel**.
+>
+> *Pourquoi ce changement ?*
+> 1. Les contraintes strictes d'homologation française (et européennes) rendent la démarche de fabrication purement DIY extrêmement difficile à légaliser sur route ouverte pour un particulier.
+> 2. Des exigences strictes de charge utile : la moto doit pouvoir supporter 200 à 250 kg (deux personnes avec bagages).
+> 3. Des critères esthétiques spécifiques orientés vers le style "Néo-rétro" (ex: Triumph, Maeving) ou "Roadster moderne" (ex: Zero Motorcycles, Yamaha).
+>
+> Par conséquent, nous privilégions la recherche de modèles récents d'occasion comme la **Zero Motorcycles S ou SR/F**, ou encore l'achat de solutions de rétrofit professionnellement certifiées (conformément aux arrêtés de 2020 sur le rétrofit en France). L'analyse DIY originale est conservée ci-dessus pour la traçabilité de nos recherches initiales.
+
 ## Références et Bibliographie
 
 ### Modèles du marché (Roadsters modernes & Néo-Rétro)
@@ -51,3 +61,4 @@ La suite de la documentation se concentrera sur l'aspect réglementaire de cette
 - [Documentation : Moteur QS 138 90H 4000W V3](./bibliographie/qs_motor_138_specs.pdf) - Exemple de moteur très utilisé dans les conversions de catégorie L3e.
 - [Manuel : Contrôleur Kelly](./bibliographie/kelly_controller_manual.pdf) - Référence pour la gestion de la puissance.
 - [Spécifications : BMS ANT](./bibliographie/bms_ant_specs.pdf) - Système de gestion de batterie pour les packs assemblés sur mesure.
+- *Les documents techniques et réglementaires seront téléchargés localement et ajoutés ici ultérieurement.*
