@@ -24,6 +24,24 @@ Le pont d'une péniche Freycinet représente une surface de captage considérabl
 - **Usage :** Ce circuit d'eau de pluie doit être **strictement séparé** du circuit d'eau potable. L'eau récupérée sera utilisée pour les sanitaires, le lavage (lave-linge) ou le nettoyage extérieur.
 - **Attention :** L'eau coulant sur un pont en acier peint nécessite une filtration grossière avant stockage dans une cuve tampon dédiée (500 à 1 000 L). L'analyse de la qualité de cette eau fera partie des travaux du laboratoire embarqué.
 
+## Solutions Expérimentales, DIY et Nouvelles Technologies
+
+Dans une démarche d'innovation et d'autonomie (low-tech / high-tech), des solutions complémentaires peuvent être implémentées **en toute sécurité** (en aval ou en parallèle du circuit de potabilisation principal strict) :
+
+- **Bio-filtration (Low-Tech) :** Filtres à sable biologiques (Biosand filters) pour le pré-traitement de l'eau de pluie avant stockage. Utile pour abattre la charge organique sans énergie.
+- **Ultrafiltration (UF) / Osmose Inverse (RO) basse pression :** Systèmes de membranes capillaires à très faible consommation énergétique (ex: filtres type Sawyer ou Lifestream adaptés en modules) pour une sécurisation ultime au point d'usage (robinet cuisine).
+- **Monitoring Open-Source :** Mise en place de capteurs Arduino/ESP32 (turbidité, TDS, température, débit) connectés à un tableau de bord (ex: Home Assistant, par Matt YAPADEBOULOS) pour surveiller la qualité de l'eau en temps réel.
+- **Désinfection LED UV-C :** Intégration de modules LED UV-C (type Oji) miniaturisés directement aux points de puisage, offrant une désinfection instantanée avec une consommation électrique très faible par rapport aux lampes UV traditionnelles (et sans mercure).
+
 ## Références et Bibliographie
-- Normes sanitaires pour le stockage et le traitement de l'eau potable (ARS).
-- Réglementation sur l'usage de l'eau de pluie à l'intérieur des habitations.
+
+- **Directives OMS :** [Directives de qualité pour l'eau de boisson](https://iris.who.int/bitstream/handle/10665/258763/9789242549959-fre.pdf) - Base sanitaire pour le traitement de l'eau.
+- **Standard ES-TRIN :** [Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure (ES-TRIN)](https://www.cesni.eu/normes/es-trin/) - Normes obligatoires pour les péniches fluviales (incluant les exigences pour l'eau).
+- **Manuel Low-Tech :** [Manuel de construction des filtres à sable biologiques CAWST](https://resources.cawst.org/)
+- **Ressources en ligne :**
+  - [Normes sanitaires pour le stockage et le traitement de l'eau potable (ARS)](https://solidarites-sante.gouv.fr/sante-et-environnement/eaux/article/eau-du-robinet).
+  - [Réglementation sur l'usage de l'eau de pluie à l'intérieur des habitations (Service-Public)](https://www.service-public.fr/particuliers/vosdroits/F31481).
+- **Fiches techniques des systèmes de filtration (Conformes aux exigences fluviales européennes - ES-TRIN, VNF, HAROPA) :**
+  - *Filtre à sédiments (20 µm) :* [Cintropur NW25 / NW32](https://www.cintropur.com/fr/produits/eau-de-pluie/) (faible perte de charge, manchons jetables). Adapté à la pré-filtration des eaux d'avitaillement des ports fluviaux.
+  - *Filtre à charbon actif :* [Cintropur NW25 TE](https://www.cintropur.com/fr/produits/eau-de-pluie/nw25te/) (traitement des odeurs/goûts, remplissage par vrac) ou cartouches standard 9"3/4 à 20" Pentair.
+  - *Stérilisateur UV-C :* [Cintropur UV 2100](https://www.cintropur.com/fr/produits/uv/uv2100/) (débit max 2 m³/h) ou équivalent [Oji](https://www.oji-water.com/) (technologie LED UV sans mercure). Garantit une potabilité conforme aux directives sanitaires européennes de navigation.
