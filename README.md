@@ -18,4 +18,46 @@ Ce dépôt structure les réflexions, les recherches et la documentation techniq
 - `/vehicules/` : Projets complémentaires de mobilité terrestre.
 
 ## Références et Bibliographie
-- *À compléter au fur et à mesure des recherches.*
+
+*Note : Certains documents de référence peuvent être téléchargés au format PDF dans le dossier [`/bibliographie/`](./bibliographie/).*
+
+### Fluvial et Naval
+- [Règlement Général de Police de la Navigation Intérieure (RGPNI)](https://www.ecologie.gouv.fr/politiques-publiques/reglementation-fluviale).
+- [Code Européen des Voies de Navigation Intérieure (CEVNI)](https://unece.org/info/Transport/Inland-Water-Transport/pub/36257) (Voir PDF local : [`Placeholder_CEVNI.pdf`](./bibliographie/Placeholder_CEVNI.pdf)).
+- [Ministère de la Mer - Textes officiels Permis Plaisance](https://www.mer.gouv.fr/).
+- [ES-TRIN (Standard Européen des Bateaux de Navigation Intérieure)](https://www.cesni.eu/fr/es-trin/), Chapitres 10 & 11 (Voir PDF local : [`Placeholder_ES-TRIN.pdf`](./bibliographie/Placeholder_ES-TRIN.pdf)).
+- [Bureau Veritas : *Rules for the Classification of Inland Navigation Vessels*](https://marine-offshore.bureauveritas.com/).
+- [Règlements de Voies Navigables de France (VNF)](https://www.vnf.fr/) sur les rejets et le domaine public fluvial.
+- [Réglementation et consignes locales de HAROPA PORT](https://www.haropaport.com/) (Axe Seine : Paris, Rouen, Le Havre).
+- [Directives des instances européennes des voies navigables (CESNI)](https://www.cesni.eu/fr/).
+- Principes de l'architecture intérieure navale et fluviale.
+
+### Aménagement et Habitat
+- [Normes PMR et design inclusif](https://www.ecologie.gouv.fr/politiques-publiques/accessibilite-batiments).
+- Normes d'accessibilité des ERP et habitats.
+- [Normes NFC 15-100 pour l'habitat](https://boutique.afnor.org/fr-fr/norme/nf-c15-100/installations-electriques-a-basse-tension/fa023961/7623).
+- CEE et aides à la transition énergétique.
+- Règlements fiscaux sur l'assimilation des bateaux logements (Taxe foncière vs Redevance VNF).
+- [Cerfa 2062 (Déclaration de contrat de prêt)](https://www.service-public.fr/particuliers/vosdroits/R1054).
+
+### Eau et Écologie
+- [Normes sanitaires pour le stockage et le traitement de l'eau potable (ARS)](https://www.sante.fr/eau-potable).
+- [Réglementation sur l'usage de l'eau de pluie à l'intérieur des habitations](https://www.service-public.fr/particuliers/vosdroits/F31481).
+- Règlements locaux et nationaux sur les rejets en eaux intérieures.
+- Documentation sur la phytoépuration et les filtres plantés.
+- Documentation sur les toilettes à compostage (Separett, Trobolo, etc.).
+- Études sur la méthanisation domestique.
+
+### Véhicules et Mobilité Terrestre
+- [Ministère de la Transition écologique : RTI construction amateur](https://www.ecologie.gouv.fr/politiques-publiques/homologation-vehicules).
+- [Règlement délégué (UE) N° 44/2014](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32014R0044).
+- [Directive européenne sur la Compatibilité Électromagnétique (CEM)](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32014L0030).
+- [Règlement UNECE R100](https://unece.org/transport/vehicle-regulations) (Voir PDF local : [`Placeholder_UNECE_R100.pdf`](./bibliographie/Placeholder_UNECE_R100.pdf)).
+- [Arrêté Rétrofit (13 mars 2020)](https://www.legifrance.gouv.fr/loda/id/JORFTEXT000041780558/).
+
+### Laboratoire, R&D et Do It Yourself (DIY)
+- [Documentation Open-Source Hardware (OSHW)](https://www.oshwa.org/).
+- [Low-tech Lab](https://lowtechlab.org/fr) : Tutoriels et documentation sur les technologies douces et l'autonomie.
+- Directives sur la sécurité basse tension et la conception de prototypes électroniques.
+- [Ressources IoT open-source : Home Assistant](https://www.home-assistant.io/).
+- Expérimentations en phytoépuration et biogaz à petite échelle.
