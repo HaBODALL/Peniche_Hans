@@ -36,6 +36,13 @@ La production de biogaz par méthanisation des déchets organiques est envisagé
 - **Sécurité :** Le méthane étant un gaz inflammable, l'installation (digesteur et stockage) requiert une ventilation stricte (locale extérieur) et des détecteurs de gaz.
 
 ## Références et Bibliographie
-- Normes NFC 15-100 pour l'habitat.
-- ES-TRIN et règles des sociétés de classification (ex: Bureau Veritas).
-- CEE et aides à la transition énergétique.
+
+### Solutions Industrielles Modernes
+- [Documentation Architecture Marine Victron Energy](./bibliographie/Victron_Energy_Marine.pdf) : Schémas et bonnes pratiques pour les systèmes électriques embarqués (Onduleurs, batteries, gestion).
+
+### Méthodes DIY et Solutions Expérimentales
+- [Tutoriel Low-Tech Lab : Méthanisation Domestique](./bibliographie/LowTechLab_Methanisation.pdf) : Conception et sécurité d'un biodigesteur Low-Tech pour un usage expérimental d'appoint.
+
+### Réglementaire et Normes
+- [Normes NF C 15-100 (Basse tension) et NF C 18-510 (Habilitations électriques)](./bibliographie/NFC_15-100_18-510.pdf).
+- [Documentation ES-TRIN 2023](./bibliographie/ES-TRIN_2023_fr.pdf) : Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure.
