@@ -42,4 +42,12 @@ Face au coût de l'achat neuf, la possibilité de concevoir ou d'assembler soi-m
 La suite de la documentation se concentrera sur l'aspect réglementaire de cette démarche DIY en France.
 
 ## Références et Bibliographie
-- *À compléter au fur et à mesure des recherches sur les modèles du marché et les composants DIY.*
+
+### Modèles du marché (Roadsters modernes & Néo-Rétro)
+- [Fiche Technique : Zero SR/F (2023)](./bibliographie/zero_srf_specs.pdf) - Modèle de référence pour les performances attendues sur un roadster moderne.
+
+### Composants DIY et Rétrofit
+*Note : Ces documents sont inclus à titre informatif et d'exploration technologique (DIY).*
+- [Documentation : Moteur QS 138 90H 4000W V3](./bibliographie/qs_motor_138_specs.pdf) - Exemple de moteur très utilisé dans les conversions de catégorie L3e.
+- [Manuel : Contrôleur Kelly](./bibliographie/kelly_controller_manual.pdf) - Référence pour la gestion de la puissance.
+- [Spécifications : BMS ANT](./bibliographie/bms_ant_specs.pdf) - Système de gestion de batterie pour les packs assemblés sur mesure.
