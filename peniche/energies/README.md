@@ -38,11 +38,11 @@ La production de biogaz par méthanisation des déchets organiques est envisagé
 ## Références et Bibliographie
 
 ### Solutions Industrielles Modernes
-- [Documentation Architecture Marine Victron Energy](./bibliographie/Victron_Energy_Marine.pdf) : Schémas et bonnes pratiques pour les systèmes électriques embarqués (Onduleurs, batteries, gestion).
+- [Documentation Architecture Marine Victron Energy](../../bibliographie/energies/Victron_Energy_Marine.pdf) : Schémas et bonnes pratiques pour les systèmes électriques embarqués (Onduleurs, batteries, gestion).
 
 ### Méthodes DIY et Solutions Expérimentales
-- [Tutoriel Low-Tech Lab : Méthanisation Domestique](./bibliographie/LowTechLab_Methanisation.pdf) : Conception et sécurité d'un biodigesteur Low-Tech pour un usage expérimental d'appoint.
+- [Tutoriel Low-Tech Lab : Méthanisation Domestique](../../bibliographie/energies/LowTechLab_Methanisation.pdf) : Conception et sécurité d'un biodigesteur Low-Tech pour un usage expérimental d'appoint.
 
 ### Réglementaire et Normes
-- [Normes NF C 15-100 (Basse tension) et NF C 18-510 (Habilitations électriques)](./bibliographie/NFC_15-100_18-510.pdf).
-- [Documentation ES-TRIN 2021/1](../../bibliographie/ES_TRIN_2021_FR.pdf) : Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure. *(Note : La version 2027/1 est en cours de préparation par le CESNI).*
+- [Normes NF C 15-100 (Basse tension) et NF C 18-510 (Habilitations électriques)](../../bibliographie/energies/NFC_15-100_18-510.pdf).
+- [Documentation ES-TRIN 2021/1](../../bibliographie/reglementation/ES_TRIN_2021_FR.pdf) : Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure. *(Note : La version 2027/1 est en cours de préparation par le CESNI).*

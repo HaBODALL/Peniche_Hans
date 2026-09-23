@@ -22,10 +22,10 @@ Ce dépôt structure les réflexions, les recherches et la documentation techniq
 *Note : Certains documents de référence peuvent être téléchargés au format PDF dans le dossier [`/bibliographie/`](./bibliographie/).*
 
 ### Fluvial et Naval
-- [Règlement Général de Police de la Navigation Intérieure (RGPNI) 2019](./bibliographie/recueil_rgpni___2019_09.pdf) ([Source](https://www.ecologie.gouv.fr/politiques-publiques/reglementation-fluviale)).
-- [Code Européen des Voies de Navigation Intérieure (CEVNI) - 6e Révision](./bibliographie/CEVNI_6eRev.pdf) ([Source UNECE](https://unece.org/info/Transport/Inland-Water-Transport/pub/36257)).
+- [Règlement Général de Police de la Navigation Intérieure (RGPNI) 2019](./bibliographie/reglementation/recueil_rgpni___2019_09.pdf) ([Source](https://www.ecologie.gouv.fr/politiques-publiques/reglementation-fluviale)).
+- [Code Européen des Voies de Navigation Intérieure (CEVNI) - 6e Révision](./bibliographie/reglementation/CEVNI_6eRev.pdf) ([Source UNECE](https://unece.org/info/Transport/Inland-Water-Transport/pub/36257)).
 - [Ministère de la Mer - Textes officiels Permis Plaisance](https://www.mer.gouv.fr/).
-- [ES-TRIN 2021/1 (Standard Européen des Bateaux de Navigation Intérieure)](./bibliographie/ES_TRIN_2021_FR.pdf) *(Note : La version 2027/1 est en cours de préparation)*, Chapitres 10 & 11 ([Source CESNI](https://www.cesni.eu/fr/es-trin/)).
+- [ES-TRIN 2021/1 (Standard Européen des Bateaux de Navigation Intérieure)](./bibliographie/reglementation/ES_TRIN_2021_FR.pdf) *(Note : La version 2027/1 est en cours de préparation)*, Chapitres 10 & 11 ([Source CESNI](https://www.cesni.eu/fr/es-trin/)).
 - [Bureau Veritas : *Rules for the Classification of Inland Navigation Vessels*](https://marine-offshore.bureauveritas.com/).
 - [Règlements de Voies Navigables de France (VNF)](https://www.vnf.fr/) sur les rejets et le domaine public fluvial.
 - [Réglementation et consignes locales de HAROPA PORT](https://www.haropaport.com/) (Axe Seine : Paris, Rouen, Le Havre).
