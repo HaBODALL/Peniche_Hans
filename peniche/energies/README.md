@@ -45,4 +45,4 @@ La production de biogaz par méthanisation des déchets organiques est envisagé
 
 ### Réglementaire et Normes
 - [Normes NF C 15-100 (Basse tension) et NF C 18-510 (Habilitations électriques)](./bibliographie/NFC_15-100_18-510.pdf).
-- [Documentation ES-TRIN 2023](./bibliographie/ES-TRIN_2023_fr.pdf) : Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure.
+- [Documentation ES-TRIN 2021/1](../../bibliographie/ES_TRIN_2021_FR.pdf) : Standard Européen établissant les Prescriptions Techniques des Bateaux de Navigation Intérieure. *(Note : La version 2027/1 est en cours de préparation par le CESNI).*
