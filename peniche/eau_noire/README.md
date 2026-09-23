@@ -42,8 +42,9 @@ L'arbitrage doit se faire en comparant diverses solutions allant des méthodes c
 > - **Phase 2 :** Le choix d'un système à eau (dépression) couplé à un digesteur anaérobie ou une micro-station MBR est étudié en tant que projet laboratoire, mais la complexité technique, les exigences strictes de VNF pour le rejet, et le rendement modeste incitent à bien documenter et valider chaque étape.
 
 ## Références et Bibliographie
-- [Normes ES-TRIN 2023 (Prescriptions techniques des bateaux)](./bibliographie/ES_TRIN_2023.pdf)
-- [Guide des Rejets et Aménagements - VNF](./bibliographie/Reglementation_VNF_Rejets.pdf)
-- [Tutoriel Toilettes Sèches Bokashi - Low-Tech Lab](./bibliographie/LowTechLab_Bokashi.pdf)
+- [Normes ES-TRIN 2021/1 (Prescriptions techniques des bateaux)](../../bibliographie/ES_TRIN_2021_FR.pdf) *(Note : La version 2027/1 est en cours de préparation par le CESNI).*
+- Guide des Rejets et Aménagements - VNF *(Document manquant à sourcer).*
+- [Tutoriel Toilettes Sèches Bokashi - Low-Tech Lab](./bibliographie/Tutoriel_Toilettes_Seches_Bokashi_Low_Tech_Lab.pdf)
+- [Traité Technique Assainissement Écologique Bokashi V3](./bibliographie/Traite_Technique_Assainissement_Ecologique_Bokashi_V3.pdf)
 - Documentation constructeurs sur les systèmes d'incinération (ex: Cinderella) et micro-stations MBR embarquées.
 - Études comparatives sur la méthanisation domestique à micro-échelle.
