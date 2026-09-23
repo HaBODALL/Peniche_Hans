@@ -62,10 +62,11 @@ Le sens conventionnel du balisage fluvial est défini de l'amont vers l'aval.
 - **Vert seul :** Entrée autorisée.
 - **Règles :** Interdiction de fumer. Moteur au point mort (ou coupé). Attention aux amarres qui doivent coulisser avec le niveau d'eau.
 
-## 8. Radiotéléphonie VHF et ATIS
+## 8. Radiotéléphonie VHF, ATIS et Services d'Information
 - **Canaux :** 10 (Veille fluviale), 13 (Sécurité), 09 (Services portuaires). Le canal 16 est réservé à la mer.
 - **Puissance :** Limitée à 1 Watt en eaux intérieures pour éviter les interférences.
 - **Messages :** MAYDAY (Détresse grave) > PAN PAN (Urgence) > SÉCURITÉ.
+- **Services Numériques (VNF) :** Depuis juin 2026, l'ancien service CIFL a été remplacé par des outils numériques plus modernes. Pour préparer et suivre sa navigation, on utilise désormais l'application mobile **Navi** (itinéraires, infos en temps réel), **Avisbat** (pour les avis à la batellerie sur le réseau), et le **Portail EuRIS** pour une vision européenne.
 
 ## 9. Signaux Phoniques (Sons)
 - **1 son bref :** Je viens sur Tribord (droite).

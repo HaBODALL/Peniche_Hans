@@ -26,6 +26,13 @@ L'architecture de propulsion (Bloc 2 - géré par Matt YAPADEBOULOS) sera **tota
 - **Câblage Puissance :** Câbles ignifugés (ex: 95mm² H07RN-F) avec protections spécifiques.
 - **Propulseur d'étrave :** Également électrique, indispensable pour les manœuvres (notamment en écluse, surtout pour le pilote et les aides d'éventuels passagers).
 
+## Contexte Technologique et Synergies
+
+La motorisation de la péniche s'inscrit dans un contexte technologique européen favorable, porté par des investissements massifs dans le verdissement du fret fluvial et de la navigation de plaisance :
+- **Projet Riverboost :** Ce projet européen vise à développer des navires de fret fluvial 100 % électriques dotés de systèmes de batteries hybrides (semi-solid-state + LFP) et interchangeables (*Battery-as-a-Service*). L'innovation issue de ces projets lourds permet de démocratiser des technologies (haute tension 400V+, BMS intelligents, moteurs compacts) pour les rendre accessibles à l'habitat itinérant.
+- **Projet MOVEO (VNF) :** Ce projet vise à améliorer la gestion du trafic et la numérisation des données de navigation (AIS, outils VNF). Une meilleure gestion intelligente du trafic et la supervision de l'état des infrastructures permettront à l'avenir aux bateaux habitables autonomes de mieux planifier leurs trajets et d'optimiser leur consommation énergétique.
+- **Nouveaux Produits Écotouristiques (VNF) :** VNF soutient le déploiement de flottes de bateaux de location électriques (ex: Sixto Green) en installant des réseaux de bornes de recharge rapide tous les 10-15 km sur certains itinéraires (comme le canal de la Marne au Rhin). Le développement de ces infrastructures dédiées à la plaisance locative bénéficiera directement à l'autonomie de notre péniche lors de ses déplacements.
+
 ## Sécurité et Monitoring
 
 Le rétrofit inclut un monitoring constant du système (BMS - Battery Management System, contrôle des températures, etc.), dont les données viendront alimenter les recherches du laboratoire embarqué.
@@ -33,3 +40,6 @@ Le rétrofit inclut un monitoring constant du système (BMS - Battery Management
 ## Références et Bibliographie
 - Règlements ES-TRIN (Chapitres 10 & 11).
 - Bureau Veritas : *Rules for the Classification of Inland Navigation Vessels*.
+- [Guide Diesel-électrique (VNF)](../../bibliographie/Guide-Diesel-electrique_V3.pdf) : Cahier technique de Voies navigables de France sur l'hybridation et la motorisation électrique (V3).
+- Projets Horizon Europe : [Riverboost (Propulsion électrique avancée)](https://riverboost.eu/) et [MOVEO (Mobilité intelligente)](https://www.vnf.fr/vnf/dossiers-actualitess/vnf-est-engage-dans-le-projet-europeen-moveo-pour-une-mobilite-intelligente-et-durable/).
+- [Nouveaux produits écotouristiques et bornes de recharge VNF](https://www.vnf.fr/vnf/accueil/tourisme-fluvial/offre-touristique-fluviale/nouveaux-produits-ecotouristiques/).
