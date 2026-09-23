@@ -40,6 +40,6 @@ Le rétrofit inclut un monitoring constant du système (BMS - Battery Management
 ## Références et Bibliographie
 - Règlements ES-TRIN (Chapitres 10 & 11).
 - Bureau Veritas : *Rules for the Classification of Inland Navigation Vessels*.
-- [Guide Diesel-électrique (VNF)](../../bibliographie/Guide-Diesel-electrique_V3.pdf) : Cahier technique de Voies navigables de France sur l'hybridation et la motorisation électrique (V3).
+- [Guide Diesel-électrique (VNF)](../../bibliographie/energies/Guide-Diesel-electrique_V3.pdf) : Cahier technique de Voies navigables de France sur l'hybridation et la motorisation électrique (V3).
 - Projets Horizon Europe : [Riverboost (Propulsion électrique avancée)](https://riverboost.eu/) et [MOVEO (Mobilité intelligente)](https://www.vnf.fr/vnf/dossiers-actualitess/vnf-est-engage-dans-le-projet-europeen-moveo-pour-une-mobilite-intelligente-et-durable/).
 - [Nouveaux produits écotouristiques et bornes de recharge VNF](https://www.vnf.fr/vnf/accueil/tourisme-fluvial/offre-touristique-fluviale/nouveaux-produits-ecotouristiques/).

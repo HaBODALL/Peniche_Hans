@@ -37,9 +37,9 @@ Voici le récapitulatif des références et chartes graphiques pour les 3 direct
 
 | Direction Artistique | Concept | Palette Principale | Moodboard (PDF) |
 | :--- | :--- | :--- | :--- |
-| **Solarpunk Pragmatique** | Technologie au service du vivant, machinerie apparente, végétal | Vert de gris, Acier Corten, Ocre, Blanc Cassé | [Voir le document](./bibliographie/moodboard_solarpunk.pdf) |
-| **Nautique Hacker** | Esprit vaisseau d'exploration, priorité à la fonction et l'adaptabilité | Gris Naval, Noir Mat, Aluminium, Jaune Sécurité | [Voir le document](./bibliographie/moodboard_nautique_hacker.pdf) |
-| **Atelier Frugal / Wabi-Sabi** | Élégance de la réparation, minimalisme, espace apaisé | Gris Chauds, Bois Clair, Bleu Indigo, Noir Encre | [Voir le document](./bibliographie/moodboard_atelier_frugal.pdf) |
+| **Solarpunk Pragmatique** | Technologie au service du vivant, machinerie apparente, végétal | Vert de gris, Acier Corten, Ocre, Blanc Cassé | [Voir le document](../../bibliographie/amenagement/moodboard_solarpunk.pdf) |
+| **Nautique Hacker** | Esprit vaisseau d'exploration, priorité à la fonction et l'adaptabilité | Gris Naval, Noir Mat, Aluminium, Jaune Sécurité | [Voir le document](../../bibliographie/amenagement/moodboard_nautique_hacker.pdf) |
+| **Atelier Frugal / Wabi-Sabi** | Élégance de la réparation, minimalisme, espace apaisé | Gris Chauds, Bois Clair, Bleu Indigo, Noir Encre | [Voir le document](../../bibliographie/amenagement/moodboard_atelier_frugal.pdf) |
 
 ## Références et Bibliographie
 - Normes PMR et design inclusif.

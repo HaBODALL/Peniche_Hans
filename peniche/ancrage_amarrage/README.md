@@ -14,6 +14,6 @@ Afin de moderniser et de sécuriser l'ancrage et l'amarrage tout en respectant l
 - **Amortisseurs d'amarrage innovants :** Utilisation de systèmes d'amortissement en élastomère de nouvelle génération pour réduire les chocs sur les taquets liés au batillage (sillage des autres bateaux).
 
 ## Références et Bibliographie
-- [ES-TRIN 2021/1 (Standard Européen des Bateaux de Navigation Intérieure)](../../bibliographie/ES_TRIN_2021_FR.pdf) concernant l'équipement d'ancrage et d'amarrage. *(Note : La version 2027/1 est en cours de préparation par le CESNI).*
-- [Règlement Général de Police de la Navigation Intérieure (RGPNI) 2019](../../bibliographie/recueil_rgpni___2019_09.pdf) pour les règles de stationnement.
+- [ES-TRIN 2021/1 (Standard Européen des Bateaux de Navigation Intérieure)](../../bibliographie/reglementation/ES_TRIN_2021_FR.pdf) concernant l'équipement d'ancrage et d'amarrage. *(Note : La version 2027/1 est en cours de préparation par le CESNI).*
+- [Règlement Général de Police de la Navigation Intérieure (RGPNI) 2019](../../bibliographie/reglementation/recueil_rgpni___2019_09.pdf) pour les règles de stationnement.
 - VNF (Voies Navigables de France) - Conditions pour les Conventions d'Occupation Temporaire (COT). *(Document manquant à sourcer)*.
