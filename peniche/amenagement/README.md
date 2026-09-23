@@ -35,11 +35,26 @@ Actuellement, 3 directions artistiques sont envisagées pour l'aménagement int�
 
 Voici le récapitulatif des références et chartes graphiques pour les 3 directions artistiques envisagées :
 
+> 📝 **Note d'avancement :** Les documents PDF actuels des moodboards ne contiennent pour le moment que des blocs de texte. Ils devront être impérativement mis à jour et complétés avec de réelles images de référence, des palettes de couleurs visuelles et des exemples de textures pour exprimer pleinement ces directions artistiques.
+
 | Direction Artistique | Concept | Palette Principale | Moodboard (PDF) |
 | :--- | :--- | :--- | :--- |
-| **Solarpunk Pragmatique** | Technologie au service du vivant, machinerie apparente, végétal | Vert de gris, Acier Corten, Ocre, Blanc Cassé | [Voir le document](./bibliographie/moodboard_solarpunk.pdf) |
-| **Nautique Hacker** | Esprit vaisseau d'exploration, priorité à la fonction et l'adaptabilité | Gris Naval, Noir Mat, Aluminium, Jaune Sécurité | [Voir le document](./bibliographie/moodboard_nautique_hacker.pdf) |
-| **Atelier Frugal / Wabi-Sabi** | Élégance de la réparation, minimalisme, espace apaisé | Gris Chauds, Bois Clair, Bleu Indigo, Noir Encre | [Voir le document](./bibliographie/moodboard_atelier_frugal.pdf) |
+| **Solarpunk Pragmatique** | Technologie au service du vivant, machinerie apparente, végétal | Vert de gris, Acier Corten, Ocre, Blanc Cassé | [Voir le document](../../bibliographie/amenagement/moodboard_solarpunk.pdf) |
+| **Nautique Hacker** | Esprit vaisseau d'exploration, priorité à la fonction et l'adaptabilité | Gris Naval, Noir Mat, Aluminium, Jaune Sécurité | [Voir le document](../../bibliographie/amenagement/moodboard_nautique_hacker.pdf) |
+| **Atelier Frugal / Wabi-Sabi** | Élégance de la réparation, minimalisme, espace apaisé | Gris Chauds, Bois Clair, Bleu Indigo, Noir Encre | [Voir le document](../../bibliographie/amenagement/moodboard_atelier_frugal.pdf) |
+
+### Outils recommandés (Gratuits et sans compte)
+Pour faciliter la conception des plans et l'assemblage des images pour les moodboards, voici une sélection d'outils gratuits, fonctionnant hors-ligne ou sans nécessité de créer un compte :
+
+**Pour la création des plans (2D / 3D) :**
+- **Sweet Home 3D** *(Version Desktop)* : Logiciel libre et gratuit. Idéal pour modéliser l'intérieur en 3D rapidement et gérer l'encombrement des meubles.
+- **LibreCAD** : Logiciel 2D open-source, parfait pour des plans au sol précis (type industriel).
+- **FreeCAD** : Pour la conception de pièces spécifiques (mobilier sur mesure, intégration technique).
+
+**Pour la création des moodboards (Assemblage d'images) :**
+- **PureRef** : Petit utilitaire logiciel permettant d'agencer librement un nombre infini d'images de référence sur une grande toile (pas de compte, fonctionne hors-ligne).
+- **Excalidraw** : Outil de tableau blanc minimaliste dans le navigateur, idéal pour croquer des idées rapidement et coller des images d'inspiration sans inscription.
+- **GIMP / Krita** : Logiciels de traitement d'image libres pour l'édition et la création de palettes de couleurs.
 
 ## Références et Bibliographie
 - Normes PMR et design inclusif.

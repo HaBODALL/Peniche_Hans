@@ -42,11 +42,11 @@ La solution actuellement privilégiée, alignée avec la philosophie du projet.
 Le succès de tout système de traitement biologique (phytoépuration, MBR) et la préservation de l'environnement fluvial reposent impérativement sur l'utilisation stricte de produits d'entretien, de vaisselle et d'hygiène corporelle 100 % biodégradables.
 
 ## Références et Bibliographie
-- [Règlements de Voies Navigables de France (VNF) sur les rejets en eaux intérieures](./bibliographie/Reglements_VNF.pdf).
-- [Guide technique Aquatiris sur l'assainissement écologique par phytoépuration (adaptations pour l'habitat léger et mobile)](./bibliographie/Aquatiris_Guide.pdf).
-- [Directive Européenne ES-TRIN (Prescriptions techniques applicables aux bateaux de navigation intérieure) - Section sur le traitement des eaux usées](./bibliographie/ES_TRIN_Directive.pdf).
-- [Réseau Assainissement Écologique (RAE) - Documentation sur les filtres plantés pour habitats alternatifs](./bibliographie/RAE_Documentation.pdf).
-- [Retours d'expérience et études de cas de l'Agence de l'Eau sur les solutions de traitement zéro-rejet](./bibliographie/Etude_Cas_Agence_Eau.pdf).
-- [Tutoriels et guides du Low-Tech Lab sur l'auto-construction (DIY) de filtres à roseaux et systèmes d'épuration low-tech](./bibliographie/LowTechLab_Filtres.pdf).
-- [Publications sur l'intégration récente des Bioréacteurs à Membranes (MBR) ultra-compacts couplés aux solutions naturelles](./bibliographie/MBR_Documentation.pdf).
-- [Projets expérimentaux de "Jardins Flottants" (Floating Treatment Wetlands) et filtres à mousse de sphaigne pour le traitement sécurisé en milieu confiné](./bibliographie/Jardins_Flottants_Guide.pdf).
+- [Règlements de Voies Navigables de France (VNF) sur les rejets en eaux intérieures](../../bibliographie/reglementation/recueil_rgpni___2019_09.pdf).
+- [Guide technique Aquatiris sur l'assainissement écologique par phytoépuration (adaptations pour l'habitat léger et mobile)](../../bibliographie/eaux/Aquatiris_Guide.pdf).
+- [Directive Européenne ES-TRIN (Prescriptions techniques applicables aux bateaux de navigation intérieure) - Section sur le traitement des eaux usées](../../bibliographie/reglementation/ES_TRIN_2021_FR.pdf).
+- [Réseau Assainissement Écologique (RAE) - Documentation sur les filtres plantés pour habitats alternatifs](../../bibliographie/eaux/RAE_Documentation.pdf).
+- Retours d'expérience et études de cas de l'Agence de l'Eau sur les solutions de traitement zéro-rejet *(Document manquant)*.
+- [Tutoriels et guides du Low-Tech Lab sur l'auto-construction (DIY) de filtres à roseaux et systèmes d'épuration low-tech](../../bibliographie/eaux/LowTechLab_Filtres.pdf).
+- Publications sur l'intégration récente des Bioréacteurs à Membranes (MBR) ultra-compacts couplés aux solutions naturelles *(Document manquant)*.
+- Projets expérimentaux de "Jardins Flottants" (Floating Treatment Wetlands) et filtres à mousse de sphaigne pour le traitement sécurisé en milieu confiné *(Document manquant)*.

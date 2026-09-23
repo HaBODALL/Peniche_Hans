@@ -73,7 +73,10 @@ Trois axes de financement sont étudiés selon la situation professionnelle et j
   - **Montant envisagé Phase 1 :** 25 000 € à 35 000 €
   - **Épargne personnelle :** 5 000 € à 10 000 €
 - **Subventions R&D :** L'aspect "Laboratoire", "Méthanisation/Zéro Déchet" et "Mobilité Électrique" de la Phase 2/3 ouvre la porte à des subventions ciblées (Agence de l'Eau, ADEME, Région), subventions PAMI ou du crowdfunding.
+- **Financement Transition Énergétique (VNF/CEE) :** Le verdissement de la flotte fluviale est soutenu par des aides spécifiques de VNF et de l'État (PARM - Plan d'Aide au Report Modal, ou CEE - Certificats d'Économies d'Énergie). Même si ces aides ciblent initialement le fret commercial, le statut de laboratoire embarqué/R&D (avec la mise à l'épreuve de cahiers techniques VNF pour la propulsion électrique) pourrait justifier des dossiers de financement dédiés à l'innovation écotouristique ou à la réduction de l'empreinte carbone en phase 3.
 
 ## Références et Bibliographie
 - Règlements fiscaux sur l'assimilation des bateaux logements (Taxe foncière vs Redevance VNF).
 - Cerfa 2062 (Déclaration de contrat de prêt).
+- [Financer le verdissement de la flotte fluviale (VNF)](https://www.vnf.fr/vnf/accueil/beneficier-de-solutions-en-faveur-de-la-transition-energetique-du-secteur-fluvial/comment-financer-un-projet-de-verdissement-de-la-flotte-fluviale/).
+- [Cahiers techniques VNF sur la motorisation électrique](https://www.vnf.fr/vnf/accueil/beneficier-de-solutions-en-faveur-de-la-transition-energetique-du-secteur-fluvial/vos-solutions-technologiques-cahiers-techniques/).

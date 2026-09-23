@@ -30,7 +30,6 @@ Les documents suivants étaient présents sous forme de coquilles vides (< 100 o
 **Eaux Noires (`peniche/eau_noire/`) :**
 * *Réglementation VNF Rejets* : Guide des Rejets et Aménagements.
 * *LowTechLab Bokashi* : Tutoriel Toilettes Sèches Bokashi.
-* *ES-TRIN 2023* : Normes ES-TRIN 2023 (À potentiellement remplacer par la version 2027/1 à venir).
 
 **Véhicules - Motos (`vehicules/motos/`) :**
 * Documents techniques et réglementaires spécifiques liés à la Compatibilité Électromagnétique (CEM) et à la Sécurité Électrique.
