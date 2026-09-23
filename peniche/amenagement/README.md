@@ -35,6 +35,8 @@ Actuellement, 3 directions artistiques sont envisagées pour l'aménagement int�
 
 Voici le récapitulatif des références et chartes graphiques pour les 3 directions artistiques envisagées :
 
+> 📝 **Note d'avancement :** Les documents PDF actuels des moodboards ne contiennent pour le moment que des blocs de texte. Ils devront être impérativement mis à jour et complétés avec de réelles images de référence, des palettes de couleurs visuelles et des exemples de textures pour exprimer pleinement ces directions artistiques.
+
 | Direction Artistique | Concept | Palette Principale | Moodboard (PDF) |
 | :--- | :--- | :--- | :--- |
 | **Solarpunk Pragmatique** | Technologie au service du vivant, machinerie apparente, végétal | Vert de gris, Acier Corten, Ocre, Blanc Cassé | [Voir le document](../../bibliographie/amenagement/moodboard_solarpunk.pdf) |
