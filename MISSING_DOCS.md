@@ -6,8 +6,12 @@ L'objectif (en cette année 2026) est de s'assurer que ces documents soient corr
 
 ## Documents à télécharger ou déposer manuellement à la racine (`bibliographie/`)
 Ces fichiers bloquent le téléchargement automatisé :
+* **CEVNI (Code Européen des Voies de la Navigation Intérieure)** - 6e Révision : [Lien UNECE](https://unece.org/sites/default/files/2024-11/2109540_F_pdf_web.pdf)
 * **Règlement UNECE R100 (Sécurité des Véhicules Électriques)** - REV3 (français) : [Lien UNECE](https://unece.org/sites/default/files/2024-01/R0100r3f.pdf)
-*(Note: Les fichiers ES-TRIN 2021/1 et CEVNI ont été téléchargés avec succès. Cependant, **attention, le CESNI travaille sur la nouvelle version ES-TRIN 2027/1** suite à la réunion d'avril 2026. [Voir l'actualité](https://www.cesni.eu/actualites/reunion-du-cesni-le-16-avril-2026/))*
+*(Note: Le fichier ES-TRIN 2021/1 a été téléchargé avec succès. Cependant, **attention, le CESNI travaille sur la nouvelle version ES-TRIN 2027/1** suite à la réunion d'avril 2026. [Voir l'actualité](https://www.cesni.eu/actualites/reunion-du-cesni-le-16-avril-2026/))*
+
+## Documents en attente de dépôt depuis un dossier local
+* **Guide de l'habitat fluvial (2019)** : Fichier local en attente d'upload (`file:///C:/Users/hansb/Downloads/guide-de-lhabitat-fluvial-2019-1.pdf`). *(Attention: ce document de 2019 risque de ne plus être à jour en 2026).*
 
 ## Documents techniques à capturer (Low-Tech Lab)
 Liens vers des pages Wiki à capturer en PDF pour garantir l'accès hors-ligne (ex: pour `peniche/eau_noire/` ou `eau_propre/`) :
@@ -25,6 +29,7 @@ Les documents suivants étaient présents sous forme de coquilles vides (< 100 o
 
 **Eaux Noires (`peniche/eau_noire/`) :**
 * *Réglementation VNF Rejets* : Guide des Rejets et Aménagements.
+* *LowTechLab Bokashi* : Tutoriel Toilettes Sèches Bokashi.
 
 **Véhicules - Motos (`vehicules/motos/`) :**
 * Documents techniques et réglementaires spécifiques liés à la Compatibilité Électromagnétique (CEM) et à la Sécurité Électrique.

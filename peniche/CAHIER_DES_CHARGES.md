@@ -6,7 +6,8 @@ Ce document liste les exigences fondamentales (Must-Have) du projet d'habitat fl
 
 ## 1. La Coque et le Gabarit
 - **Type :** Péniche au format "Freycinet" (38,5m x 5,05m).
-- **Justification :** C'est le format historique qui permet de naviguer sur l'immense majorité des canaux français.
+- **Justification du volume :** Le format Freycinet a été choisi pour sa bonne manœuvrabilité et son accès à un réseau très large (bien que les canaux de petits gabarits comme la Sarthe lui soient fermés). Plus important encore, avec la transformation en lieu mixte (vie, travail/laboratoire) et l'ajout de grandes cuves pour l'autonomie, ce format représente le volume "seuil" nécessaire pour développer l'autonomie mobile sans manquer d'espace intermédiaire.
+- **Lestage de la coque :** Une péniche de commerce vidée de sa cargaison et simplement aménagée en habitat a un poids global très faible comparé à sa charge nominale. Il est crucial de paramétrer le lestage (charge maximale / tirant d'eau) pour stabiliser la coque, particulièrement avec l'intégration ultérieure de technologies lourdes (parc de batteries 400V de plusieurs tonnes, systèmes de gestion électrique EMS, panneaux solaires/éoliennes).
 - **Sécurité :** Un rapport de sondage (mesure par ultrasons de l'épaisseur de la tôle de fond) de moins de 2 ans est impératif avant achat. Une épaisseur résiduelle inférieure à 3,5/4 mm entraîne un risque financier énorme (redoublage de fond nécessaire).
 
 ## 2. Programme Fonctionnel
