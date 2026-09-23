@@ -61,4 +61,3 @@ La suite de la documentation se concentrera sur l'aspect réglementaire de cette
 - [Documentation : Moteur QS 138 90H 4000W V3](./bibliographie/qs_motor_138_specs.pdf) - Exemple de moteur très utilisé dans les conversions de catégorie L3e.
 - [Manuel : Contrôleur Kelly](./bibliographie/kelly_controller_manual.pdf) - Référence pour la gestion de la puissance.
 - [Spécifications : BMS ANT](./bibliographie/bms_ant_specs.pdf) - Système de gestion de batterie pour les packs assemblés sur mesure.
-- *Les documents techniques et réglementaires seront téléchargés localement et ajoutés ici ultérieurement.*
