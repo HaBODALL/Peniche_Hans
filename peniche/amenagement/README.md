@@ -4,7 +4,7 @@ La péniche, bien qu'offrant un volume important (190 m² de pont), est contrain
 
 ## Contraintes d'Accessibilité (PMR)
 
-L'aménagement doit obligatoirement répondre aux normes d'accessibilité PMR (pour le pilote et d'éventuels passagers) :
+L'aménagement doit obligatoirement répondre aux normes d'accessibilité PMR (pour prévoir tout types de passagers) :
 - **Espace de giration :** Un diamètre de 150 cm minimum dans les pièces de vie.
 - **Passage :** Largeur de circulation minimale de 90 cm.
 - **Seuils :** Zéro seuil (ou rampe inférieure à 5%).
