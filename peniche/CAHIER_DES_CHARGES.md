@@ -10,6 +10,21 @@ Ce document liste les exigences fondamentales (Must-Have) du projet d'habitat fl
 - **Lestage de la coque :** Une péniche de commerce vidée de sa cargaison et simplement aménagée en habitat a un poids global très faible comparé à sa charge nominale. Il est crucial de paramétrer le lestage (charge maximale / tirant d'eau) pour stabiliser la coque, particulièrement avec l'intégration ultérieure de technologies lourdes (parc de batteries 400V de plusieurs tonnes, systèmes de gestion électrique EMS, panneaux solaires/éoliennes).
 - **Sécurité :** Un rapport de sondage (mesure par ultrasons de l'épaisseur de la tôle de fond) de moins de 2 ans est impératif avant achat. Une épaisseur résiduelle inférieure à 3,5/4 mm entraîne un risque financier énorme (redoublage de fond nécessaire).
 
+### Calcul et Matériaux de Lestage
+**Outil de calcul gratuit recommandé :** L'approche la plus simple et ouverte (sans logiciel payant) consiste à utiliser un tableur (ex: LibreOffice Calc) appliquant le **Principe d'Archimède**.
+*Formule de base :* `Volume immergé = Masse totale du bateau (coque + aménagement + lest) / Densité de l'eau (environ 1000 kg/m³ en eau douce)`. Pour estimer la masse totale à viser, on multiplie la surface à la flottaison (env. 38m x 5m = 190m²) par le tirant d'eau souhaité (ex: 1,20m). `Tonnage souhaité ≈ 190 x 1,20 = 228 Tonnes`.
+Des logiciels libres comme **FreeCAD** (avec atelier *Ship*) peuvent aussi modéliser la carène pour des calculs plus pointus.
+
+**Comparatif des solutions de lestage :**
+
+| Matériau de lest | Masse volumique (apparente) | Facilité d'installation | Facilité d'enlèvement | Prix estimé / Tonne | Notes & Précautions |
+|-----------------|---------------------------|-------------------------|-----------------------|---------------------|---------------------|
+| **Blocs de Fonte** | ~ 7 200 kg/m³ | Difficile (très lourd) | Difficile | Très élevé | Volume extrêmement compact. Nécessite une grue. |
+| **Gueuses d'acier (chutes)** | ~ 4 000 kg/m³ (en vrac) | Moyenne (si en bacs) | Moyenne (si en bacs) | Élevé | Classique sur les péniches. À protéger de la rouille. |
+| **Blocs de Béton** | ~ 2 400 kg/m³ | Facile (modulaire) | Facile (modulaire) | Faible | Pratique à caler entre les varangues. Volume important. |
+| **Sable / Gravier** | ~ 1 600 kg/m³ | Très facile (vrac) | **Très difficile** | Très faible | Déconseillé à même la coque (garde l'humidité et favorise la rouille). |
+| **Eau (Cuves de lest)** | 1 000 kg/m³ | Moyenne (plomberie) | Très facile (pompage) | Moyen (coût des cuves) | Modulable, idéal pour compenser des charges dynamiques, mais prend beaucoup de place. |
+
 ## 2. Programme Fonctionnel
 
 ### 2.1 Espaces obligatoires
