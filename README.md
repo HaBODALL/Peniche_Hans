@@ -16,6 +16,7 @@ Ce dépôt structure les réflexions, les recherches et la documentation techniq
   - `ancrage_amarrage/` : Gestion des connexions marines (parking, arrêt avec ancre).
   - `deplacement/` : Motorisation (électrique) et systèmes de déplacement.
 - `/vehicules/` : Projets complémentaires de mobilité terrestre.
+- `/software/` : Rapports et projets logiciels pour le suivi, la supervision (IoT) et l'aide à la navigation.
 
 ## Références et Bibliographie
 
