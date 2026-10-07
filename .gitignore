@@ -1,0 +1,27 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires Bureautique (LibreOffice / MS Office)
+.~lock.*.ods#
+.~lock.*.odt#
+~$*.xlsx
+~$*.docx
+
+# Fichiers temporaires CAO / 3D
+*.bak
+*.log
+*.auto
+*.swp
+
+# Builds et caches Logiciel / ROS 2
+/software/**/build/
+/software/**/install/
+/software/**/log/
+*.pyc
+__pycache__/
+
+# Environnements virtuels
+.venv/
+venv/
+node_modules/
