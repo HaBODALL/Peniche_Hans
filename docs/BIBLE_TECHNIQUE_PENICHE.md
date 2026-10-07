@@ -2,7 +2,7 @@
 
 Ce document centralise l'intégralité de l'ingénierie, de la réglementation et des stratégies opérationnelles pour la transformation d'une péniche Freycinet (38,50 m × 5,05 m) en un habitat mobile semi-autonome doté d'un atelier et d'un laboratoire de R&D.
 
-Il est issu des 6 carnets thématiques du projet et sert de référentiel unique (Single Source of Truth) pour la communication interne et externe (VNF, HAROPA, Crédit Maritime, Assurances).
+Il est issu des 6 carnets thématiques du projet et sert de référentiel unique (Single Source of Truth) pour la communication interne et externe.
 
 > 📁 **Bibliographie & Ressources :**
 > Les réglementations officielles (ES-TRIN, CEVNI, rapports CESNI) citées dans ce document sont stockées au format PDF dans le dossier racine [`/bibliographie/`](../bibliographie/).
@@ -21,154 +21,363 @@ Il est issu des 6 carnets thématiques du projet et sert de référentiel unique
 
 ## 1. Architecture Navale, Réglementation et Aménagement
 
-La transformation d'une péniche Freycinet bascule sous le cadre ES-TRIN et l'urbanisme fluvial.
+### 1.1 Macro (Vision Globale) — Cadre Réglementaire & Points Bloquants
+La transformation d'une péniche au gabarit Freycinet (38,50 m × 5,05 m) en habitat fait basculer le bateau du régime de la petite plaisance vers le cadre juridique des bateaux de navigation intérieure.
 
-### 1.1 Cadre Réglementaire (Macro)
-* **ES-TRIN (CESNI)** : Nécessite un titre de navigation. L'épaisseur minimale de coque est de 3,8mm. Une séparation stricte est exigée entre l'électricité domestique (230V/24V) et la propulsion (400V DC).
-* **Isolation et Coupe-Feu** : L'installation de parcs batteries Lithium nécessite un cloisonnement A60. Les vaigrages doivent être difficilement inflammables.
-* **Domaine Public Fluvial (VNF/HAROPA)** : La Convention d'Occupation Temporaire (COT) est précaire et révocable. Le rejet d'eaux usées (grises et noires) est **strictement interdit** sans équipement validé (zéro-rejet).
-* **Points bloquants (No-Go)** : Perte de COT (activité économique non déclarée), ou coque trop fine (<3,5mm).
+**A. Les 3 Piliers Réglementaires**
+*   **Standard Européen ES-TRIN (CESNI)**
+    *   *Seuil de 20 mètres* : Soumis à l'obtention d'un Titre de Navigation (Certificat Communautaire).
+    *   *Intégrité de la coque (Art. 3.02)* : Épaisseur minimale du bordé d'acier/sole généralement de 3,50 mm à 3,84 mm, et 4,80 mm pour les bouchains.
+    *   *Sécurité électrique* : Séparation physique stricte entre réseau domestique (NFC 15-100) et réseau de propulsion (400V DC).
+*   **Domaine Public Fluvial (VNF / HAROPA Port)**
+    *   *COT* : L'amarrage permanent repose sur une Convention d'Occupation Temporaire, précaire et révocable.
+    *   *Mise en concurrence* : Si la péniche accueille une activité économique (labo R&D payant), le renouvellement est soumis à un appel à projets.
+    *   *Gabarit* : Surélévations plafonnées à 25 % du rectangle hors-tout.
+*   **Environnement "Zéro-Rejet"** : Interdiction absolue de déverser eaux noires et grises dans le milieu naturel.
 
-### 1.2 Ingénierie du Lestage (Meso)
-Le bateau lège pèse environ 50t à 100t. Il faut atteindre un déplacement cible de ~200t pour un tirant d'eau nominal de 1,20m.
-* **Fonte (7,2 t/m³)** : Idéale pour gagner de la hauteur sous barrot, mais très chère.
-* **Acier / Ferraille (4 à 7 t/m³)** : Bon compromis mais grand risque de rouille et corrosion confinée.
-* **Béton Lourd/Standard (2,4 à 3,8 t/m³)** : **Option hybride recommandée**. Couler le fond entre les varangues avec du béton, puis affiner l'assiette avec quelques gueuses d'acier aux extrémités.
-* **Eau** : Exclue au centre (effet de carène liquide modifiant la stabilité), utile uniquement en ballasts fermés compartimentés.
+```text
+                     ┌─────────────────────────────────────────┐
+                     │ PÉNISSE FREYCINET HABITAT / LABO (38,5m)│
+                     └────────────────────┬────────────────────┘
+                                          │
+         ┌────────────────────────────────┼────────────────────────────────┐
+         ▼                                │                                ▼
+┌─────────────────────────┐               │                  ┌───────────────────────────┐
+│     SÉCURITÉ NAVALE     │               │                  │     GESTION DOMANIALE     │
+│    Standard ES-TRIN     │               │                  │   COT (VNF / HAROPA Port) │
+├─────────────────────────┤               │                  ├───────────────────────────┤
+│• Épaisseur coque ≥3,8mm │               ▼                  │• Précaire & Révocable     │
+│• Titre de navigation    │ ┌─────────────────────────────┐  │• Limite 25% pont couvert  │
+│• Séparation 230V / 400V │ │ ASSAINISSEMENT ZÉRO-REJET   │  │• Appel à projet si activité│
+└─────────────────────────┘ │   Eaux grises & noires      │  │  économique (CGPPP)       │
+                            └─────────────────────────────┘  └───────────────────────────┘
+```
 
-### 1.3 Inspection de Coque par Drone ROV (Nano)
-Pour éviter la mise en cale sèche (coût et délai tous les 7 à 10 ans), le projet déploie un ROV d'inspection par ultrasons.
-* **Base matérielle** : BlueROV2 Heavy (8 propulseurs vectorisés) avec Skid magnétique pour ventouser la coque.
-* **Sonde** : Palpeur à ultrasons Cygnus Multi-Écho sur cardan à ressorts pour percer la peinture sans meulage.
-* **Reconnaissance** : Doit être conforme IACS UR Z17 / ISO 9712 avec supervision par un expert fluvial certifié à terre.
-* **Logiciel** : ROS 2 pour la fusion SLAM et la géolocalisation des défauts.
+**B. Matrice des Points Bloquants ("No-Go" Légaux)**
+1.  **Refus de Titre ES-TRIN** : Coque < 3,5 mm $\rightarrow$ Interdiction de naviguer/stationner. *Prévention : Audit structurel et sondage ultrasons préalable complet avant achat.*
+2.  **Perte de COT** : Activité économique non déclarée $\rightarrow$ Expulsion. *Prévention : Valider la COT pour activité mixte.*
+3.  **Blocage Sanitaire** : Absence de système étanche agréé $\rightarrow$ Refus de COT.
+4.  **Non-conformité Urbanisme/PLU** : Marquise dépassant 25 %. *Prévention : Validation des plans 3D extérieurs.*
+5.  **Démotorisation non autorisée** : Retrait du moteur thermique sans accord $\rightarrow$ Reclassification en "Établissement Flottant".
 
-### 1.4 Aménagement PMR (Pratique)
-* Franchissement vertical par élévateur à vis sans fin pont/cale.
-* Plancher nivelé avec tolérance < 5mm.
-* **Couloir central ≥ 120 cm**.
-* **Aires de rotation ≥ 150 cm** de diamètre dans chaque zone fonctionnelle (salon, SDB, chambre, labo).
-* Portes à galandage passage net 83cm, absence totale de seuil (chanfrein max 2cm).
+### 1.2 Meso — Comparatif des Stratégies de Lestage
+Pour atteindre un tirant d'eau stable (1,20 m à 1,30 m), la masse globale doit atteindre environ 220 à 240 tonnes.
+
+| Critères d'Évaluation | Blocs de Fonte | Gueuses de Ferraille | Blocs Béton Standard | Béton Lourd (Magnétite) | Sable (Vrac) | Eau (Cuves Ballast) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Densité & Gain Hauteur** | 5 ($7,2\text{ t/m}^3$) | 4 ($4,0\text{ t/m}^3$) | 2 ($2,4\text{ t/m}^3$) | 3 ($3,8\text{ t/m}^3$) | 1 ($1,6\text{ t/m}^3$) | 1 ($1,0\text{ t/m}^3$) |
+| **Coût d'acquisition (CAPEX)** | 2 (1000–2200 €/t) | 3 (130–190 €/t) | 5 (45–150 €/t) | 4 (150–300 €/t) | 5 (10–25 €/t) | 5 (~0 €/t) |
+| **Logistique/Installation** | 2 (Grue requise) | 3 (Lourd) | 4 (Modulaire) | 4 (Modulaire) | 3 (Big Bags) | 4 (Pompe) |
+| **Réversibilité** | 3 (Manutention) | 3 (Manutention) | 4 (Net) | 4 (Net) | 1 (Très difficile) | 5 (Pompage) |
+| **Corrosion Coque** | 5 (Insensible) | 2 (Risque rouille) | 4 (Sec) | 4 (Sec) | 1 (Piège l'humidité) | 3 (Risque de fuite) |
+| **Stabilité (Carène liquide)**| 5 (Parfaite) | 5 (Parfaite) | 5 (Parfaite) | 5 (Parfaite) | 4 (Risque glissement)| 2 (Effet carène liq.) |
+| **Score Global** | **3,7 / 5** | **3,3 / 5** | **4,0 / 5** | **4,3 / 5** | **2,5 / 5** | **3,3 / 5** |
+
+*Recommandation* : Hybride. Fond de cale en Béton Lourd entre les varangues, ajustement en Gueuses de Fonte aux extrémités.
+
+### 1.3 Nano — Drone Sous-Marin (ROV) pour Inspection de Coque
+Développement d'une plate-forme d'inspection robotisée à flot pour reporter les mises en cale sèche (intervalle 7–10 ans).
+
+```text
+┌────────────────────────────────────────────────────────────────────────┐
+┌┤                   STATION DE SURFACE (PC DURCI)                       ├┐
+││  - IHM / ROS 2 Supervision  - Visualisation Video HD + A-Scan OSD      ││
+││  - Traitement MAVLink       - Fichier journal binaire infalsifiable   ││
+└└───────────────────────────────────┬───────────────────────────────────┘┘
+                                     │
+                    OMBILICAL HIGH-SPEED / POWER
+                                     │
+┌────────────────────────────────────┴───────────────────────────────────┐
+┌┤                   ROV SOUS-MARIN (BlueROV2 Heavy)                     ├┐
+││  ┌─────────────────────────┐             ┌─────────────────────────┐  ││
+││  │ CALCULATEUR COMPAGNON   │             │ PILOTE AUTOMATIQUE      │  ││
+││  │ Nvidia Jetson / ROS 2   │◄──USB/MAV──►│ Pixhawk / ArduSub       │  ││
+││  └────────────┬────────────┘             └────────────┬────────────┘  ││
+││               ▼                                       ▼               ││
+││  ┌──────────┐ ┌───────────────┐         ┌───────────┐ ┌─────────────┐ ││
+││  │ CAPTEUR  │ │ TÉLÉMÉTRIE    │         │ SENSORS   │ │ PROPULSION  │ ││
+││  │ ULTRASONS│ │ DVL A50       │         │ Bar02/30  │ │ 8x T200     │ ││
+││  │ Cygnus   │ │ (WaterLinked) │         │ IMU 9-DoF │ │ Vecteurs    │ ││
+││  └────┬─────┘ └───────────────┘         └───────────┘ └─────────────┘ ││
+││       ▼                                                               ││
+││  ┌─────────────────────────────────────────────────────────────────┐  ││
+││  │ PALPEUR UT MULTI-ÉCHO sur Cardan à ressort (Spring-Loaded)      │  ││
+││  └─────────────────────────────────────────────────────────────────┘  ││
+└└───────────────────────────────────────────────────────────────────────┘┘
+```
+*   **Technique d'Inspection à Distance (RIT)** : IACS UR Z17 / ISO 9712. L'expert fluvial doit être présent physiquement sur le site.
+*   **Physique Multi-Écho** : Élimine mathématiquement l'épaisseur des peintures anticorrosion sans meulage.
+*   **Architecture Matérielle** : BlueROV2 Heavy (6-DoF), Skid à roues magnétiques NdFeB pour se ventouser, palpeur Cygnus sur cardan à ressorts ($\pm 15^\circ$ d'alignement).
+*   **Logiciel (ROS 2)** : Nœud `cygnus_ut_driver` filtre les faux échos ($|t_1 - t_2| \le \epsilon$).
+
+### 1.4 Pratique — Aménagement PMR en Cale Freycinet
+
+```text
+                     COUPE TRANSVERSALE CALE FREYCINET AMÉNAGÉE PMR
+
+               ◄───────────────── 5,05 m (Largeur hors-tout) ──────────────►
+ ┌──────────┐  ╔═══════════════════════════════════════════════════════════╗  ┌──────────┐
+ │ PLAQUE   │  ║  ISOLATION POLYURÉTHANE PROJETÉE (10-12 cm par flanc)     ║  │ PLAQUE   │
+ │ ACIER    │  ║  ┌─────────────────────────────────────────────────────┐  ║  │ ACIER    │
+ │ BORDÉ    │  ║  │    ESPACE UTILE AMÉNAGÉ NET (~4,20 m à 4,40 m)      │  ║  │ BORDÉ    │
+ └────┬─────┘  ║  │                                                     │  ║  └────┬─────┘
+      │        ║  │    ┌──────────────────┐     ┌──────────────────┐    │  ║       │
+      │        ║  │    │ CLOISON / MEUBLE │     │ COULOIR CENTRAL  │    │  ║       │
+      │        ║  │    │ PORTE GALANDAGE  │     │ PASSAGE ≥ 120 cm │    │  ║       │
+      │        ║  │    │ Passage ≥ 83 cm  │     │ (Giration 150cm) │    │  ║       │
+      │        ║  │    └────────┬─────────┘     └────────┬─────────┘    │  ║       │
+      │        ║  └─────────────┼────────────────────────┼──────────────┘  ║       │
+      │        ║ ═══════════════╧════════════════════════╧════════════════ ║       │
+      │        ║   PLANCHER DE CALE NIVELÉ SUR LEST (Planéité < 5mm)      ║       │
+      │        ╚═══════════════════════════════════════════════════════════╝       │
+      └─────────────────────────────────┬──────────────────────────────────────────┘
+                                ┌───────┴───────┐
+                                │ VARANGUES &   │
+                                │ LEST BÉTON/   │
+                                │ FONTE         │
+                                └───────────────┘
+```
+**Checklist Étape par Étape :**
+1.  **Franchissement Vertical** : Élévateur PMR vertical (entraînement à vis sans fin 230V). Plateforme $\ge 90\times140$ cm.
+2.  **Nivellement & Circulations** : Axe de circulation central de $120\text{ cm}$. Aire de rotation de $150\text{ cm}$ de diamètre dans chaque zone (Entrée, Salon, SDB). Revêtement R10/PN12.
+3.  **Portes & Seuils** : Portes à galandage suspendues passage net $\ge 83\text{ cm}$. Seuil max 2 cm avec bords chanfreinés à 33 %.
+4.  **Sanitaires** : Douche plain-pied $120\times90\text{ cm}$ avec pompe de relevage automatique d'eaux grises.
 
 ---
 
 ## 2. Gestion des Eaux et Écologie Expérimentale
 
-### 2.1 Réglementation et Tolérances (Macro)
-* **Zéro-rejet absolu** : La loi française (Code de l'environnement) et la doctrine des ports fluviaux interdisent tout rejet direct d'eaux noires et grises non traitées.
-* **Obligation d'équipement** : Obligation d'avoir soit des cuves de rétention ISO 8099 (vidange par camion à quai), soit une station d'épuration homologuée (selon le Chapitre 18 de l'ES-TRIN).
+### 2.1 Macro — Réglementation et Interdictions
+*   **Interdiction stricte de rejet brut** : Aucun rejet d'eaux noires brutes (toilettes) n'est toléré dans le réseau fluvial français.
+*   **Tolérance unique d'épuration autonome** : Le seul rejet d'eaux vannes autorisé est celui issu d'une station d'épuration homologuée selon le Chapitre 18 du standard ES-TRIN ($\text{DBO}_5 \le 25\text{ mg/L}$, $\text{DCO} \le 125\text{ mg/L}$).
+*   **Doctrines Domaniales** : VNF et HAROPA imposent le raccordement direct au réseau d'assainissement collectif urbain à quai ou la rétention totale avec vidange par camion.
 
-### 2.2 Comparatif des Filières d'Assainissement (Meso)
-* **MBR (BioRéacteur à Membrane)** : Station ultra-compacte certifiée ES-TRIN. Excellente épuration (DBO5 < 10 mg/L), emprise au sol minimale (1m²), mais nécessite une alimentation électrique continue (~1 kWh/jour).
-* **Phytoépuration (Barge/Pont)** : Zéro consommation (gravitaire), très low-tech, mais volume et poids massifs (jusqu'à 7,5 tonnes). Sensible au froid. Dangereux pour la stabilité du bateau si placé sur le pont.
-* **Bokashi & Séparation (Toilettes Sèches)** : Supprime le flux noir liquide, emprise minimale, mais nécessite une maintenance manuelle importante. Ne résout pas le problème des eaux grises (qui devront quand même passer par un MBR).
+### 2.2 Meso — Comparatif des Filières d'Assainissement
+| Critère d'Analyse | Station Industrielle MBR (Bioréacteur) | Phytoépuration Flottante | Bokashi + Toilettes Sèches (Séparation) |
+| :--- | :--- | :--- | :--- |
+| **Efficacité d'Épuration** | Excellente : $\text{DBO}_5 \le 10\text{ mg/L}$, $> 99,99\%$ élimination bactérienne | Fluctuante : Abattement 75-85%, sensible au froid | Inapplicable sur jus (lixiviat $\text{DCO} > 1000\text{ mg/L}$) |
+| **Conformité VNF / ES-TRIN**| Totale : Homologuée Chapitre 18 | Incertaine sans agrément spécifique | Non conforme pour rejets liquides |
+| **Encombrement Navals** | Optimisé : Emprise $0,8$ à $1,5\text{ m}^2$ | Incompatible en coque (jusqu'à 7,5 tonnes) | Minimal |
+| **Autonomie Énergétique** | Dépendante : $35\text{ W}$ en continu ($1\text{ kWh/jour}$) | Haute : Passif ($0\text{ kWh/jour}$) | Absolue : $100\%$ manuelle |
 
-### 2.3 Méthanisation Embarquée (Nano)
-Le développement expérimental d'un digesteur anaérobie (2 à 4 EH) permet la valorisation des déchets organiques en biogaz et digestat.
-* **Risques** : En milieu confiné (cale en acier), le biogaz (CH4, H2S) pose un risque mortel d'asphyxie et d'explosion.
-* **IoT** : Nécessite une supervision très stricte des gaz et des pressions par l'architecture logicielle embarquée (Home Assistant / Serveur Edge).
+### 2.3 Nano — Ingénierie de la Méthanisation
+Pour un système de méthanisation (digesteur) expérimental (2 à 4 personnes) :
+*   **Risques** : En milieu confiné (péniche), les fuites de $CH_4$ et $H_2S$ présentent un danger d'asphyxie et d'explosion.
+*   **Sécurité IoT** : Architecture de surveillance requise pour la gestion des vannes et la ventilation forcée.
 
-### 2.4 Architecture Hydraulique (Pratique)
-Prévoir une double tuyauterie : un circuit gravitaire principal d'eaux grises dirigé vers le MBR/cuves de rétention (la filière réglementaire sûre), et une "boucle d'essai" (by-pass) pour tester les filtres expérimentaux avec de vraies charges organiques sans polluer le réseau.
+### 2.4 Pratique — Architecture Hydraulique Bi-carburation
+Conception de réseaux sanitaires en bi-carburation : un circuit classique gravitaire conforme (orienté vers le MBR ou les cuves de rétention) et une **boucle expérimentale de test** pour éprouver de nouvelles méthodes de filtration grise sans risque de pollution du milieu.
 
 ---
 
 ## 3. Énergie, Électricité et Motorisation Fluviale
 
-### 3.1 Séparation Électrique ES-TRIN (Macro)
-La réglementation fluviale impose une étanchéité matérielle absolue entre l'habitat et la propulsion.
-* **Bloc 1 (Habitat)** : 230V AC / 24V DC. Standard domotique (NFC 15-100).
-* **Bloc 2 (Propulsion)** : 400V DC pour les moteurs électriques.
-* **Neutre IT** : Les réseaux doivent fonctionner avec des pôles flottants (totalement isolés de la coque) et sous la surveillance de deux Contrôleurs Permanents d'Isolement (CPI) distincts (400V et 230V).
-* **Compartimentage Lithium** : Pour un parc batteries $\ge$ 20 kWh, obligation d'avoir un local dédié classé coupe-feu A60, ventilé directement vers l'extérieur avec extinction automatique.
-* **Priorité Propulsion** : L'EMS (Energy Management System) doit prioriser la propulsion de manière absolue et délester automatiquement l'habitat en cas d'appel de puissance du moteur.
+### 3.1 Macro — Prérequis ES-TRIN (Bloc 1 et Bloc 2)
+Pour une péniche Freycinet, l'ES-TRIN impose une étanchéité fonctionnelle absolue.
+*   **Bloc 1 (Habitat)** : 230V AC / 24V DC.
+*   **Bloc 2 (Propulsion)** : 400V DC.
+*   **Régime IT & CPI** : Les réseaux doivent avoir des pôles flottants isolés de la coque en acier. Deux Contrôleurs Permanents d'Isolement (CPI) distincts et découplés doivent être installés.
+*   **Compartimentage (Art. 10.11)** : Les batteries Lithium $\ge 20\text{ kWh}$ exigent un local protégé classe coupe-feu **A60**, avec ventilation mécanique directe vers le pont ouvert et extinction fixe. *Interdit dans les locaux d'habitation.*
+*   **Délestage** : L'automate (PMS) garantit la priorité absolue à la propulsion, délestant automatiquement l'habitat en cas d'appel de puissance.
 
-### 3.2 Rétrofit Professionnel vs Semi-DIY (Meso)
-* **L'impasse du semi-DIY (batteries automobiles de récupération)** : Bien que moins cher à l'achat, l'absence de certification (EN 62619) interdit l'homologation ES-TRIN, fait perdre l'accès aux assurances maritimes, et annule l'éligibilité aux primes financières (CEE/VNF).
-* **La solution Professionnelle (Clé en main)** : Obligatoire pour un bateau navigable de gabarit Freycinet (38m). Offre la garantie, la conformité légale et le déblocage des subventions.
+### 3.2 Meso — Rétrofit Professionnel vs Semi-DIY
+*   **Semi-DIY (Composants auto/industrie d'occasion)** : Impasse réglementaire. Impossibilité de certifier les batteries réassemblées (EN 62619). Entraîne le refus de certificat, déchéance d'assurance, et inéligibilité aux aides.
+*   **Pro Clé en Main** : Certifié, couvert par les assurances, et éligible aux primes CEE (TRA-EQ-126) et subventions VNF/PAMI.
 
-### 3.3 Contrôleur de Batterie (BMS) Haute Tension (Nano)
-Pour l'expérimentation R&D (hors-propulsion principale), un BMS 400V doit respecter des contraintes sévères :
-* Surveillance cellule par cellule avec gestion thermique active.
-* Communication CAN-bus/NMEA 2000 avec isolation galvanique certifiée entre la Haute Tension (400V) et les réseaux Basse Tension (24V).
+### 3.3 Nano — Contrôleur de Batterie (BMS) 400V DC
+Cahier des charges pour un pack LFP expérimental :
+*   Conformité EN 62619 (sécurité) et EN 62620.
+*   Interface CAN-bus / Modbus TCP isolée galvaniquement pour dialoguer avec l'inverter.
+*   Isolation galvanique renforcée entre la mesure HT (400V) et les bus 24V.
 
-### 3.4 Déploiement Solaire sur le Roof (Pratique)
-* **Choix technique** : Panneaux ETFE souples, posés sur une sous-couche (type nid d'abeille/polycarbonate) créant une lame d'air de 15mm. Évite la surchauffe de la coque en acier (+15% de rendement récupéré face à un collage direct).
-* **Architecture MPPT** : Multiplication des petits micro-onduleurs ou contrôleurs MPPT (strings indépendants) pour contrer drastiquement les ombres portées du mât de navigation et des arbres de rive.
+### 3.4 Pratique — Déploiement Solaire sur le Roof
+*   **Matériel** : Panneaux ETFE (éthylène tétrafluoroéthylène) flexibles.
+*   **Montage critique** : Le collage direct sur acier sombre entraîne des surchauffes (perte de 15-18% de rendement). Solution : montage sur sous-couche polycarbonate alvéolaire créant une **lame d'air de 10 à 15 mm**.
+*   **Architecture de conversion** : Multiplier les régulateurs MPPT indépendants pour contrer l'ombrage du mât et des berges.
 
 ---
 
 ## 4. IT, Logiciel, Supervision et Réseaux (IoT)
 
-### 4.1 Architecture "Offline-First" (Macro)
-Pour maintenir l'opérabilité critique sans connexion internet (écluses profondes, zones blanches rurales), l'infrastructure repose sur un serveur local "Edge".
-* **Serveur Edge** : Mini-PC fanless industriel ou cluster durci. L'OS doit être en Read-Only (OverlayFS) pour prévenir toute corruption de carte/disque due aux coupures électriques.
-* **VLANs Sectorisés** :
-  - VLAN 10 : Navigation (NMEA 2000, GPS, Signal K).
-  - VLAN 20 : Énergie et IoT (Victron Cerbo GX, Modbus TCP, MQTT, Home Assistant).
-  - VLAN 30 : Clients tactiles, équipage et labo.
-  - VLAN 40 : WAN (Starlink, modem 4G/5G, Wi-Fi de quai).
-* **Clients (Android/Web)** : Conçus pour lire et écrire dans une base de données locale (Room DB) et se synchroniser en arrière-plan lorsque le réseau interne est capté.
+### 4.1 Macro — Architecture Informatique Globale & Autonomie Offline-First
+Pour maintenir une opérabilité critique à 100 % face aux coupures de connexion prolongées, l'infrastructure embarquée repose sur un paradigme Offline-First.
 
-### 4.2 Réseaux Sans Fil en Milieu Métallique (Meso)
-Une coque en acier crée une cage de Faraday et des évanouissements de signal (fading) importants.
-* **Wi-Fi Classique (2.4/5GHz)** : Faible pénétration, bloqué dès le passage d'une cloison étanche (perte >25 dB).
-* **LoRaWAN (Sub-GHz, 868 MHz)** : Excellent pour la télémétrie discrète et les capteurs sur piles (fuite de cale, température moteur). La modulation traverse l'acier et offre jusqu'à 10 ans d'autonomie.
-* **Wi-Fi HaLow (802.11ah)** : Le protocole optimal pour les flux à haut débit dans le bateau (caméras salle des machines, télémétrie IP native), combinant la diffraction du Sub-GHz et les débits de l'OFDM.
+```text
++-----------------------------------------------------------------------------------+
+|                            POSTES CLIENTS (Tablettes / Android)                   |
+|              Jetpack Room DB (Single Source of Truth) <---> WorkManager           |
++-----------------------------------------------------------------------------------+
+                                          | (Wi-Fi Local Intranet)
+                                          v
++-----------------------------------------------------------------------------------+
+|                             SERVEUR LOCAL EDGE (FANLESS)                          |
+|  - OS Read-Only (OverlayFS) + Hardware Watchdog                                   |
+|  - Middleware : Signal K (N2K/Modbus) <---> Broker MQTT <---> Home Assistant      |
+|  - Moteurs de stockage : InfluxDB / SQLite (Partition de persistance NVMe PLP)    |
++-----------------------------------------------------------------------------------+
+                                          |
+                      +-------------------+-------------------+
+                      | (Modbus / MQTT)                       | (N2K / CAN)
+                      v                                       v
+         [Génération Solaire & Victron]           [Capteurs Moteur & Navigation]
+```
+*   **VLANs Sectorisés** : VLAN 10 (Navigation), VLAN 20 (Gestion Énergétique), VLAN 30 (Clients), VLAN 40 (WAN 4G/Starlink).
+*   **Clients Android** : Utilisent `Jetpack Room DB`. Le `WorkManager` synchronise les données en arrière-plan lorsque le Wi-Fi local est retrouvé.
 
-### 4.3 Durcissement Matériel Fluvial (Pratique)
-L'environnement fluvial impose des contraintes physiques permanentes :
-* **Vibrations** : Proscription totale des disques durs mécaniques (HDD). Utilisation de SSD NVMe certifiés (MIL-STD-810H) montés sur silentblocs en Viton ou amortisseurs à câbles.
-* **Alimentations** : Le serveur est alimenté directement sur le bus **24V DC** du navire via un DC-UPS à supercondensateurs (pour lisser les chutes de tension lors du démarrage des moteurs).
-* **Condensation (Tropicalisation)** : Application d'un vernis de tropicalisation polyuréthane (Conformal Coating IPC-CC-830C) sur les cartes mères. Armoires IP55/66 climatisées en circuit fermé (Peltier/Caloducs).
-* **Sauvegarde (3-2-1)** : Snapshots locaux ZFS $\rightarrow$ réplication sur NAS distant (timonerie) $\rightarrow$ synchronisation Cloud asynchrone lors de l'accès 4G.
+### 4.2 Meso — Comparaison des Technologies Sans Fil (Cage de Faraday)
+À l'intérieur d'une coque en acier, les cloisons créent une cavité résonnante sujette au *fading*.
+
+| Protocole | Pénétration Coque | Immuabilité Multi-trajets | Débit | Consommation / Autonomie |
+| :--- | :--- | :--- | :--- | :--- |
+| **Wi-Fi Classique (2.4/5GHz)** | Très faible (Bloqué 1er pont) | Moyenne | 10 Mbps à 1 Gbps | Élevée (Jours/Semaines) |
+| **Bluetooth Mesh** | Faible (Relais nécessaires) | Faible (Résonances) | 10 à 50 kbps | Asymétrique |
+| **LoRaWAN (Sub-GHz)** | Excellente (Franchit 2-3 ponts) | Maximale (CSS) | 0.3 à 50 kbps | Ultra-faible (5-10 ans) |
+| **Wi-Fi HaLow (802.11ah)** | Excellente (Diffraction + OFDM) | Très haute | 150 kbps à 15 Mbps| Ultra-faible (2-5 ans) |
+
+*Verdict* : LoRaWAN pour les capteurs sur piles (fuite, température). Wi-Fi HaLow pour la télémétrie IP native (caméras, vibrations moteur).
+
+### 4.3 Nano — Code Python d'Extraction API (EuRIS / VNF)
+Script complet permettant de récupérer et superposer les données de navigation publiques (WFS et OData V4) sur une cartographie autonome.
+
+```python
+import requests
+import json
+import folium
+from folium import plugins
+
+class InlandWaterwaysDataExtractor:
+    EURIS_BASE_URL = "https://www.eurisportal.eu/visuris/api"
+
+    def __init__(self, euris_api_token=None):
+        self.euris_token = euris_api_token
+        self.session = requests.Session()
+        self.session.headers.update({"Accept": "application/json", "User-Agent": "Péniche-SCADA/1.0"})
+        if self.euris_token:
+            self.session.headers.update({"Authorization": f"Bearer {self.euris_token}"})
+
+    def fetch_euris_berths(self, top=50, skip=0):
+        endpoint = f"{self.EURIS_BASE_URL}/Berth/GetCompactBerths"
+        try:
+            response = self.session.get(endpoint, params={"$top": top, "$skip": skip}, timeout=15)
+            response.raise_for_status()
+            return response.json().get("items", [])
+        except requests.exceptions.RequestException as e:
+            print(f"Erreur d'extraction EuRIS Berth API: {e}")
+            return []
+
+    def fetch_vnf_wfs_polygons(self, wfs_url, type_name):
+        params = {"service": "WFS", "version": "2.0.0", "request": "GetFeature", "typeName": type_name, "outputFormat": "application/json"}
+        response = requests.get(wfs_url, params=params, timeout=20)
+        return response.json()
+
+    def transform_berths_to_geojson(self, berths_list):
+        features = []
+        for berth in berths_list:
+            geometry = berth.get("geometry")
+            if not geometry and "longitude" in berth and "latitude" in berth:
+                geometry = {"type": "Point", "coordinates": [float(berth["longitude"]), float(berth["latitude"])]}
+            if geometry:
+                status_code = berth.get("berthStatus", 0)
+                features.append({
+                    "type": "Feature", "geometry": geometry,
+                    "properties": {
+                        "isrs": berth.get("isrsCode", "N/A"),
+                        "name": berth.get("objectName", "Zone"),
+                        "status": status_code
+                    }
+                })
+        return {"type": "FeatureCollection", "features": features}
+
+def generate_interactive_map(geojson_data, output_html="carte_amarrage_locale.html"):
+    m = folium.Map(location=[48.8566, 2.3522], zoom_start=12, tiles="CartoDB positron")
+    def style_function(feature):
+        status = feature["properties"].get("status", 0)
+        colors = {0: "#2ecc71", 1: "#f1c40f", 2: "#e74c3c"}
+        return {"fillColor": colors.get(status, "#9b59b6"), "color": "#111", "weight": 1.5, "fillOpacity": 0.7}
+    folium.GeoJson(geojson_data, style_function=style_function).add_to(m)
+    m.save(output_html)
+
+if __name__ == "__main__":
+    extractor = InlandWaterwaysDataExtractor(euris_api_token="VOTRE_JETON_PAT_EURIS")
+    raw_berths = extractor.fetch_euris_berths(top=50)
+    geojson_berths = extractor.transform_berths_to_geojson(raw_berths)
+    generate_interactive_map(geojson_berths)
+```
+
+### 4.4 Pratique — Plan de Sauvegarde & Redondance Matérielle Fluviale
+```text
+                                  [Réseau Bord 24V DC / Alternateur]
+                                                  |
+                                     [Module OR-ing FET (Redondance 1+1)]
+                                                  |
+                                     [DC-UPS 24V (Supercondensateurs / LiFePO4)]
+                                                  |
++---------------------------------------------------------------------------------------------------+
+| ARMOIRE ÉTANCHE THERMORÉGULÉE (IP55/IP66 - Refroidissement Peltier / Caloducs en Circuit Fermé)   |
+|   +-------------------------------------------------------------------------------------------+   |
+|   | CHÂSSIS SERVEUR FANLESS (Monté sur Silentblocs Viton + Amortisseurs à câbles hélicoïdaux) |   |
+|   | - Cartes électroniques : Conformal Coating Polyuréthane (IPC-CC-830C)                     |   |
+|   | - Stockage : Array RAID 10 ZFS Mirroring SSD NVMe Entreprise (Condensateurs PLP)          |   |
+|   +-------------------------------------------------------------------------------------------+   |
++---------------------------------------------------------------------------------------------------+
+```
+*   **Vibrations** : HDD bannis (destruction des têtes). SSD NVMe certifiés MIL-STD-810H avec PLP (Power Loss Protection), montés sur amortisseurs à câbles hélicoïdaux.
+*   **Alimentation 24V Native** : Suppression des conversions AC/DC avec un contrôleur DC-UPS à supercondensateurs lissant les chocs de tension du moteur (crank surge).
+*   **Sauvegarde 3-2-1** : Snapshots locaux ZFS $\rightarrow$ Réplication sur NAS distant (timonerie) $\rightarrow$ Synchronisation Cloud asynchrone (Queueing).
 
 ---
 
 ## 5. Mobilité Terrestre Électrique
 
-L'objectif est de documenter une flotte de véhicules légers faisant le lien entre le bateau (amarré), les haltes fluviales, et l'intérieur des terres, tout en profitant de l'énergie solaire du bord.
+L'objectif est d'assurer une mobilité propre au départ de la péniche, rechargée par le système solaire du bord.
 
-### 5.1 Impasses Légales du Rétrofit et du DIY (Macro)
-* **DIY & RTI** : La construction d'une moto électrique "maison" ou la modification d'un cadre (RTI) est un gouffre financier légal (tests destructifs UNECE R136 et normes de Compatibilité Électromagnétique R10 en chambre anéchoïque UTAC).
-* **Rétrofit thermique** : Nécessite un installateur agréé et un kit de marque certifié. À ce jour, aucun kit n'est homologué pour de gros roadsters type Triumph Bonneville.
-* **Choix validé** : L'acquisition d'une moto électrique de série neuve ou d'occasion (ex: gamme Zero Motorcycles) est la seule voie viable et assurable sans surcoût.
+### 5.1 Macro — Impasses Légales et Arbitrage
+*   **L'impasse de la construction amateur (RTI)** : La fabrication DIY exige les tests UNECE R136 (écrasement batterie) et R10 (CEM), destructifs et inabordables (dizaines de milliers d'euros).
+*   **Le cadre du rétrofit (Arrêté 2020)** : Réservé aux professionnels avec un agrément de prototype CNRV. Aucun kit n'existe pour les gros modèles.
+*   **Arbitrage Stratégique** : Acquisition d'une moto électrique de série (Zero Motorcycles) garantissant la légalité, l'assurance, et le standard CEM.
 
-### 5.2 Comparatif des Bases Roulantes (Meso)
-Le cahier des charges exige une capacité Duo + Bagages (charge utile requise > 200kg).
-* **Maeving RM1 / RM1S** : Homologation stricte monoplace (129kg de charge max). Éliminée.
-* **Zero S (Occasion < 2024)** : Poids contenu (142kg) mais charge utile duo trop juste (149kg).
-* **Zero DSR/X ou Zero S 2024+ (Châssis FST)** : Poids élevé (~220-250kg) mais homologuée pour plus de 210kg de charge. Atout majeur : intègre une **marche arrière électrique**, fondamentale pour reculer sur une rampe ou manœuvrer sur le pont étroit d'une péniche.
+### 5.2 Meso — Étude Comparative Duo + Bagages (200–250 kg)
+*   **Maeving RM1 / RM1S** : Homologuée monoplace. Charge utile de 129 kg max. Éliminée.
+*   **Triumph Speed Twin 900** : Thermique. Excellent en théorie (210 kg) mais illégal en rétrofit DIY.
+*   **Zero S (Génération < 2024)** : Poids léger (142 kg), charge utile duo insuffisante (149 kg).
+*   **Zero DSR/X ou S (Châssis FST 2024+)** : Poids à vide de 247 kg, PTAC de 454 kg $\rightarrow$ **Charge utile de 207 kg**, idéale pour le duo avec bagages. Atout logistique : **Marche arrière à basse vitesse (Parking Mode)**.
 
-### 5.3 Logistique Embarquée (Pratique)
-* **Rampe télescopique (Option 1)** : Adaptée aux quais stabilisés. En raison des dénivelés bateau/quai variant selon l'enfoncement de la coque (jusqu'à 1,5m), il faut prévoir une rampe d'environ 6 mètres pour respecter une pente franchissable de 15°.
-* **Grue de levage / Mâtereau (Option 2)** : Pour les berges sauvages. Nécessite un mât motorisé d'une CMU de 350-400kg.
-* **Élingage** : Toujours attacher les sangles textiles aux tés de fourche et au bras oscillant. *Interdiction stricte de prendre appui sur les gaines orange haute-tension.*
-* **Recharge** : Branchée sur l'onduleur du bateau (AC) ou en charge directe DC-DC. L'EMS (Energy Management System) de la péniche doit pouvoir délester dynamiquement la charge de la moto (Dynamic Load Balancing) en cas d'appel de puissance prioritaire sur le bateau.
+### 5.3 Nano — Normes et Composants
+Tout véhicule léger électrique embarqué doit s'appuyer sur un pack batterie conforme **UNECE R136 / UN 38.3** et un contrôleur **UNECE R10 (CEM)**, essentiel pour ne pas perturber l'électronique de navigation du bateau en phase de charge.
+
+### 5.4 Pratique — Grutage et Recharge
+*   **Grue de Pont vs Passerelle** :
+    *   *La Passerelle* : Pour une pente praticable de 15°, un dénivelé de 1,5m nécessite 5,80m de rampe. L'usage de la marche arrière de la moto est indispensable pour sécuriser la descente.
+    *   *La Grue (Mâtereau)* : Indispensable sur berge sauvage. CMU exigée de 350-400 kg (pour absorber un coefficient dynamique de 1,5 face au roulis).
+*   **Élingage** : Sangles sur le té de fourche et le bras oscillant. *Interdiction absolue de toucher les câbles haute tension (orange).*
+*   **Intégration EMS** : Le BMS de la moto doit communiquer (Modbus/OCPP) avec l'EMS du bateau pour permettre un *Dynamic Load Balancing* et recharger préférentiellement en surplus solaire.
 
 ---
 
 ## 6. Gestion de Projet, Opérations et Financement
 
-### 6.1 Dispositifs d'Aides et Financements (Macro)
-* **Aides VNF et ADEME (PARM / PAMI)** : Attention, la majorité des aides massives à la remotorisation fluviale sont **réservées aux bateaux ayant une activité économique** (fret, passagers, charte, labo commercial). Un habitat purement privé est exclu de ces dispositifs.
-* **Crédit Maritime / Banque Populaire** : Accorde des Prêts Verts fluviaux. Le bateau étant un bien meuble, la garantie prend la forme d'une **hypothèque fluviale**, nécessitant l'immatriculation de la péniche au registre du Tribunal de Commerce et la présentation d'une expertise de coque (sondage ultrasons > 4mm).
-* **CEE (Certificats d'Économie d'Énergie)** : Financements mobilisables sur l'équipement électrique efficient installé à bord.
+### 6.1 Macro — Aides Financières et Éligibilité
+Il y a une frontière stricte entre les dispositifs fluviaux (commerce) et les dispositifs d'habitation privée.
+*   **Plan d'Aides à la Modernisation (PAMI - VNF/ADEME)** : Réservé aux bateaux intégrant une activité commerciale déclarée (location, laboratoire payant). Subventions de 20k€ à 500k€.
+*   **Crédit Maritime** : Propose des "Prêts Verts Maritimes".
+    *   *L'Hypothèque Fluviale* : Le bateau est un bien meuble. Exige une immatriculation au registre du Tribunal de Commerce.
+    *   *Exigences* : Expertise de coque récente (>4mm), Titre de navigation, COT valide.
+*   **Aides terrestres (MaPrimeRénov)** : Inéligibles aux navires.
 
-### 6.2 ERP Open-Source pour le Chantier (Meso)
-Piloter la refonte d'une péniche (budget, planning, nomenclature de pièces à acheter) nécessite un outil robuste.
-* **Odoo Community** : Connu, mais ampute ses modules de budget analytique avancé et de gestion de nomenclatures multiniveaux complexes au profit de sa version Enterprise payante.
-* **ERPNext (Option recommandée)** : 100% Open-Source (GPLv3). Relie nativement les centres de coûts (budget du bateau), les BOM (Bill Of Materials pour le R&D des laboratoires, la motorisation) et un diagramme de Gantt collaboratif sans aucun frais caché.
+### 6.2 Meso — Choix de l'ERP Open-Source
+*   **Option 1 : Odoo Community (LGPLv3)**. Bonnes bases, mais restreint la comptabilité analytique budgétaire et le Gantt dynamique à sa version Enterprise.
+*   **Option Privilégiée : ERPNext (GPLv3)**. Solution 100% open-source. Connecte les centres de coûts, la nomenclature d'achats (BOM multi-niveaux), et génère automatiquement le planning de chantier (Gantt) interactif lié aux feuilles de temps.
 
-### 6.3 Matrice des Risques AMDEC (Nano)
-* **Risque Législatif / Réglementaire** : Blocage par la Commission de Visite ES-TRIN due à l'intégration d'un composant R&D hors norme ou à une défaillance de traitement d'eau empêchant l'octroi de la COT.
-* **Risque Financier** : Surcoût brut sur les cours de l'acier (chaudronnerie de coque) et des batteries Lithium. Prévoir une marge de manœuvre continue de 15% verrouillée dans l'ERPNext.
+### 6.3 Nano — Matrice de Risques (AMDEC)
+*   **Aléas Financiers (Dépassement)** : Fluctuation de l'acier et des batteries. *Mitigation : Suivi dynamique des répercussions dans l'ERP et marge pour imprévus de 15 %.*
+*   **Aléas Réglementaires (CESNI/PT)** : Blocage suite à l'entrée en vigueur de règles ES-TRIN strictes sur le Lithium-ion (A60). *Mitigation : Préférer le LiFePO4, valider les plans coupe-feu avec la Commission avant découpe.*
+*   **Aléas Techniques (R&D)** : Défaillance du système de propulsion hybride. *Mitigation : Désynchroniser les bancs d'essais R&D et la découpe de coque.*
 
-### 6.4 Rétroplanning Global R&D (Pratique)
-1. **Mois 1-2** : Veille documentaire, centralisation dans Gemini NotebookLM, cadrage informel avec l'UTI VNF/HAROPA.
-2. **Mois 3** : Dépôt officiel du dossier de Manifestation d'Intérêt.
-3. **Mois 4-5** : Période légale de publicité domaniale (6 semaines) et dépôt de dossier Loi sur l'Eau (DDTM).
-4. **Mois 6** : Signature de la COT d'amarrage, validation par la Commission de visite, et lancement physique des travaux en chaudronnerie.
+### 6.4 Pratique — Rétroplanning Synthétique
+*   **Mois 1 à 2** : Cadrage avec l'Unité Territoriale (UTI) VNF / HAROPA. Aspiration juridique dans NotebookLM.
+*   **Mois 3** : JALON 1 - Dépôt de la Manifestation d'Intérêt / Dossier d'occupation auprès de VNF.
+*   **Mois 4 à 5** : Lancement de la période légale de publicité domaniale (6 semaines) et dossier Loi sur l'Eau (DDTM).
+*   **Mois 6** : JALON 3 - Signature de la Convention d'Occupation Temporaire (COT), déblocage du prêt Crédit Maritime et début du chantier physique.
 
 ---
-> *Fin de la Bible Technique - Projet Péniche Freycinet. Pour les fichiers de travail annexes (CAO, Excel, Code), reportez-vous aux dossiers du dépôt Git correspondants.*
+> *Fin de la Bible Technique - Projet Péniche Freycinet. Pour les fichiers de travail annexes (CAO, Excel, Code source), reportez-vous aux dossiers du dépôt Git correspondants.*
