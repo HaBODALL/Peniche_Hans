@@ -4,23 +4,32 @@ Ce dépôt documente un projet global de création d'un habitat et atelier mobil
 
 Le volume de la péniche permet de mettre en place des plans de traitement complets ou partiels de l'eau via des technologies expérimentales (zéro-rejet). Ce projet sert de base pour de la R&D, l'accueil d'un laboratoire et d'un atelier, tout en intégrant une transition vers la propulsion électrique et la mobilité douce.
 
-## Architecture du dépôt
+---
 
-Le projet est divisé en sous-systèmes, interconnectés entre eux (Synergies EMS, Réseaux, Gestion de l'eau) :
+## 📖 LA BIBLE TECHNIQUE DU PROJET
 
-- [`/peniche/01_architecture_navale_reglementation_amenagement/`](./peniche/01_architecture_navale_reglementation_amenagement/README.md) : **Carnet 1** - ES-TRIN, Lestage (fonte/acier/béton), Aménagement PMR, et inspection coque par ROV (drone sous-marin).
-- [`/peniche/02_gestion_eaux_et_ecologie/`](./peniche/02_gestion_eaux_et_ecologie/README.md) : **Carnet 2** - Loi zéro-rejet (VNF/HAROPA), Phytoépuration, MBR (bioréacteurs compacts), Méthanisation.
-- [`/peniche/03_energie_electricite_motorisation/`](./peniche/03_energie_electricite_motorisation/README.md) : **Carnet 3** - Séparation réseau Bloc 1 (Habitat 230V) / Bloc 2 (Propulsion 400V DC), Rétrofit électrique, Solaire ETFE.
-- [`/peniche/04_ancrage_amarrage/`](./peniche/04_ancrage_amarrage/) : Gestion des connexions marines (pieux de guidage, amarres).
-- [`/vehicules/`](./vehicules/README.md) : **Carnet 5** - Mobilité terrestre, moto électrique (ex: Zero DSR/X), calculs de grutage et synergies de recharge sur le navire.
-- [`/gestion_projet_et_financement/`](./gestion_projet_et_financement/README.md) : **Carnet 6** - Gestion du budget via ERPNext, aides (PAMI, CEE, Crédit Maritime), Rétroplanning.
-- [`/software/`](./software/README.md) : **Carnet 4** - Architecture "Offline-First", IoT (Home Assistant), télémétrie LoRaWAN/Wi-Fi HaLow, durcissement matériel, et extraction d'API de navigation fluviale.
-- `/docs/` : Dossier principal contenant la `bibliographie`, les `moodboards`, etc.
-- `prompts_notebook_gemini.md` : Guide de R&D contenant les prompts macro/nano pour l'utilisation de Gemini Notebook.
+L'intégralité de l'ingénierie, des choix techniques (CAO, IoT, Eaux) et des contraintes légales (ES-TRIN, VNF) a été compilée dans un seul et même document de référence. **C'est le point d'entrée principal pour comprendre la théorie du projet :**
+
+👉 **[LIRE LA BIBLE TECHNIQUE (Livre Blanc)](./docs/BIBLE_TECHNIQUE_PENICHE.md)**
+
+---
+
+## Architecture des dossiers de travail
+
+Les sous-dossiers du dépôt servent désormais de répertoires de travail pour héberger les fichiers bruts (Code Source, Plans CAO 3D/2D, Tableurs de calculs, etc.) associés à chaque chapitre de la Bible :
+
+- [`/peniche/01_architecture_navale_reglementation_amenagement/`](./peniche/01_architecture_navale_reglementation_amenagement/) : Plans PMR, calculs de lestage (Archimède), ROV sous-marin.
+- [`/peniche/02_gestion_eaux_et_ecologie/`](./peniche/02_gestion_eaux_et_ecologie/) : Schémas des boucles d'essai de traitement, notes de calculs MBR.
+- [`/peniche/03_energie_electricite_motorisation/`](./peniche/03_energie_electricite_motorisation/) : Schémas unifilaires (400V DC / 230V AC), études de rendement solaire.
+- [`/peniche/04_ancrage_amarrage/`](./peniche/04_ancrage_amarrage/) : Calculs et dimensionnement des pieux/amarres.
+- [`/vehicules/`](./vehicules/) : Logistique embarquée, grue de levage.
+- [`/software/`](./software/) : Code IoT (Home Assistant), scripts Python d'extraction VNF, et ROS 2 pour le drone.
+- [`/gestion_projet_et_financement/`](./gestion_projet_et_financement/) : Suivi financier, exports ERPNext.
+- [`/docs/`](./docs/) : Contient la Bible Technique, la bibliographie (PDF légaux), les moodboards.
 
 ## Règles de Contribution & Synergies
 
 Ce projet repose sur la documentation en Open-Source Hardware et Software.
 - Les schémas de CAO (3D/2D) et les PDF lourds doivent être committés via **Git LFS** (voir le fichier `.gitattributes`).
 - Les documentations doivent inclure la référence systématique aux lois (ES-TRIN, RGPIN, etc) et comparer des solutions industrielles aux solutions Low-Tech / DIY.
-- Voir `MISSING_DOCS.md` pour l'inventaire des ressources à sourcer.
+- `prompts_notebook_gemini.md` : Conserve les bases de R&D pour lancer de nouvelles recherches sur Gemini.
