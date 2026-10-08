@@ -1,96 +1,250 @@
-# Notice d'Accompagnement à la Reprise du Projet (Péniche Freycinet)
+# Notice d'Accompagnement à la Reprise du Projet (Péniche Freycinet) - Édition Étendue
 
 Salut ! 👋
 
-Si tu lis ces lignes, c’est que tu reprends le flambeau sur le projet technologique et logiciel de notre Péniche Freycinet. Je sais que reprendre le code et l'architecture de quelqu'un d'autre peut faire peur, surtout quand on mélange du code logiciel avec un vrai bateau de 200 tonnes !
+Si tu lis ces lignes, c’est que tu reprends le flambeau sur le projet technologique et logiciel de notre Péniche Freycinet. Je sais que reprendre le code et l'architecture de quelqu'un d'autre peut être intimidant. Ici, on ne parle pas d'une simple application web, on parle du système nerveux d'un bateau de 38,50 mètres et de 200 tonnes, soumis à des règles maritimes (ES-TRIN), équipé de systèmes 400V DC et d'une domotique devant résister aux coupures 4G et aux cages de Faraday.
 
-Mais respire un grand coup : **tout va bien se passer**. J'ai écrit ce guide spécialement pour toi, en partant du principe que tu maîtrises notre métier et notre projet de vie, mais que le code source, ce n'est pas (encore) ton langage maternel.
+Mais respire un grand coup : **tout va bien se passer**. J'ai écrit cette "Bible de Passation" spécialement pour toi. J'ai condensé ici des mois de R&D, de galères de serveurs, de crashs de réseau et de choix d'architecture. Mon but est de te donner le niveau de détail d'un Lead Tech, mais expliqué avec bienveillance.
 
-Ce document est ta bouée de sauvetage. Garde-le sous la main, il te montrera où chercher, comment lire notre logique, et comment bidouiller sans couler le navire.
+Ce document est exhaustif. Prends un café, installe-toi confortablement, et décortiquons ensemble comment fonctionne la matrice de notre péniche.
 
 ---
 
-## 1. Cartographie Mentale (Architecture Globale)
+## 1. Cartographie Mentale (Architecture Globale Détaillée)
 
-Imagine le système informatique de la péniche comme un grand équipage où chaque membre a un rôle précis :
+Notre péniche repose sur 4 grands piliers technologiques qui communiquent entre eux. Le mot d'ordre absolu du bateau est **Offline-First**. Le bateau navigue souvent dans des zones blanches ; si on perd la 4G/Starlink, le bateau *doit* continuer à fonctionner à 100%.
 
-*   **Les Capteurs (Les Yeux et les Oreilles)** : Dispersés partout dans les cales et les moteurs. Ils surveillent le niveau des cuves, la température des batteries 400V, l'humidité, etc. Ils parlent des langages très basiques (LoRa, N2K, Modbus).
-*   **Le Serveur Local Edge (Le Cerveau central)** : C'est notre ordinateur principal (Fanless, durci contre les vibrations). Il fonctionne avec **Home Assistant** (un chef d'orchestre domotique). Il écoute tous les capteurs, stocke l'historique dans une base de données locale, et décide s'il faut déclencher des alarmes.
-*   **L'Application Android / Tablette (Le Tableau de Bord)** : C'est ce que tu utilises pour piloter la péniche. L'application (souvent appelée "Client") vient poser des questions au Serveur Central ("Quel est le niveau d'eau de la cuve ?") et affiche de jolis boutons.
-*   **Les Scripts Python (Les Assistants Spécialisés)** : Ce sont de petits programmes automatiques. Par exemple, l'un d'eux va lire la météo et la carte des parkings VNF sur internet et la donne au Serveur Central.
-*   **ROS 2 (Le Pilote du Sous-marin)** : C'est un système totalement à part, conçu uniquement pour piloter notre petit drone sous-marin qui va inspecter la coque en acier de la péniche.
+### Le Schéma d'Architecture Cible
 
-**La règle d'or (Offline-First) :** Le bateau doit *toujours* fonctionner, même s'il n'y a plus de 4G. Le Cerveau Central est donc *dans* le bateau, pas dans un nuage lointain (le Cloud).
+```text
+       [ RÉSEAU EXTERNE (WAN) - 4G / Starlink ] -- (Connexion instable)
+                           │
++--------------------------│----------------------------------------------------+
+|  PÉNICHE (Réseau Local Intranet - VLANs isolés)                               |
+|                                                                               |
+|  1. POSTES CLIENTS (Android/Tablettes)                                        |
+|     - App "Timonerie" (Kotlin / Jetpack Room DB)                              |
+|     - Synchronisation asynchrone (WorkManager)                                |
+|           │                                                                   |
+|           │ (Wi-Fi / Ethernet local)                                          |
+|           ▼                                                                   |
+|  2. LE SERVEUR EDGE (Le Cerveau - PC Fanless durci, NVMe PLP, ZFS)            |
+|     - Docker Containers                                                       |
+|     - Home Assistant (Automates, Règles de crise)                             |
+|     - Broker MQTT (Mosquitto) / Base de données InfluxDB (Séries Temporelles) |
+|           │                                                                   |
+|           ├───────────────────────────────────────────────┐                   |
+|           ▼                                               ▼                   |
+|  3. LES CAPTEURS / IOT (Matt YAPADEBOULOS)       4. LA NAVIGATION (Python)    |
+|     - LoRaWAN (Traverse la coque acier)             - Scripts VNF / EuRIS     |
+|     - Wi-Fi HaLow (Caméras)                         - Cartes Folium           |
+|     - NMEA2000/CAN (Moteur 400V)                                              |
++-------------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------------+
+|  5. LE SOUS-MARIN D'INSPECTION (ROV) - Système isolé                          |
+|     - BlueROV2 Heavy + Capteur Ultrasons Cygnus                               |
+|     - Ordinateur Compagnon (Nvidia Jetson / ROS 2)                            |
++-------------------------------------------------------------------------------+
+```
+
+### Qui fait quoi ?
+1. **Le Serveur Edge (Home Assistant & MQTT)** : C'est le cœur. Il stocke les données localement et prend les décisions d'urgence.
+2. **L'Application Android** : L'interface humaine. Elle possède sa propre base de données pour fonctionner même si le Wi-Fi du bateau tombe.
+3. **Les Scripts Python** : Ce sont nos "petites mains". Ils tournent la nuit pour télécharger les données officielles de navigation (Avisbat, EuRIS) et les mettent en cache.
+4. **Le Sous-marin (ROS 2)** : C'est un projet de R&D à part, conçu pour remplacer la cale sèche en mesurant l'épaisseur de l'acier sous l'eau.
 
 ---
 
 ## 2. Visite Guidée du Code (Où trouver quoi ?)
 
-Notre dépôt de code est rangé par thèmes. Voici ta carte au trésor à la racine du projet :
+L'arborescence du dépôt a été pensée pour séparer la réglementation de la tech pure. Voici ta boussole :
 
-*   📁 **`docs/`** : L'encyclopédie du projet. C'est ici que tu trouveras la `BIBLE_TECHNIQUE_PENICHE.md`. Si tu veux relire pourquoi on a choisi de la fonte ou du béton pour alourdir le bateau, c'est là !
-*   📁 **`bibliographie/`** : Les textes de loi (VNF, ES-TRIN). Ce sont tous les PDF officiels.
-*   📁 **`software/`** : **C'est ici que tu vas passer le plus de temps pour la technique.**
-    *   Si tu veux modifier l'outil qui télécharge les cartes VNF, cherche les scripts Python à l'intérieur.
-    *   Si tu cherches comment fonctionne l'outil budgétaire ou Home Assistant, la doc `OUTILS_SUIVI_NAVIGATION.md` t'expliquera la démarche.
-*   📄 **`prompts_notebook_gemini.md`** : Notre cerveau IA ! Si tu veux modifier les mots-clés qu'on donne à l'IA pour l'aider à trouver des infos sur notre bateau, tu modifies ce fichier.
-*   📄 **`MISSING_DOCS.md`** : La liste des courses des fichiers qu'on doit encore télécharger et ranger.
-
-**Exemples pratiques :**
-*   *Tu veux changer l'adresse de la base de données VNF ?* $\rightarrow$ Va dans `software/` et ouvre le script Python d'extraction API.
-*   *Tu veux ajouter un paragraphe sur les nouvelles réglementations ES-TRIN ?* $\rightarrow$ Va dans `docs/BIBLE_TECHNIQUE_PENICHE.md`.
+*   📁 **`docs/`** : L'encyclopédie théorique.
+    *   `BIBLE_TECHNIQUE_PENICHE.md` : Le document fondateur. Si tu te demandes *pourquoi* on a choisi un câble spécifique ou *pourquoi* les batteries ne sont pas dans les cabines (norme A60), la réponse est là.
+*   📁 **`bibliographie/`** : Tous les PDF officiels (ES-TRIN, VNF). Toujours vérifier ces textes avant de faire une modification électrique.
+*   📁 **`software/`** : **Ton QG de développeur.**
+    *   `README.md` et `OUTILS_SUIVI_NAVIGATION.md` : La documentation fonctionnelle de l'IT.
+    *   *(Note : Dans ce dossier, tu trouveras ou créeras les sous-dossiers spécifiques : `/android`, `/python_scripts`, `/ros2_ws`, `/homeassistant_config`)*.
+*   📄 **`prompts_notebook_gemini.md`** : Notre banque de prompts IA pour la R&D. Si tu veux interroger le NotebookLM du projet sur une réglementation obscure, utilise les structures de prompts qui y sont définies.
+*   📄 **`MISSING_DOCS.md`** : Le backlog documentaire. Si tu n'arrives pas à télécharger une norme à cause d'un anti-bot (ex: Cloudflare), note-le ici.
+*   📄 **`NOTICE_REPRISE_PROJET.md`** : Le document que tu es en train de lire.
 
 ---
 
-## 3. Les Concepts Clés à retenir (Crash Course)
+## 3. Les Concepts Clés à retenir (Crash Course Approfondi)
 
-Pas besoin d'un bac+5 en informatique, voici les 3 concepts magiques pour comprendre nos outils :
+Pour coder sur le bateau, tu vas naviguer entre 4 langages/frameworks. Voici les bases de survie pour chacun.
 
-1.  **L'architecture Offline-First (Priorité au mode hors-ligne)** :
-    L'application de la tablette garde une copie locale des données (grâce à un outil appelé `Jetpack Room DB`). Si la connexion coupe, l'app utilise sa copie locale. Quand le Wi-Fi revient, un "facteur" silencieux (le `WorkManager`) envoie les mises à jour en arrière-plan.
-2.  **MQTT (Le système de messagerie des machines)** :
-    Quand un capteur (ex: thermomètre moteur) veut envoyer sa température, il ne l'envoie pas directement à ta tablette. Il crie la température dans un tuyau ("Hey, la temp est de 80°C !"). Le Serveur Central écoute ce tuyau, l'enregistre, puis Home Assistant l'affiche. C'est ça le MQTT : un tableau d'affichage numérique.
-3.  **Les API (Les guichets d'information)** :
-    Quand notre script Python veut connaître les places d'amarrage (EuRIS), il parle à une API. Une API, c'est comme le guichetier d'une gare. On lui demande : *"Donne-moi les places de port"* (c'est la *Requête*), et le guichetier nous donne un ticket avec l'information écrite dessus (la *Réponse*, souvent dans un format lisible par ordinateur appelé JSON).
+### Concept 1 : Offline-First & Jetpack Room DB (Android / Kotlin)
+**L'idée** : L'appli Android (tablette de barre) ne fait *pas* une requête réseau à chaque fois que tu cliques. Elle lit et écrit dans sa base locale (`SQLite` via `Room`). C'est le `WorkManager` Android qui s'occupe de synchroniser cette base avec le Serveur Edge en arrière-plan.
+
+**Exemple concret (Kotlin) - Une entité Room pour le niveau des cuves :**
+```kotlin
+// Ceci est la définition de la table "WaterTank" dans la tablette locale
+@Entity(tableName = "water_tanks")
+data class WaterTank(
+    @PrimaryKey val tankId: String, // ex: "cuve_grises_1"
+    val levelPercentage: Int,       // ex: 85
+    val lastUpdatedLocally: Long    // Timestamp pour la synchro
+)
+
+// Le DAO (Data Access Object) : Comment on lit/écrit
+@Dao
+interface WaterTankDao {
+    @Query("SELECT * FROM water_tanks WHERE tankId = :id")
+    fun getTankLevel(id: String): Flow<WaterTank> // Le Flow met à jour l'UI en temps réel !
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun updateTank(tank: WaterTank)
+}
+```
+
+### Concept 2 : MQTT & Le Publish/Subscribe (IoT)
+**L'idée** : Nos capteurs ne parlent pas directement aux applications. Ils publient un message sur un "Sujet" (Topic). Le serveur écoute ce sujet. C'est le concept du *Broker* (Mosquitto).
+**Avantage** : Si l'appli Android plante, le capteur continue d'envoyer ses données au serveur sans erreur.
+
+**Exemple d'un Payload JSON MQTT (ce qui transite sur le réseau) :**
+*Topic :* `peniche/engine/batteries/400v`
+*Payload (Message) :*
+```json
+{
+  "soc": 82.5,
+  "voltage": 385.2,
+  "current_amps": -45.0,
+  "cell_temp_max_c": 34.2,
+  "status": "DISCHARGING",
+  "timestamp": "2026-08-15T14:32:01Z"
+}
+```
+*Si tu veux rajouter un thermomètre, tu n'as pas à toucher au serveur, il suffit que le thermomètre publie un JSON sur le bon Topic !*
+
+### Concept 3 : Les API & Python (L'Extraction de Données)
+**L'idée** : On utilise la librairie `requests` en Python pour interroger les serveurs officiels VNF ou EuRIS. L'API nous répond en JSON, qu'on transforme ensuite en cartes interactives (`Folium`).
+
+**Extrait de code :**
+```python
+import requests
+
+# On simule le navigateur pour ne pas se faire bloquer
+headers = {"User-Agent": "Peniche-Freycinet-App/1.0"}
+url = "https://www.eurisportal.eu/visuris/api/Berth/GetCompactBerths"
+
+reponse = requests.get(url, headers=headers)
+if reponse.status_code == 200:
+    donnees = reponse.json()
+    print(f"Trouvé {len(donnees['items'])} zones d'amarrage !")
+else:
+    print(f"Erreur API : {reponse.status_code}")
+```
+
+### Concept 4 : ROS 2 (Robot Operating System) - Pour le Drone
+**L'idée** : ROS 2 n'est pas un système d'exploitation comme Windows, c'est un framework de communication en C++/Python. Un robot est divisé en "Noeuds" (Nodes). Un nœud lit la caméra, un autre contrôle les moteurs, un autre lit la sonde à ultrasons.
+**Particularité** : Tout le drone tourne sous ROS 2, qui utilise DDS (Data Distribution Service) pour communiquer sous l'eau via un câble ombilical Ethernet.
 
 ---
 
-## 4. Le Flux de la Donnée (Anatomie d'une action)
+## 4. Le Flux de la Donnée (Anatomie de 4 actions centrales)
 
-Suivons le cheminement d'une alerte critique : **"Le niveau d'eau de la cuve de phyto-épuration déborde !"**
+Pour bien comprendre, décortiquons le parcours de l'information dans 4 scénarios critiques.
 
-1.  **Le Capteur (La Bouée)** : Un capteur de flotteur physique dans la cuve des eaux grises se déclenche.
-2.  **L'Émission (LoRaWAN)** : Le capteur envoie un micro-message radio (qui passe super bien à travers la coque en acier du bateau) vers le Serveur Central.
-3.  **La Réception (Le Cerveau)** : Le Serveur Central (Home Assistant) reçoit le message via son système de tri du courrier (MQTT).
-4.  **La Logique de crise (L'Automate)** : Home Assistant regarde ses règles : *"Oh là là, ce capteur est en Alarme Haute !"*. Il décide de couper automatiquement la pompe à eau pour éviter une inondation.
-5.  **L'Affichage (La Tablette)** : Home Assistant envoie une notification immédiate à ton réseau local. Ton téléphone et la tablette de la timonerie clignotent en rouge : *"ALERTE : Débordement cuve. Pompe arrêtée."*
+### Flux A : Alerte Débordement Cuve Eaux Grises (IoT -> Serveur -> Humain)
+1.  **Sonde Physique** : Le flotteur de la cuve atteint 95%. Le microcontrôleur ESP32 se réveille.
+2.  **Réseau LoRaWAN** : L'ESP32 envoie un message radio encodé en base64 pour traverser l'acier de la cale.
+3.  **Passerelle (Gateway)** : L'antenne LoRa de la timonerie capte le signal, le décode, et le publie sur le MQTT (`peniche/water/grey/level`).
+4.  **Home Assistant (Automate)** : Détecte que la valeur > 90. Il déclenche le script `emergency_pump_stop.yaml`.
+5.  **Action & Notification** : HA coupe le relais 24V de la pompe d'entrée d'eau et envoie un Push sur les téléphones de l'équipage.
+
+### Flux B : Le Capitaine note une dépense hors-ligne (Android -> Serveur)
+1.  **Action Humaine** : Le Capitaine, dans un magasin sans réseau, ouvre l'App Android et ajoute : "Achat tuyaux PVC : 45€".
+2.  **Room DB** : L'app enregistre la dépense dans `SQLite` avec le statut `synced = false`.
+3.  **Retour à bord** : Le Capitaine remonte sur la péniche. Son téléphone se connecte au Wi-Fi `PENICHE_VLAN30`.
+4.  **WorkManager** : Android détecte le Wi-Fi. Il prend toutes les données `synced = false` et lance une requête POST HTTP silencieuse vers l'API du Mini-ERP (Serveur Edge).
+5.  **Validation** : Le serveur répond `200 OK`. L'app Android passe `synced = true`.
+
+### Flux C : Génération de la Carte des Haltes VNF (Python)
+1.  **Cronjob** : À 03h00 du matin, le serveur Edge lance `update_maps.py`.
+2.  **Requête WFS** : Le script Python interroge les serveurs VNF pour récupérer les polygones des écluses et des postes d'attente.
+3.  **Transformation** : Le script convertit les coordonnées EPSG:2154 (Lambert 93) en EPSG:4326 (GPS classique Latitude/Longitude).
+4.  **Rendu** : Le script génère un gros fichier `map_offline.html` contenant tout le code Javascript Folium/Leaflet.
+5.  **Mise à disposition** : Ce fichier HTML est servi par un serveur web local (Nginx). Les tablettes l'affichent sans avoir besoin d'internet.
+
+### Flux D : Inspection de la Coque (ROS 2 / C++)
+1.  **Sonde** : Le palpeur Cygnus collé au ventre du robot envoie une onde ultrasonore contre l'acier.
+2.  **Traitement Matériel** : La sonde renvoie `3.82 mm`.
+3.  **Noeud ROS 2 (`cygnus_driver_node`)** : Un script Python sur le drone lit le port série USB, crée un message `std_msgs/Float32` et le publie sur le topic `/rov/hull_thickness`.
+4.  **Ombilical** : Le message DDS transite dans les 50 mètres de câble réseau sous-marin.
+5.  **PC de Surface** : L'ordinateur du pilote écoute le topic `/rov/hull_thickness` et l'enregistre dans un fichier *rosbag* (base de données binaire) associé aux coordonnées X,Y du robot.
 
 ---
 
-## 5. Le Guide de Survie (Débogage & Compilation)
+## 5. Le Guide de Survie (Débogage & Commandes Sysadmin)
 
-Voici ton kit de secours. Si un truc ne marche pas, ne panique pas, c'est normal, c'est de l'informatique.
+C'est ici que tu trouveras comment te sortir des pires situations. Garde ces commandes précieusement.
 
-### A. Si tu modifies un script Python (Outils carto / Navigation)
-*   **Pour le lancer** : Ouvre un terminal (l'écran noir) à la racine de `software/` et tape : `python nom_du_script.py`
-*   **L'erreur classique** : `ModuleNotFoundError`.
-    *   *Signification* : Il te manque un "outil" externe pour faire tourner le script (comme une clé à molette manquante).
-    *   *Solution* : Tape `pip install nom_du_module_manquant` pour l'installer.
+### A. Survie Sysadmin de Base (Linux / Réseau)
+Le serveur principal tourne sous Debian/Ubuntu Linux.
+*   **Me connecter au serveur depuis mon PC** : `ssh user@192.168.10.10` (Demande la clé SSH à l'ancien admin).
+*   **Voir si un service a planté (ex: MQTT) et pourquoi** :
+    ```bash
+    systemctl status mosquitto
+    journalctl -u mosquitto -f --lines 50  # Le -f permet de voir les logs arriver en direct !
+    ```
+*   **Vérifier ce qui tourne sur le réseau (Si un capteur a disparu)** :
+    *   Le bateau répond-il ? `ping 192.168.10.50`
+    *   Quels sont les appareils sur le VLAN IoT ? `sudo nmap -sn 192.168.20.0/24`
 
-### B. Si l'application Android ou la Tablette affiche un "Écran Blanc"
-1.  Vérifie d'abord que le Wi-Fi du bateau fonctionne.
-2.  Vérifie que le "Serveur Central Edge" est allumé et branché (il gère tout).
-3.  Ferme l'application de force sur la tablette et relance-la (souvent, ça resynchronise la base de données locale `Room DB`).
+### B. Survie Docker (Le Serveur Edge)
+Toute notre infrastructure serveur est "conteneurisée" avec Docker. Si Home Assistant ou InfluxDB plante, c'est ici que ça se passe.
+*   **Voir tous les conteneurs qui tournent** : `docker ps`
+*   **Relancer toute l'infrastructure IT de la péniche** :
+    Va dans le dossier contenant le fichier `docker-compose.yml` et tape :
+    ```bash
+    docker-compose down
+    docker-compose up -d
+    ```
+*   **Lire les logs d'un conteneur qui refuse de démarrer (Très utile pour Home Assistant)** :
+    `docker logs -f homeassistant_container_name`
 
-### C. Si le serveur "Home Assistant" ne répond plus
-*   **Que faire ?** Home Assistant est installé sur le PC durci en soute. Tu peux souvent le redémarrer électriquement, ou si tu as accès à la console, taper la commande de redémarrage (ex: `ha core restart`).
-*   **Où regarder si c'est cassé ?** Les erreurs ne mordent pas. Cherche un fichier appelé `home-assistant.log`. Si tu vois des lignes rouges, lis simplement la dernière ligne. Très souvent, elle te dira : "Erreur de mot de passe", "Impossible de joindre le capteur X".
+### C. Survie Python (Les Scripts)
+L'erreur de débutant en Python est de tout installer au même endroit et de créer des conflits de versions. Nous utilisons des "Environnements Virtuels" (`venv`).
+*   **Si on te dit "ModuleNotFoundError" quand tu lances un script :**
+    C'est que tu n'as pas activé ton environnement !
+    1. Va dans le dossier du script : `cd software/nom_du_projet`
+    2. Crée un environnement isolé (une seule fois) : `python3 -m venv venv`
+    3. **Active-le (À faire à chaque fois !)** : `source venv/bin/activate` (Sous Windows : `venv\Scripts\activate`)
+    4. Installe les dépendances : `pip install -r requirements.txt`
+    5. Lance le script : `python script.py`
 
-### D. La Règle d'or en cas de crash
-**Ne supprime jamais tout pour recommencer à zéro.**
-1. Respire.
-2. Lis le message d'erreur de haut en bas (souvent la réponse est dans la dernière phrase).
-3. Pose la question à ton IA préférée (ou tape l'erreur dans Google).
-4. Rappelle-toi que le bateau utilise un système de "snapshots" (des sauvegardes figées dans le temps). On peut toujours revenir au système d'hier si on a vraiment fait une bêtise.
+### D. Survie Android (L'App Timonerie)
+Tu as un écran blanc ou l'application crash instantanément ?
+1.  Branche la tablette à ton PC en USB.
+2.  Ouvre **Android Studio**.
+3.  Va dans l'onglet **Logcat** en bas. C'est la console de la tablette.
+4.  Filtre par "Error". 90% du temps, tu verras une `NullPointerException` (tu as essayé d'afficher une variable qui n'existe pas) ou une `SQLiteConstraintException` (la base locale est corrompue).
+5.  *Technique de la terre brûlée* : Dans les paramètres Android de la tablette > Applications > App Péniche > "Effacer le stockage". Cela détruit la Room DB locale et force l'app à tout retélécharger depuis le serveur.
 
-Bon vent et bonne navigation ! Tu vas assurer ! ⚓
+### E. Survie ROS 2 (Le Drone)
+ROS 2 est capricieux avec les variables d'environnement. Si rien ne marche, c'est probablement que tu n'as pas "sourcé" ton espace de travail.
+*   **Compiler le code du drone** (À faire sur le PC compagnon ou ton PC Linux) :
+    ```bash
+    cd ~/ros2_ws
+    colcon build --symlink-install
+    ```
+*   **La commande magique (Sourcing)** : Si ton PC te dit `ros2: command not found` ou ne trouve pas tes nœuds :
+    ```bash
+    source /opt/ros/humble/setup.bash    # Charge les commandes ROS de base
+    source ~/ros2_ws/install/setup.bash  # Charge ton propre code (Le palpeur Cygnus)
+    ```
+*   **Déboguer un capteur muet (ex: le Palpeur d'épaisseur)** :
+    Pour voir en direct si le capteur envoie des données sous l'eau : `ros2 topic echo /rov/hull_thickness`
+
+---
+
+## 6. Références et Bibliographie
+*   [Documentation Home Assistant](https://www.home-assistant.io/docs/)
+*   [Documentation Android Room / Kotlin](https://developer.android.com/training/data-storage/room)
+*   [Documentation ROS 2 (Humble)](https://docs.ros.org/en/humble/index.html)
+*   [Bible Technique Péniche](../docs/BIBLE_TECHNIQUE_PENICHE.md)
+
+Bon vent Capitaine-Codeur ! Avec ces outils, tu as tout ce qu'il faut pour maintenir le navire à flot (au sens propre comme au figuré). ⚓
