@@ -24,6 +24,7 @@ Les sous-dossiers du dépôt servent désormais de répertoires de travail pour 
 - [`/peniche/04_ancrage_amarrage/`](./peniche/04_ancrage_amarrage/) : Calculs et dimensionnement des pieux/amarres.
 - [`/vehicules/`](./vehicules/) : Logistique embarquée, grue de levage.
 - [`/software/`](./software/) : Code IoT (Home Assistant), scripts Python d'extraction VNF, et ROS 2 pour le drone.
+- [`/outils/`](./outils/) : Outil logiciel interconnecté de dimensionnement (Budget, Lestage/Stabilité GM, Énergie, Eaux, Thermique, Alertes ES-TRIN).
 - [`/gestion_projet_et_financement/`](./gestion_projet_et_financement/) : Suivi financier, exports ERPNext.
 - [`/docs/`](./docs/) : Contient la Bible Technique, la bibliographie (PDF légaux), les moodboards.
 
