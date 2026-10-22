@@ -1,0 +1,1790 @@
+{
+  "meta": {
+    "projet": "Péniche Freycinet - estimation du prix d'achat",
+    "version": "0.7",
+    "date_creation": "2026-10-16",
+    "source_des_donnees": "Texte de 21 annonces Leboncoin collé par l'utilisateur (3 le 2026-10-16, 17 le 2026-10-17, 1 le 2026-10-22 ; la fiche de Saint-Jean-de-Losne a été recollée en version complète le 2026-10-22). Descriptions parfois tronquées par « Voir plus ». L'association des pages collées à leurs URL a été faite par catégorie et par ordre d'envoi pour les premiers lots : à confirmer.",
+    "convention": "Ne jamais inventer une valeur : null si l'information n'est pas dans l'annonce, et la poser comme question au vendeur. Les prix sont des prix demandés, pas des prix de vente.",
+    "champs_ajoutes_v0_2": "travaux_coque, date_annonce, prix_par_metre_longueur_eur, nb_favoris_leboncoin",
+    "regle_cot": "Information de l'utilisateur : la COT n'est jamais transférable de plein droit ; elle se négocie avec le gestionnaire (VNF, ou HAROPA Port sur la zone Paris et l'axe Seine Rouen - Le Havre). Une reprise avec le bateau est parfois possible mais jamais garantie. Conséquence : un prix d'annonce qui évoque un emplacement peut inclure une valeur d'emplacement qui fausse la valeur du bateau.",
+    "categories_de_prix": {
+      "C1": "Bateau sans emplacement garanti (valeur coque, moteur, équipements)",
+      "C2": "Bateau à régulariser (titre, expertise, emplacement ou navigabilité à reprendre)",
+      "C3": "Bateau vendu avec exploitation, emplacement ou aménagement lourd (fonds de commerce, bief privé, logement)"
+    },
+    "champs_ajoutes_v0_3": "categorie_prix, nom_bateau, note dans titre_navigation et cot",
+    "gabarit_hors_mediane": "Les annonces marquées gabarit_hors_mediane=true (gabarit inconnu, citerne, 30 m, etc.) sont exclues de la médiane C1 Freycinet.",
+    "champs_ajoutes_v0_4": "gabarit_hors_mediane",
+    "contraintes_utilisateur": {
+      "zone_amarrage": "Île-de-France à court terme (l'utilisateur est originaire du Nord) ; le temps que le projet se stabilise",
+      "calendrier": "phase d'étude au 2026-10-17 ; achat visé fin d'hiver ou début du printemps 2027",
+      "financement": "hypothèse de l'utilisateur : un prêt d'achat d'au plus 50 000 € serait plus facile à obtenir qu'un prêt de 70 000 € ou plus, avec éventuellement un second prêt dédié aux travaux. À valider auprès des banques. Le seuil de 50 000 € n'est pas un plafond ferme : à voir avec les banques."
+    },
+    "champs_ajoutes_v0_6": "tranche_prix"
+  },
+  "annonces": [
+    {
+      "id": "lbc-3285702400",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3285702400",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche Freycinet bateau à moteur",
+      "prix_eur": 70000,
+      "prix_negociable": null,
+      "localisation": "Paris 75012 (Gare de Lyon - Diderot), visible au port de la Rapée",
+      "date_annonce": "2026-10-10",
+      "nb_favoris_leboncoin": 13,
+      "type_bateau": "Freycinet à moteur, non aménagé, ancien bateau de mariniers",
+      "annee_construction": null,
+      "longueur_m": 38,
+      "largeur_m": 5.05,
+      "prix_par_metre_longueur_eur": 1842,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Bateau navigant, non aménagé ; sans COT (à céder à une personne qui en possède déjà une)",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Fond totalement changé en septembre 2003",
+      "cot": {
+        "present": false,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": "non cessible de plein droit ; l'annonce demande à l'acheteur d'en posséder déjà une"
+      },
+      "motorisation": "Baudouin DK6 (écrit « Baudoin » dans l'annonce), révisé, annoncé en parfait état ; groupe électrogène",
+      "assainissement": null,
+      "renovation": "Non aménagé (l'annonce dit aussi « parfaitement habitable » : à clarifier)",
+      "points_forts": [
+        "Annoncé en parfait état de naviguer, moteur DK6 révisé",
+        "Fond entièrement remplacé en 2003",
+        "Non aménagé : page blanche pour le lestage, la cale et l'atelier",
+        "Groupe électrogène déjà à bord",
+        "Vendeur lié à l'histoire du bateau (parents mariniers), numéro vérifié, réactif"
+      ],
+      "points_faibles": [
+        "Pas de COT, et l'emplacement parisien n'est pas inclus",
+        "Aucune mention du titre de navigation ni d'une expertise de coque récente",
+        "Description contradictoire (non aménagé / parfaitement habitable) et tronquée",
+        "Prix le plus élevé des trois pour un bateau sans emplacement"
+      ],
+      "questions_vendeur": [
+        "Titre de navigation : existe-t-il, valide jusqu'à quand ?",
+        "Date et résultats du dernier sondage d'épaisseur de coque ; rapport disponible ?",
+        "Date de la dernière mise en cale sèche",
+        "Année de construction et chantier ?",
+        "Où le bateau est-il amarré exactement et sous quel régime d'occupation ?",
+        "Installation électrique, état de la cale et des cloisons",
+        "Quelle est la fin de la description tronquée ?"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire, à réviser avec les photos. Bonne base technique et sans aménagement à défaire, mais sans COT, donc l'emplacement est tout à trouver."
+      },
+      "date_collecte": "2026-10-16",
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3236617822",
+      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3236617822",
+      "categorie": "ventes_immobilieres",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Maison 5 pièces 150 m² (péniche à rénover, Reims)",
+      "prix_eur": 18000,
+      "prix_negociable": null,
+      "localisation": "Reims 51100 (Barbâtre - St-Rémi - Verrerie)",
+      "date_annonce": null,
+      "nb_favoris_leboncoin": 180,
+      "type_bateau": "Péniche à rénover, annonce classée en ventes immobilières",
+      "annee_construction": 1947,
+      "longueur_m": 39,
+      "largeur_m": 5,
+      "prix_par_metre_longueur_eur": 462,
+      "surface_habitable_m2": 150,
+      "statut_juridique": "Situation irrégulière selon l'annonce : sondage de coque de plus de 10 ans (expertise décennale obligatoire pour être en règle et assuré)",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": "2005",
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Dernière mise en cale sèche en 2005, rapport d'expertise de 2005 annoncé OK",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": "non renseigné"
+      },
+      "motorisation": "« Moteur ok » (type non précisé)",
+      "assainissement": null,
+      "renovation": "À rénover (plus de 150 m²) ; 5 pièces, 4 chambres, 1 salle de bain ; chauffage fioul ; place de parking mentionnée",
+      "points_forts": [
+        "Prix d'entrée très bas (18 000 €)",
+        "Gabarit Freycinet 39 × 5 m, construite en 1947",
+        "Mise en cale sèche et expertise en 2005 annoncées satisfaisantes",
+        "Moteur annoncé en état de marche",
+        "Vendeur professionnel (agence), 20 photos"
+      ],
+      "points_faibles": [
+        "Aucun sondage depuis 2005 : l'annonce reconnaît une situation irrégulière et une impossibilité d'être assuré",
+        "Prochain audit ultrasons et nouvelle cale sèche à prévoir, avec le risque d'un blindage de coque coûteux",
+        "Reims, éloignée de la région parisienne (transport ou convoyage à prévoir)",
+        "Mention de travaux publics sur les berges du canal : risque sur l'emplacement",
+        "Frais de notaire estimés par la plateforme (1 440 €), probablement non applicables à un bateau",
+        "Aucune info sur le COT, le titre de navigation, l'électricité, l'assainissement"
+      ],
+      "questions_vendeur": [
+        "Titre de navigation et assurance actuels ?",
+        "Rapport d'expertise de 2005 : épaisseurs relevées ? Copie disponible ?",
+        "Emplacement actuel, gestionnaire, COT ou redevance sans titre ?",
+        "Que prévoient les travaux publics des berges du canal et à quelle date ?",
+        "Type et état du moteur ; état de l'installation électrique",
+        "Pourquoi cette annonce en catégorie maison ? Quel acte de vente (bateau ou bien immobilier) ?",
+        "Quelle est la fin de la description tronquée ?"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire. Prix attractif mais c'est le moins sûr : coque non contrôlée depuis 2005, emplacement incertain et éloignement. À envisager seulement avec une expertise de coque avant achat."
+      },
+      "date_collecte": "2026-10-16",
+      "categorie_prix": "C2",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3243153381",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3243153381",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_complet",
+      "titre": "Péniche Freycinet – Projet habitation / événementiel – Coque refaite – Emplacement à Creil",
+      "prix_eur": 48000,
+      "prix_negociable": true,
+      "localisation": "Creil 60100 (Oise)",
+      "date_annonce": "2026-10-01",
+      "nb_favoris_leboncoin": 68,
+      "type_bateau": "Freycinet de 1964 (Forge de Strasbourg), moteur",
+      "annee_construction": 1964,
+      "longueur_m": 38.5,
+      "largeur_m": 5.02,
+      "prix_par_metre_longueur_eur": 1247,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Vendu en l'état ; titre de navigation expiré depuis 2019 ; pas de COT, régime « COSTU » (redevance d'occupation sans titre) à jour de paiement",
+      "titre_navigation": {
+        "present": false,
+        "echeance": "expiré depuis 2019, remise en conformité (notamment électrique) nécessaire avant nouveau titre"
+      },
+      "expertise_coque": {
+        "date": "2024 (plan de sondage disponible)",
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Doublage des bordés et des bouchains en 2024 ; fond doublé",
+      "cot": {
+        "present": false,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": "non garanti : la conservation de l'emplacement de Creil est à négocier avec le gestionnaire (l'annonce dit « à confirmer »)"
+      },
+      "motorisation": "Baudouin DK6 fonctionnel ; péniche mécaniquement navigante",
+      "assainissement": null,
+      "renovation": "Intérieur à rénover ; cale aménagée en espace de réception / mini salle de spectacle ; mobilier, décors et équipements cédés avec le bateau",
+      "points_forts": [
+        "Coque travaillée en 2024 (doublage des bordés, des bouchains et du fond) avec plan de sondage 2024 disponible",
+        "Gabarit exact du projet (38,50 × 5,02 m)",
+        "Moteur Baudouin DK6 fonctionnel, bateau mécaniquement navigant",
+        "Emplacement à Creil, redevance à jour (conservation à négocier avec le gestionnaire)",
+        "Cale déjà utilisable comme salle de réception / atelier",
+        "Vendeur transparent sur la situation administrative ; prix à débattre"
+      ],
+      "points_faibles": [
+        "Titre de navigation expiré depuis 2019, installation électrique à remettre aux normes",
+        "Pas de COT : régime de redevance sans titre, précaire ; emplacement à confirmer auprès du gestionnaire",
+        "Le doublage n'élimine pas la question de l'épaisseur du bordé d'origine : à faire apprécier par un expert",
+        "Documents seulement sur demande",
+        "Contexte électrique à reprendre, ce qui recoupe le chantier prévu"
+      ],
+      "questions_vendeur": [
+        "Plan de sondage 2024 : épaisseurs relevées, expert, copie ?",
+        "Nature et qualité du doublage (épaisseur, soudures, factures, réception par un expert)",
+        "Détail de la non-conformité électrique et de ce que demande la remise en conformité",
+        "Régime d'occupation à Creil : gestionnaire, durée, conditions de cession à l'acquéreur",
+        "Date de la dernière mise en cale sèche",
+        "Assainissement et réseau d'eau à bord",
+        "Liste du mobilier et des équipements cédés"
+      ],
+      "adequation_projet": {
+        "score_0_5": 4,
+        "notes": "Provisoire. La plus proche du projet : coque récemment traitée, bonne documentation annoncée, cale utilisable, gabarit exact. Les points ouverts sont l'emplacement (COSTU) et le titre de navigation."
+      },
+      "date_collecte": "2026-10-16",
+      "categorie_prix": "C2",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3209529995",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3209529995",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Peniche navigable",
+      "nom_bateau": null,
+      "prix_eur": 95000,
+      "prix_negociable": null,
+      "localisation": "Noyon 60400 (Oise)",
+      "date_annonce": "2026-08-19",
+      "nb_favoris_leboncoin": 217,
+      "type_bateau": "Freycinet de 1964, habitation, navigable",
+      "annee_construction": 1964,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Annoncée navigable ; « elle était certifiée jauge du Rhin » (au passé : statut actuel à vérifier)",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null,
+        "note": "certification jauge du Rhin évoquée au passé"
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Fond neuf doublé en 6 mm ; plancher étanche",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "Bon état annoncé ; hublots neufs de haute qualité ; pont à demi fermé, véranda prévue sur l'autre moitié pour agrandir la surface habitable",
+      "points_forts": [
+        "Fond neuf doublé en 6 mm et plancher étanche",
+        "Annoncée navigable et en bon état",
+        "Hublots neufs",
+        "217 favoris : annonce très regardée"
+      ],
+      "points_faibles": [
+        "Prix le plus élevé des Freycinet à usage comparable (95 000 €)",
+        "Description tronquée, aucune information sur COT, titre, moteur",
+        "Aménagements déjà engagés (pont semi-fermé, véranda) à adapter à votre projet"
+      ],
+      "questions_vendeur": [
+        "Titre de navigation / certificat actuel, jusqu'à quand ?",
+        "Rapport de sondage récent et épaisseurs",
+        "Date des travaux de fond et factures",
+        "Moteur, type et état",
+        "Emplacement actuel et régime d'occupation",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire. Coque neuve annoncée, mais prix haut et informations lacunaires."
+      },
+      "categorie_prix": "C1",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": ">80k"
+    },
+    {
+      "id": "lbc-3232173230",
+      "url": "https://www.leboncoin.fr/ad/bureaux_commerces/3232173230",
+      "categorie": "bureaux_commerces",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Fonds de commerce – péniche ERP – emplacement exceptionnel à Auvers-sur-Oise (95)",
+      "nom_bateau": null,
+      "prix_eur": 160000,
+      "prix_negociable": null,
+      "localisation": "Auvers-sur-Oise 95430",
+      "date_annonce": null,
+      "nb_favoris_leboncoin": 29,
+      "type_bateau": "Péniche classée ERP (écrite « Freyssinet » dans l'annonce) vendue avec fonds de commerce, restaurant / événementiel",
+      "annee_construction": 1924,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": 150,
+      "statut_juridique": "Fonds de commerce ; ERP ; COT VNF « en cours de signature » selon l'annonce",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": false,
+        "gestionnaire": "VNF",
+        "echeance": null,
+        "transferable": "COT non encore signée : à ne pas considérer comme acquise",
+        "note": "annonce : en cours de signature"
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "Terrasse et jardin ; 1 étage",
+      "points_forts": [
+        "Fonds de commerce actif sur une péniche classée ERP",
+        "Emplacement touristique au cœur d'Auvers-sur-Oise",
+        "COT en cours de signature (si elle aboutit)"
+      ],
+      "points_faibles": [
+        "Le prix mêle fonds de commerce, bateau et espérance de COT : très difficile d'en isoler la valeur du bateau",
+        "COT non signée au moment de l'annonce",
+        "Aucune donnée sur la coque, le titre, le moteur",
+        "Usage restaurant, éloigné d'un atelier/laboratoire"
+      ],
+      "questions_vendeur": [
+        "La COT est-elle signée ? Au nom de qui, durée, redevance ?",
+        "Que comprend le prix : fonds, bateau, matériel ?",
+        "Dernière expertise de coque et titre de navigation",
+        "Chiffre d'affaires et charges si l'activité est reprise",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire. Utile surtout comme repère de la valeur d'un emplacement avec COT ; peu adapté à un atelier/laboratoire."
+      },
+      "categorie_prix": "C3",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": ">80k"
+    },
+    {
+      "id": "lbc-3253976756",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3253976756",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche 39m proche de Fontainebleau",
+      "nom_bateau": null,
+      "prix_eur": 70000,
+      "prix_negociable": null,
+      "localisation": "Saint-Mammès 77670 (canal du Loing)",
+      "date_annonce": "2026-08-21",
+      "nb_favoris_leboncoin": 32,
+      "type_bateau": "Péniche de 39 m construite par les chantiers Michot (Thuin)",
+      "annee_construction": null,
+      "longueur_m": 39,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": 1795,
+      "surface_habitable_m2": null,
+      "statut_juridique": null,
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "Logement du marinier : salon, 2 chambres, cuisine, toilettes ; cale non aménagée mais bateau lesté et cornières soudées pour poser rapidement un plancher",
+      "points_forts": [
+        "Cale non aménagée, déjà lestée, avec cornières soudées pour recevoir un plancher : très proche de votre besoin",
+        "Logement du marinier habitable",
+        "Chantier réputé selon l'annonce",
+        "Gare SNCF à 10 min à pied, Paris à 45 min en train",
+        "Prix de 70 000 €"
+      ],
+      "points_faibles": [
+        "Largeur, année, titre de navigation, COT, expertise de coque et moteur non précisés dans l'extrait",
+        "Description tronquée"
+      ],
+      "questions_vendeur": [
+        "Année, largeur, titre de navigation et échéance",
+        "Dernier sondage de coque, épaisseurs, date de cale sèche",
+        "Nature et masse du lest",
+        "Moteur et état",
+        "Emplacement à Saint-Mammès : gestionnaire, régime, cessibilité",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 4,
+        "notes": "Provisoire. Cale lestée et prête à aménager, proche de Paris ; dépend du titre, de la coque et de l'emplacement."
+      },
+      "categorie_prix": "C1",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3258147912",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3258147912",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche (Moerbeke 1960, 38 m, 379 T)",
+      "nom_bateau": null,
+      "prix_eur": 75000,
+      "prix_negociable": null,
+      "localisation": "Longueil-Annel 60150 (Oise)",
+      "date_annonce": "2026-08-28",
+      "nb_favoris_leboncoin": 8,
+      "type_bateau": "Bateau de 1960, équipé commerce, 379 T (tonnage tel qu'écrit dans l'annonce)",
+      "annee_construction": 1960,
+      "longueur_m": 38,
+      "largeur_m": 5.1,
+      "prix_par_metre_longueur_eur": 1974,
+      "surface_habitable_m2": null,
+      "statut_juridique": "« Équipé commerce Jauge du Rhin 2027 » ; possibilités logement, restauration ou autre",
+      "titre_navigation": {
+        "present": null,
+        "echeance": "« Jauge du Rhin 2027 » : probablement validité jusqu'en 2027, à confirmer",
+        "note": "interprétation à vérifier"
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": null,
+      "points_forts": [
+        "Équipé pour le commerce, annonce un certificat (jauge du Rhin) jusqu'en 2027",
+        "Gabarit proche de la Freycinet (38 m)",
+        "Prix de 75 000 €"
+      ],
+      "points_faibles": [
+        "Annonce de deux lignes : aucune info sur coque, moteur, COT, état",
+        "Largeur de 5,10 m, au-dessus des 5,05 m du gabarit Freycinet : à vérifier pour le passage des écluses",
+        "8 favoris seulement"
+      ],
+      "questions_vendeur": [
+        "Que signifient « Moerbeke 1960 » et « Jauge du Rhin 2027 » (chantier, certificat, échéance) ?",
+        "Largeur exacte et gabarit pour le réseau Freycinet",
+        "Dernier sondage de coque, épaisseurs",
+        "Moteur et état",
+        "Emplacement et régime d'occupation"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire. Base potentiellement intéressante mais presque aucune information."
+      },
+      "categorie_prix": "C1",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3224798234",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3224798234",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche (Freycinet 1960, Dunkerque)",
+      "nom_bateau": null,
+      "prix_eur": 85000,
+      "prix_negociable": null,
+      "localisation": "Dunkerque 59140",
+      "date_annonce": "2026-08-30",
+      "nb_favoris_leboncoin": 41,
+      "type_bateau": "Péniche logement type Freycinet de 1960, cale non aménagée",
+      "annee_construction": 1960,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Certificat communautaire annoncé valide jusqu'en novembre 2033",
+      "titre_navigation": {
+        "present": true,
+        "echeance": "novembre 2033 (certificat communautaire, selon l'annonce)"
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Plancher de cale en fer étanche ; couverture de cale en aluminium (description tronquée)",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": "Scania DSI 11 « 280 PK » (tel qu'écrit) ; 2 groupes Lister 220/380 V 17 kVA dont un insonorisé",
+      "assainissement": null,
+      "renovation": "Logement du marinier entièrement réaménagé (35 m², cuisine équipée, salon, 1 chambre, salle de bain), logement avant aménagé (chambre, douche, toilettes), chauffage central fuel ; cale non aménagée",
+      "points_forts": [
+        "Certificat communautaire valide jusqu'en 2033, rare et très valorisant",
+        "Cale non aménagée avec plancher de fer étanche",
+        "Moteur Scania puissant et deux groupes électrogènes",
+        "Logements arrière et avant déjà aménagés"
+      ],
+      "points_faibles": [
+        "Loin de la région parisienne (Dunkerque)",
+        "Vendeur inscrit depuis juin 2026, dernière activité il y a 24 jours",
+        "COT et emplacement non mentionnés",
+        "Description tronquée"
+      ],
+      "questions_vendeur": [
+        "Copie du certificat communautaire et du dernier rapport de visite",
+        "Épaisseurs relevées lors de l'inspection",
+        "Emplacement actuel et régime d'occupation",
+        "Heures du moteur, entretien, factures",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 4,
+        "notes": "Provisoire. Le seul bateau avec titre valide très long ; cale à aménager, logements prêts ; éloigné de Paris."
+      },
+      "categorie_prix": "C1",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": ">80k"
+    },
+    {
+      "id": "lbc-3264801998",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3264801998",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche d'habitation (URGENT) doit quitter emplacement - Faire offre",
+      "nom_bateau": null,
+      "prix_eur": 25000,
+      "prix_negociable": true,
+      "localisation": "Annonce localisée à Lille 59000 ; bateau situé à Péronnes-lez-Antoing (commune belge d'après mon identification, à vérifier)",
+      "date_annonce": "2026-09-06",
+      "nb_favoris_leboncoin": 107,
+      "type_bateau": "Péniche d'habitation de 1920, moteur GM",
+      "annee_construction": 1920,
+      "longueur_m": 38,
+      "largeur_m": 5,
+      "prix_par_metre_longueur_eur": 658,
+      "surface_habitable_m2": null,
+      "statut_juridique": "N'a pas les instruments pour naviguer, doit être remorquée ; doit quitter son emplacement",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Coque neuve en 2009 ; n'a plus tourné ni été sortie de l'eau depuis 2009",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "Peinture intérieure et extérieure à refaire ; 4 chambres, cuisine américaine, centrale de traitement d'eau, boiler électrique",
+      "points_forts": [
+        "Prix très bas, offre libre",
+        "Coque annoncée neuve en 2009",
+        "Aménagement d'habitation existant (4 chambres, traitement d'eau)"
+      ],
+      "points_faibles": [
+        "Immobile et jamais sortie de l'eau depuis 2009 : expertise de coque largement dépassée",
+        "Doit quitter son emplacement et être remorquée : frais de transport et d'installation à prévoir",
+        "Instruments de navigation absents",
+        "Si le bateau est bien en Belgique, autre autorité de gestion et autres règles"
+      ],
+      "questions_vendeur": [
+        "Localisation exacte et pays, gestionnaire de la voie d'eau",
+        "Papiers du bateau et pavillon",
+        "Moteur : date de dernier démarrage, état",
+        "Délai pour quitter l'emplacement",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 1,
+        "notes": "Provisoire. Trop de remises à niveau et une situation de départ forcé ; écartée sauf opportunité de lest ou de pièces."
+      },
+      "categorie_prix": "C2",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3123809158",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3123809158",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche Freycinet (aménagée en appartement, Auxerre)",
+      "nom_bateau": null,
+      "prix_eur": 38000,
+      "prix_negociable": null,
+      "localisation": "Auxerre 89000 (bief privé, coulée verte)",
+      "date_annonce": "2026-09-11",
+      "nb_favoris_leboncoin": 423,
+      "type_bateau": "Péniche type Freycinet aménagée en appartement",
+      "annee_construction": null,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": 135,
+      "statut_juridique": "Située sur un bief privé à Auxerre ; régime d'occupation et navigabilité non précisés",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "135 m² habitables : salon 35 m², cuisine dans la timonerie, petit studio avec salle de bain, 4 chambres dont une avec salle de bain, coursive, petit local atelier, terrasse de 40 m², pompes à chaleur réversibles + radiateurs, compteurs eau et EDF",
+      "points_forts": [
+        "Prix très bas pour 135 m² habitables et un emplacement décrit comme exceptionnel",
+        "Aménagement abouti, compteurs eau et électricité individuels",
+        "Terrasse de 40 m² et petit local atelier",
+        "423 favoris : l'annonce la plus regardée"
+      ],
+      "points_faibles": [
+        "Prix étonnamment bas : navigabilité, titre, emplacement et charges de bief à comprendre",
+        "Aménagée en logement, donc peu de cale libre pour un laboratoire ou un atelier",
+        "Description tronquée"
+      ],
+      "questions_vendeur": [
+        "Le bateau est-il navigant ? Titre de navigation ?",
+        "Statut du bief privé : propriétaire, coût, durée, cessibilité",
+        "Dernier sondage de coque",
+        "Pourquoi un prix aussi bas ?",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire. Repère de prix d'un logement aménagé ; cale occupée, donc peu compatible avec le lestage et l'atelier."
+      },
+      "categorie_prix": "C3",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": false,
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3232049517",
+      "url": "https://www.leboncoin.fr/ad/bureaux_commerces/3232049517",
+      "categorie": "bureaux_commerces",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Sur l'eau avec une péniche (Péniche Saïga)",
+      "nom_bateau": "Saïga",
+      "prix_eur": 48000,
+      "prix_negociable": null,
+      "localisation": "Annonce à Saint-Usage 21170 ; amarrée à Saint-Jean-de-Losne",
+      "date_annonce": null,
+      "nb_favoris_leboncoin": 12,
+      "type_bateau": "Péniche de 1951, espace polyvalent (stockage guinguette, scène flottante)",
+      "annee_construction": 1951,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": 100,
+      "statut_juridique": "Annoncée navigable « partout en France » ; vente par le courtier H2O Bateau (fiche « Péniche Saïga »)",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": "2023",
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": null,
+      "points_forts": [
+        "Coque expertisée en 2023 selon l'annonce",
+        "Vente par un courtier spécialisé, avec annonce détaillée sur son site",
+        "Annoncée navigante, prix de 48 000 €"
+      ],
+      "points_faibles": [
+        "Gabarit non indiqué (100 m² : probablement plus petit qu'une Freycinet, à vérifier)",
+        "Pas de précision sur COT, titre, moteur",
+        "Seulement 3 photos"
+      ],
+      "questions_vendeur": [
+        "Longueur, largeur, tirant d'eau",
+        "Rapport d'expertise 2023 et épaisseurs",
+        "Titre de navigation et échéance",
+        "Moteur et état",
+        "Emplacement à Saint-Jean-de-Losne : régime d'occupation"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire, en attente du gabarit. À regarder sur la fiche du courtier H2O."
+      },
+      "categorie_prix": "C1",
+      "date_collecte": "2026-10-17",
+      "gabarit_hors_mediane": true,
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3267732061",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3267732061",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche (bateau citerne, Dunkerque)",
+      "nom_bateau": null,
+      "prix_eur": 75000,
+      "prix_negociable": null,
+      "localisation": "Dunkerque 59140",
+      "date_annonce": "2026-09-11",
+      "nb_favoris_leboncoin": 5,
+      "type_bateau": "Bateau citerne pouvant être transformé en bateau logement",
+      "annee_construction": null,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": null,
+      "statut_juridique": "« Certificat de l'Union renouvelé » (date non précisée)",
+      "titre_navigation": {
+        "present": true,
+        "echeance": null,
+        "note": "certificat de l'Union annoncé renouvelé, échéance non précisée"
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": null,
+      "points_forts": [
+        "Certificat de l'Union annoncé renouvelé",
+        "Prix de 75 000 €"
+      ],
+      "points_faibles": [
+        "Annonce de trois lignes : ni gabarit, ni année, ni moteur, ni coque",
+        "Citerne : cale cloisonnée en cuves, reconversion en logement ou atelier plus lourde qu'une Freycinet à cale ouverte",
+        "Cargaisons transportées et dégazage à documenter",
+        "Seulement 5 favoris"
+      ],
+      "questions_vendeur": [
+        "Longueur, largeur, année, chantier",
+        "Cargaison transportée, certificat de dégazage",
+        "Date et échéance du certificat de l'Union, rapport d'inspection",
+        "Épaisseurs de coque",
+        "Moteur et état",
+        "Emplacement et régime d'occupation"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire. Trop peu d'informations et conversion de citerne plus contraignante."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": true,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3269081222",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3269081222",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche freycinet 38 m – navigable – cummins 257 kw",
+      "nom_bateau": null,
+      "prix_eur": 75000,
+      "prix_negociable": null,
+      "localisation": "Annonce à Roubaix 59100 ; bateau à Vilvoorde (Belgique)",
+      "date_annonce": "2026-09-13",
+      "nb_favoris_leboncoin": 15,
+      "type_bateau": "Freycinet de 38 m construite en 1965 au chantier naval de Thuin (Belgique)",
+      "annee_construction": 1965,
+      "longueur_m": 38,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": 1974,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Annoncée en parfait état de navigation et « actuellement immatriculée comme bateau de plaisance » ; projets possibles « sous réserve des autorisations nécessaires »",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": "Cummins 257 kW (d'après le titre de l'annonce)",
+      "assainissement": null,
+      "renovation": null,
+      "points_forts": [
+        "Freycinet de 38 m en parfait état de navigation selon l'annonce",
+        "Moteur Cummins 257 kW",
+        "Chantier de Thuin",
+        "Annonce structurée avec caractéristiques détaillées (partiellement tronquée)"
+      ],
+      "points_faibles": [
+        "Bateau en Belgique : autre autorité de gestion, formalités d'immatriculation, TVA et transfert à vérifier",
+        "Immatriculée en plaisance : un usage habitation, atelier ou professionnel suppose un autre statut et les autorisations correspondantes",
+        "Description tronquée (longueur, tirant d'eau, certificat non lus)"
+      ],
+      "questions_vendeur": [
+        "Pays d'immatriculation, papiers et statut TVA du bateau",
+        "Titre ou certificat de navigation, échéance",
+        "Dernier sondage de coque et épaisseurs",
+        "Heures et entretien du moteur",
+        "Régime d'occupation à Vilvoorde, cessibilité",
+        "Longueur et largeur exactes, fin de la description"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire. Bateau correct sur le papier, mais le statut plaisance et la localisation belge ajoutent des démarches."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": false,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3132319776",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3132319776",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche JESSICA (Forges de Strasbourg, 1962)",
+      "nom_bateau": "Jessica",
+      "prix_eur": 70000,
+      "prix_negociable": null,
+      "localisation": "Arleux 59151 (Nord)",
+      "date_annonce": "2026-09-25",
+      "nb_favoris_leboncoin": 74,
+      "type_bateau": "Péniche marchande de type Freycinet, GT 386 t, cubage 450 m³",
+      "annee_construction": 1962,
+      "longueur_m": 38.5,
+      "largeur_m": 5.05,
+      "prix_par_metre_longueur_eur": 1818,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Certificat de l'Union annoncé valide jusqu'en 2029",
+      "titre_navigation": {
+        "present": true,
+        "echeance": "2029 (certificat de l'Union, selon l'annonce)"
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Construction soudée ; plancher de fer ; panneaux roulants aluminium ; tirant d'air 2,55 m (dimension indiquée)",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": "Volvo 380 ch (8 800 h), embrayage Advance, keel cooling, propulseur d'étrave Dries Hamelink 160 ch DAF, pompe de ballast fixe 100 t en 380 V, groupe électrogène Hatz 2 cyl 17 kVA insonorisé",
+      "assainissement": null,
+      "renovation": "Bateau marchand non aménagé en logement (cale ouverte à panneaux roulants)",
+      "points_forts": [
+        "Gabarit exact de la Freycinet (38,50 × 5,05 m)",
+        "Certificat de l'Union annoncé valide jusqu'en 2029",
+        "Fiche technique la plus complète de toutes les annonces",
+        "Pompe de ballast fixe de 100 t et propulseur d'étrave",
+        "Plancher de fer et panneaux roulants aluminium",
+        "Groupe électrogène insonorisé, moteur Volvo 380 ch",
+        "Prix de 70 000 €, 74 favoris"
+      ],
+      "points_faibles": [
+        "Moteur à 8 800 heures",
+        "Aucune information sur la COT, l'emplacement, l'épaisseur de coque",
+        "Vendeur peu actif (dernière activité il y a 18 jours)",
+        "Située dans le Nord, loin de la région parisienne",
+        "Description tronquée"
+      ],
+      "questions_vendeur": [
+        "Copie du certificat de l'Union et du dernier rapport d'inspection (épaisseurs)",
+        "Date de la dernière mise en cale sèche",
+        "Nature des ballasts (capacité, accès, état) et lest éventuel",
+        "Entretien du moteur et du propulseur",
+        "Emplacement actuel et régime d'occupation",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 4,
+        "notes": "Provisoire. La mieux documentée techniquement, gabarit exact, certificat jusqu'en 2029, ballast fixe utile pour le lestage. Distance et emplacement à régler."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": false,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3278579536",
+      "url": "https://www.leboncoin.fr/ad/equipement_nautisme/3278579536",
+      "categorie": "equipement_nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Bateau (péniche 38 m × 5 m, 1961, Douai)",
+      "nom_bateau": null,
+      "prix_eur": 50000,
+      "prix_negociable": null,
+      "localisation": "Douai 59500",
+      "date_annonce": "2026-09-28",
+      "nb_favoris_leboncoin": 7,
+      "type_bateau": "Péniche de 38 m × 5 m, 1961, annonce classée dans « Équipements bateau » avec « transaction sécurisée »",
+      "annee_construction": 1961,
+      "longueur_m": 38,
+      "largeur_m": 5,
+      "prix_par_metre_longueur_eur": 1316,
+      "surface_habitable_m2": null,
+      "statut_juridique": "« Documents valides jusqu'à septembre 2030 » (nature des documents non précisée)",
+      "titre_navigation": {
+        "present": null,
+        "echeance": "septembre 2030 (documents, nature à préciser)"
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Fond du bateau changé (date non précisée) ; plancher fer",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": "Iveco 350 ch ; groupe électrogène Lister 15 kVA ; timonerie aluminium ; chauffage central",
+      "assainissement": null,
+      "renovation": null,
+      "points_forts": [
+        "Fond changé, plancher de fer",
+        "Moteur Iveco 350 ch et groupe de 15 kVA",
+        "Documents annoncés valides jusqu'en 2030",
+        "Prix de 50 000 € : le plus bas des navigables de 38 m"
+      ],
+      "points_faibles": [
+        "Annonce classée en équipement nautisme, avec bouton « Transaction sécurisée » : pour un bateau de cette taille, il faut un acte de vente, des papiers vérifiés et une visite avant tout paiement en ligne",
+        "Date des travaux de fond et nature exacte des « documents » inconnues",
+        "COT et emplacement non indiqués",
+        "Description tronquée"
+      ],
+      "questions_vendeur": [
+        "Quels documents valent jusqu'en septembre 2030 (certificat, assurance) ?",
+        "Date du changement de fond, factures, rapport de sondage",
+        "Immatriculation et acte de vente prévu",
+        "Emplacement et régime d'occupation",
+        "Heures et état du moteur Iveco",
+        "Fin de la description tronquée"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire. Prix attractif et fiche correcte, à sécuriser par la vérification des papiers avant toute démarche."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": false,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3280816668",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3280816668",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche habitable 90 m²",
+      "nom_bateau": null,
+      "prix_eur": 155000,
+      "prix_negociable": null,
+      "localisation": "Vigneux-sur-Seine 91270 (Essonne)",
+      "date_annonce": "2026-10-02",
+      "nb_favoris_leboncoin": 16,
+      "type_bateau": "Péniche d'habitation sur deux niveaux, construite en 1937",
+      "annee_construction": 1937,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": 90,
+      "statut_juridique": null,
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "90 m² sur 2 niveaux : terrasse avant 20 m², pièce de vie 30 m², cuisine ouverte équipée, WC, escalier vers les chambres",
+      "points_forts": [
+        "Aménagement abouti, cuisine équipée laissée",
+        "Terrasse de 20 m²",
+        "Située en Île-de-France, près d'une gare"
+      ],
+      "points_faibles": [
+        "Prix élevé (≈ 1 722 € par m² habitable)",
+        "Gabarit, titre, COT et coque non indiqués",
+        "Cale occupée par le logement, peu compatible avec un atelier ou un laboratoire"
+      ],
+      "questions_vendeur": [
+        "Gabarit exact",
+        "Statut juridique et emplacement : COT, gestionnaire, durée",
+        "Dernier sondage de coque",
+        "Navigabilité et titre"
+      ],
+      "adequation_projet": {
+        "score_0_5": 1,
+        "notes": "Provisoire. Péniche logement à prix de marché francilien ; utile surtout comme repère C3."
+      },
+      "categorie_prix": "C3",
+      "gabarit_hors_mediane": true,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": ">80k"
+    },
+    {
+      "id": "lbc-3283172783",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3283172783",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Peniche Ebonystar 1931",
+      "nom_bateau": "Ebonystar",
+      "prix_eur": 60000,
+      "prix_negociable": null,
+      "localisation": "Dunkerque 59140",
+      "date_annonce": "2026-10-06",
+      "nb_favoris_leboncoin": 19,
+      "type_bateau": "Péniche habitable construite en 1931",
+      "annee_construction": 1931,
+      "longueur_m": 30,
+      "largeur_m": 5.28,
+      "prix_par_metre_longueur_eur": 2000,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Bateau navigant ; « certificats coque à jour » selon le titre de l'annonce (détail tronqué)",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": "Diesel de 121,3 kW, en état de fonctionnement ; autonome en électricité",
+      "assainissement": null,
+      "renovation": "2 cabines, espace de stockage à l'avant",
+      "points_forts": [
+        "Moteur fonctionnel, bateau navigant",
+        "Certificats de coque annoncés à jour",
+        "Autonome en électricité"
+      ],
+      "points_faibles": [
+        "Longueur de 30 m, plus courte qu'une Freycinet",
+        "Largeur de 5,28 m, au-dessus des 5,05 m du gabarit Freycinet : limite les itinéraires",
+        "Titre d'annonce « 5 m » alors que la fiche indique 5,28 m : à clarifier",
+        "Description tronquée"
+      ],
+      "questions_vendeur": [
+        "Largeur exacte et itinéraires possibles",
+        "Certificats de coque : dates, épaisseurs, organisme",
+        "Titre de navigation et échéance",
+        "Emplacement et régime d'occupation"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire. Gabarit différent de celui visé par le projet."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": true,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3283609562",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3283609562",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche « type plaquet » (Charleville-Mézières)",
+      "nom_bateau": null,
+      "prix_eur": 80000,
+      "prix_negociable": null,
+      "localisation": "Charleville-Mézières 08000 (Ardennes)",
+      "date_annonce": "2026-10-06",
+      "nb_favoris_leboncoin": 5,
+      "type_bateau": "Péniche « type plaquet » (terme tel qu'écrit dans l'annonce) construite en 1954",
+      "annee_construction": 1954,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Non précisé",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Fond rénové en 1992 pour une épaisseur de 7 mm ; planche de fer rénovée en 2007 ; de l'embrayage à l'hélice rénovés en 2009, gouvernail complet refait après un accident",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null
+      },
+      "motorisation": null,
+      "assainissement": null,
+      "renovation": "Grue de levage de 2 t renforcée jusqu'au fond du bateau (220/380 V) ; transformation possible en logement d'environ 150 m²",
+      "points_forts": [
+        "Grue de levage de 2 t embarquée, utile pour un atelier",
+        "Fond rénové à 7 mm, ligne d'arbre et gouvernail refaits en 2009",
+        "Potentiel de 150 m² en logement"
+      ],
+      "points_faibles": [
+        "Fond refait en 1992 : plus de 30 ans, sondage récent à demander",
+        "Gabarit, titre, COT et moteur non précisés",
+        "Loin de la région parisienne"
+      ],
+      "questions_vendeur": [
+        "Longueur, largeur, type exact de bateau",
+        "Titre de navigation et échéance",
+        "Dernier sondage et épaisseurs",
+        "Moteur, état et heures",
+        "Emplacement et régime d'occupation"
+      ],
+      "adequation_projet": {
+        "score_0_5": 3,
+        "notes": "Provisoire, en attente du gabarit. La grue de 2 t est un vrai plus pour l'atelier."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": true,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "50k-80k"
+    },
+    {
+      "id": "lbc-3265626787",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3265626787",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_complet",
+      "titre": "Peniche navigable d'habitation ou de commerce (Saint-Jean-de-Losne)",
+      "nom_bateau": null,
+      "prix_eur": 90000,
+      "prix_negociable": null,
+      "localisation": "Saint-Jean-de-Losne 21170 (Côte-d'Or)",
+      "date_annonce": "2026-10-20",
+      "nb_favoris_leboncoin": 24,
+      "type_bateau": "Freycinet de 38,80 m, rivé et soudé, construit en 1969 à Douai",
+      "annee_construction": 1969,
+      "longueur_m": 38.8,
+      "largeur_m": 5.05,
+      "prix_par_metre_longueur_eur": 2320,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Certificat communautaire valable jusqu'en 2030 (selon l'annonce) ; bateau basé au port de Saint-Jean-de-Losne",
+      "titre_navigation": {
+        "present": true,
+        "echeance": "2030 (certificat communautaire, selon l'annonce)"
+      },
+      "expertise_coque": {
+        "date": "dernière montée en cale en juin 2023 (rapport et épaisseurs non mentionnés)",
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": "Bateau rivé et soudé ; tirant d'eau de 0,80 m et hauteur de 4,25 m (dimensions telles qu'écrites)",
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": null,
+        "note": "bateau basé au port de Saint-Jean-de-Losne : régime du poste d'amarrage (contrat de port, COT) à demander"
+      },
+      "motorisation": "GM 92 de 365 ch à 26 000 h ; groupe électrogène Lister 220 V de 12 kVA à 7 150 h ; barre électrique ; pas de propulseur d'étrave ; grue de levage de 1,2 t",
+      "assainissement": "Pas de cuve d'eaux noires ; WC sanibroyeur",
+      "renovation": "Logement du marinier de 26 m² refait à neuf (1 chambre, salon, cuisine, douche, WC sanibroyeur) ; chauffage central et eau chaude sur chaudière fioul ; possibilité d'aménager une première cale de 63 m² et une seconde de 42 m² (suggestion de plan en annexe de l'annonce) ; marquise encore en cours de restauration",
+      "points_forts": [
+        "Gabarit exact de la Freycinet (38,80 × 5,05 m)",
+        "Certificat communautaire annoncé valable jusqu'en 2030",
+        "Dernière montée en cale en juin 2023",
+        "Cales aménageables de 63 m² et 42 m², avec suggestion de plan en annexe",
+        "Logement du marinier refait à neuf, chauffage central",
+        "Barre électrique, groupe électrogène Lister, grue de levage de 1,2 t",
+        "Bateau basé dans un port (poste d'amarrage identifié)"
+      ],
+      "points_faibles": [
+        "Moteur à 26 000 heures et pas de propulseur d'étrave",
+        "Prix de 90 000 €, parmi les plus élevés des Freycinet navigables relevées",
+        "Aucune cuve d'eaux noires : à prévoir pour votre projet de traitement zéro-rejet",
+        "Marquise encore en cours de restauration",
+        "Épaisseurs de coque et rapport de la montée en cale de 2023 non précisés",
+        "Annonce remontée le 20 octobre après un premier dépôt le 13 : elle ne semble pas avoir trouvé preneur (à confirmer)",
+        "Visites uniquement le week-end sur rendez-vous ; dans la Côte-d'Or, loin de l'Île-de-France"
+      ],
+      "questions_vendeur": [
+        "Rapport de la montée en cale de juin 2023 : épaisseurs relevées, expert, copie",
+        "Copie du certificat communautaire (échéance 2030)",
+        "Régime du poste d'amarrage au port : contrat de port ou COT, durée, cessibilité",
+        "Entretien et révision du moteur à 26 000 heures",
+        "Plan en annexe : qui l'a établi, faisabilité",
+        "Où part l'eau du WC sanibroyeur ?",
+        "Prix négociable ?"
+      ],
+      "adequation_projet": {
+        "score_0_5": 4,
+        "notes": "Provisoire. Dossier solide (certificat 2030, cale sèche 2023, cales à aménager avec plan) mais prix haut, moteur très usé, éloigné de l'Île-de-France."
+      },
+      "categorie_prix": "C1",
+      "gabarit_hors_mediane": false,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": ">80k",
+      "historique": [
+        "Page collée le 2026-10-17 : annonce datée du 2026-10-13 ; page recollée le 2026-10-22 : annonce datée du 2026-10-20 (annonce remontée), prix inchangé à 90 000 €"
+      ]
+    },
+    {
+      "id": "lbc-3057499757",
+      "url": "https://www.leboncoin.fr/ad/nautisme/3057499757",
+      "categorie": "nautisme",
+      "statut_collecte": "texte_colle_description_tronquee",
+      "titre": "Péniche (ancien magasin d'accastillage, Cercy-la-Tour)",
+      "nom_bateau": null,
+      "prix_eur": 39000,
+      "prix_negociable": null,
+      "localisation": "Cercy-la-Tour 58340 (Nièvre)",
+      "date_annonce": "2026-10-13",
+      "nb_favoris_leboncoin": 332,
+      "type_bateau": "Péniche avec « emplacement dans un joli village de la Nièvre », ancien magasin d'accastillage",
+      "annee_construction": null,
+      "longueur_m": null,
+      "largeur_m": null,
+      "prix_par_metre_longueur_eur": null,
+      "surface_habitable_m2": null,
+      "statut_juridique": "Annonce « avec emplacement » : régime d'occupation non précisé ; baisse de prix signalée",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": null,
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": "emplacement mis en avant : non cessible de plein droit, à négocier avec le gestionnaire",
+        "note": "annonce : « avec emplacement »"
+      },
+      "motorisation": "Volvo Penta 380 ch « en bon état »",
+      "assainissement": null,
+      "renovation": "Terrasse ; une partie aménagée (isolation et placo) ; nombreuses possibilités d'aménagement",
+      "points_forts": [
+        "Prix bas (39 000 €) avec un emplacement annoncé",
+        "Moteur Volvo Penta 380 ch en bon état",
+        "Partie déjà isolée, terrasse",
+        "Très regardée : 332 favoris"
+      ],
+      "points_faibles": [
+        "Gabarit, année, titre de navigation et coque non précisés",
+        "L'emplacement n'est pas transférable de plein droit : à confirmer avec le gestionnaire avant de payer pour lui",
+        "Aménagement commercial (ancien magasin) à reconvertir",
+        "Description courte"
+      ],
+      "questions_vendeur": [
+        "Longueur, largeur, année, titre de navigation",
+        "Régime d'occupation : gestionnaire, durée, redevance, condition de reprise par un acquéreur",
+        "Dernier sondage de coque et épaisseurs",
+        "État du moteur et heures",
+        "Pourquoi la baisse de prix ?"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire, en attente du gabarit. Intéressante comme repère de la valeur d'un emplacement en province."
+      },
+      "categorie_prix": "C3",
+      "gabarit_hors_mediane": true,
+      "date_collecte": "2026-10-17",
+      "tranche_prix": "<=50k"
+    },
+    {
+      "id": "lbc-3224802075",
+      "url": "https://www.leboncoin.fr/ad/ventes_immobilieres/3224802075",
+      "categorie": "ventes_immobilieres",
+      "statut_collecte": "texte_colle_complet",
+      "titre": "Maison 5 pièces 120 m² (péniche habitation Freycinet, Compiègne)",
+      "nom_bateau": null,
+      "prix_eur": 179000,
+      "prix_negociable": null,
+      "localisation": "Compiègne 60200 (quartier Le Petit Margny, Oise)",
+      "date_annonce": null,
+      "nb_favoris_leboncoin": 34,
+      "type_bateau": "Automoteur Freycinet à usage d'habitation entièrement rénové ; annonce d'agence (iad France), en exclusivité",
+      "annee_construction": null,
+      "longueur_m": 38.95,
+      "largeur_m": 5.05,
+      "prix_par_metre_longueur_eur": 4596,
+      "surface_habitable_m2": 120,
+      "statut_juridique": "Annonce immobilière, non soumise au DPE ; « emplacement en règle » selon l'annonce ; honoraires d'agence à la charge du vendeur",
+      "titre_navigation": {
+        "present": null,
+        "echeance": null
+      },
+      "expertise_coque": {
+        "date": "septembre 2019 (aucun travaux révélé à l'époque, selon l'annonce)",
+        "epaisseur_min_mm": null,
+        "epaisseur_bouchain_mm": null
+      },
+      "travaux_coque": null,
+      "cot": {
+        "present": null,
+        "gestionnaire": null,
+        "echeance": null,
+        "transferable": "« emplacement en règle » pour le vendeur ; non cessible de plein droit, reprise à négocier avec le gestionnaire",
+        "note": "annonce : emplacement en règle"
+      },
+      "motorisation": "GM 180 ch, bateau fonctionnel au niveau moteur",
+      "assainissement": null,
+      "renovation": "Entièrement rénové, « pas de travaux à prévoir » : terrasse couverte d'environ 40 m², pièce à vivre de 51 m², cuisine équipée, 3 chambres, baignoire à remous, chauffage fioul",
+      "points_forts": [
+        "Freycinet de 38,95 × 5,05 m entièrement rénovée, prête à habiter",
+        "Emplacement annoncé en règle",
+        "Moteur GM 180 ch fonctionnel",
+        "Annonce d'agence, honoraires à la charge du vendeur",
+        "Dans l'Oise, proche de l'Île-de-France"
+      ],
+      "points_faibles": [
+        "Prix de 179 000 € (≈ 4 600 € par mètre de longueur)",
+        "Dernière expertise de coque en septembre 2019 : plus de sept ans, la prochaine échéance approche",
+        "Cale entièrement occupée par le logement : pas de place pour un atelier ni pour le lestage prévu",
+        "COT non cessible de plein droit : « emplacement en règle » ne garantit rien à l'acheteur",
+        "Chauffage au fioul"
+      ],
+      "questions_vendeur": [
+        "Régime de l'emplacement : COT, gestionnaire, durée, redevance, conditions de reprise par un acquéreur",
+        "Rapport d'expertise de 2019 : épaisseurs, expert, copie",
+        "Titre de navigation et échéance",
+        "Assainissement : cuves ou raccordement",
+        "Détail du budget annuel (redevance, assurance, énergie)"
+      ],
+      "adequation_projet": {
+        "score_0_5": 2,
+        "notes": "Provisoire. Repère de prix d'un Freycinet rénové avec emplacement proche de l'Île-de-France ; peu compatible avec un atelier et un laboratoire."
+      },
+      "categorie_prix": "C3",
+      "gabarit_hors_mediane": false,
+      "date_collecte": "2026-10-22",
+      "tranche_prix": ">80k"
+    }
+  ],
+  "comparables_publics": [
+    {
+      "id": "efficity-25089955",
+      "url": "https://www.efficity.com/achat-immobilier/maison_160-m2_corbeil-essonnes_91250_25089955/",
+      "titre": "Péniche gabarit Freycinet 160 m², Corbeil-Essonnes (Seine), 1925",
+      "prix_eur": 235000,
+      "surface_habitable_m2": 160,
+      "annee_construction": 1925,
+      "date_annonce": null,
+      "fiabilite": "prix lu dans un extrait de recherche, date inconnue, à reverifier ; probablement bateau logement habitable avec emplacement, donc catégorie différente des 3 annonces"
+    },
+    {
+      "id": "optimhome-123094",
+      "url": "https://www.optimhome.com/fr/immobilier/vente/maison/suresnes/92150-suresnes-peniche-d-exception-aux-portes-de-paris/123094",
+      "titre": "Péniche Freycinet 180 m² avec terrasse de 100 m², Suresnes, rénovée début 2024",
+      "prix_eur": null,
+      "surface_habitable_m2": 180,
+      "date_annonce": null,
+      "fiabilite": "prix absent de l'extrait lu"
+    }
+  ],
+  "annonces_similaires_vues": {
+    "remarque": "Relevées dans les listes « annonces similaires » des pages collées. Gabarit, titre et COT inconnus sauf mention : ne pas utiliser comme comparables fermes avant d'avoir ouvert chaque annonce.",
+    "liste": [
+      {
+        "titre": "Péniche FREYCINET (1958)",
+        "prix_eur": 10000,
+        "lieu": "Valence 26000",
+        "date": "2026-10-09"
+      },
+      {
+        "titre": "Péniche Freycinet",
+        "prix_eur": 38000,
+        "lieu": "Auxerre 89000",
+        "date": "2026-09-11"
+      },
+      {
+        "titre": "Péniche 39m proche de Fontainebleau",
+        "prix_eur": 70000,
+        "lieu": "Saint-Mammès 77670",
+        "date": "2026-08-21"
+      },
+      {
+        "titre": "Peniche Ebonystar 1931",
+        "prix_eur": 60000,
+        "lieu": "Dunkerque 59140",
+        "date": "2026-10-06"
+      },
+      {
+        "titre": "Bateau remorqueur péniche",
+        "prix_eur": 100000,
+        "lieu": "Villeneuve-la-Garenne 92390",
+        "date": "2026-10-08"
+      },
+      {
+        "titre": "Péniche à vendre",
+        "prix_eur": 20000,
+        "lieu": "Castets et Castillon 33210",
+        "date": "2026-10-07"
+      },
+      {
+        "titre": "Péniche habitable 90m2",
+        "prix_eur": 155000,
+        "lieu": "Vigneux-sur-Seine 91270",
+        "date": "2026-10-02"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 80000,
+        "lieu": "Charleville-Mézières 08000",
+        "date": "2026-10-06"
+      },
+      {
+        "titre": "Habitation atypique yacht",
+        "prix_eur": 80000,
+        "lieu": "Nogent-sur-Marne 94130",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Péniche « capitaine cap » 14,40 m (vendeur pro)",
+        "prix_eur": 120000,
+        "lieu": "Narbonne 11100",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Peniche tjalk habitable",
+        "prix_eur": 33000,
+        "lieu": "Brousses-et-Villaret 11390",
+        "date": "2026-09-28"
+      },
+      {
+        "titre": "Magnifique Péniche tjalk habitable",
+        "prix_eur": 125000,
+        "lieu": "Toulouse 31000",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Peniche navigable",
+        "prix_eur": 95000,
+        "lieu": "Noyon 60400",
+        "date": "2026-08-19"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 85000,
+        "lieu": "Dunkerque 59140",
+        "date": "2026-08-30"
+      },
+      {
+        "titre": "Péniche d'habitation (URGENT) doit quitter emplacement",
+        "prix_eur": 25000,
+        "lieu": "Lille 59000",
+        "date": "2026-09-06"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 70000,
+        "lieu": "Arleux 59151",
+        "date": "2026-09-25"
+      },
+      {
+        "titre": "Péniche transformée",
+        "prix_eur": 29000,
+        "lieu": "Moret-Loing-et-Orvanne 77250",
+        "date": "2026-09-21"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 75000,
+        "lieu": "Dunkerque 59140",
+        "date": "2026-09-11"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 75000,
+        "lieu": "Longueil-Annel 60150",
+        "date": "2026-08-28"
+      },
+      {
+        "titre": "Péniche (baisse de prix)",
+        "prix_eur": 39000,
+        "lieu": "Cercy-la-Tour 58340",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Péniche habitation",
+        "prix_eur": 195000,
+        "lieu": "Mantes-la-Jolie 78200",
+        "date": "semaine du 2026-10-05"
+      },
+      {
+        "titre": "Peniche",
+        "prix_eur": 138000,
+        "lieu": "Angoulême 16000",
+        "date": "2026-08-19"
+      },
+      {
+        "titre": "Peniche",
+        "prix_eur": 150000,
+        "lieu": "Montech 82700",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Péniche Luxemotor de 1910 - HouseBoat",
+        "prix_eur": 170000,
+        "lieu": "Nogent-sur-Marne 94130",
+        "date": "2026-08-24"
+      },
+      {
+        "titre": "Petite Péniche",
+        "prix_eur": 80000,
+        "lieu": "Lagny-sur-Marne 77400",
+        "date": "2026-10-02"
+      },
+      {
+        "titre": "Péniche de 27m",
+        "prix_eur": 95000,
+        "lieu": "Saint-Fargeau-Ponthierry 77310",
+        "date": "2026-08-31"
+      },
+      {
+        "titre": "Péniche Freycinet",
+        "prix_eur": 360000,
+        "lieu": "Melun 77000",
+        "date": "2026-08-31"
+      },
+      {
+        "titre": "Bateau habitable",
+        "prix_eur": 72000,
+        "lieu": "Vigneux-sur-Seine 91270",
+        "date": "2026-09-15"
+      },
+      {
+        "titre": "Bateau à vendre",
+        "prix_eur": 50000,
+        "lieu": "Arleux 59151",
+        "date": "2026-09-02"
+      },
+      {
+        "titre": "Péniche freycinet 38 m – navigable – cummins 257 kw",
+        "prix_eur": 75000,
+        "lieu": "Roubaix 59100",
+        "date": "2026-09-13"
+      },
+      {
+        "titre": "Péniche fluviale (urgent, baisse de prix)",
+        "prix_eur": 75000,
+        "lieu": "Ramonville-Saint-Agne 31520",
+        "date": "2026-10-17"
+      },
+      {
+        "titre": "Péniche anglaise de type narrowboat",
+        "prix_eur": 43000,
+        "lieu": "Lille 59000",
+        "date": "2026-09-24"
+      },
+      {
+        "titre": "Péniche de 1882",
+        "prix_eur": 15000,
+        "lieu": "Longvic 21600",
+        "date": "2026-09-12"
+      },
+      {
+        "titre": "Péniche (urgent)",
+        "prix_eur": 25000,
+        "lieu": "Villeneuve-sur-Yonne 89500",
+        "date": "2026-09-27"
+      },
+      {
+        "titre": "Peniche habitable 15,54 m (pro)",
+        "prix_eur": 98000,
+        "lieu": "Auxerre 89000",
+        "date": "2026-08-28"
+      },
+      {
+        "titre": "Péniche hollandaise navigante (urgent)",
+        "prix_eur": 142000,
+        "lieu": "Villeneuve-la-Garenne 92390",
+        "date": "2026-09-06"
+      },
+      {
+        "titre": "Péniche Freycinet 160 m², terrasse 50 m², jacuzzi (pro)",
+        "prix_eur": 249000,
+        "lieu": "La Frette-sur-Seine 95530",
+        "date": "semaine du 2026-10-05"
+      },
+      {
+        "titre": "Péniche logement 190 m²",
+        "prix_eur": 290000,
+        "lieu": "Bezons 95870",
+        "date": "2026-08-30"
+      },
+      {
+        "titre": "Péniche « coup de cœur »",
+        "prix_eur": 215000,
+        "lieu": "Conflans-Sainte-Honorine 78700",
+        "date": "2026-08-18"
+      },
+      {
+        "titre": "Péniche navigante 80 m², 4 pièces",
+        "prix_eur": 345000,
+        "lieu": "Asnières-sur-Seine 92600",
+        "date": "2026-08-29"
+      },
+      {
+        "titre": "Péniche STRANDJA 1928, 80 m² + terrasse 55 m², navigante (pro)",
+        "prix_eur": 285000,
+        "lieu": "Asnières-sur-Seine 92600",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Très belle péniche (prix atypique, à vérifier avant tout contact)",
+        "prix_eur": 6750,
+        "lieu": "Saint-Cloud 92210",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Peniche navigable d'habitation ou de commerce",
+        "prix_eur": 90000,
+        "lieu": "Saint-Jean-de-Losne 21170",
+        "date": "semaine du 2026-10-12"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 22000,
+        "lieu": "Cruas 07350",
+        "date": "2026-10-02"
+      },
+      {
+        "titre": "Péniche",
+        "prix_eur": 65000,
+        "lieu": "Castets et Castillon 33210",
+        "date": "2026-10-04"
+      },
+      {
+        "titre": "EXCLU Spacieuse péniche habitable rénovée (pro)",
+        "prix_eur": 199000,
+        "lieu": "Villefranche-de-Lauragais 31290",
+        "date": "2026-09-23"
+      },
+      {
+        "titre": "Péniche hollandaise habitable Voorwaats Graftdyk, 27 m, 2 chambres, Canal du Midi (pro)",
+        "prix_eur": 149000,
+        "lieu": "Portiragnes 34420",
+        "date": "2026-10-01"
+      },
+      {
+        "titre": "Superbe péniche entièrement rénovée",
+        "prix_eur": 169000,
+        "lieu": "Avignonet-Lauragais 31290",
+        "date": "2026-09-19"
+      },
+      {
+        "titre": "Peniche",
+        "prix_eur": 145000,
+        "lieu": "Montceau-les-Mines 71300",
+        "date": "2026-09-18"
+      },
+      {
+        "titre": "Péniche fluviale 20,80 m (pro)",
+        "prix_eur": 172000,
+        "lieu": "Vigneux-sur-Seine 91270",
+        "date": "2026-08-28"
+      },
+      {
+        "titre": "Péniche 27 m x 4,02 m",
+        "prix_eur": 100000,
+        "lieu": "Toulouse 31500",
+        "date": "2026-10-05"
+      },
+      {
+        "titre": "Péniche d'habitation",
+        "prix_eur": 190000,
+        "lieu": "Pont-à-Mousson 54700",
+        "date": "2026-09-08"
+      },
+      {
+        "titre": "Péniche Bateau",
+        "prix_eur": 43000,
+        "lieu": "Mulhouse 68100",
+        "date": "2026-09-18"
+      },
+      {
+        "titre": "Péniche d'habitation",
+        "prix_eur": 75000,
+        "lieu": "Saint-Romain-en-Gal 69560",
+        "date": "2026-08-28"
+      },
+      {
+        "titre": "Péniche frecinet 29 M (urgent)",
+        "prix_eur": 100000,
+        "lieu": "Rupt-sur-Saône 70360",
+        "date": "2026-08-27"
+      }
+    ]
+  }
+}
