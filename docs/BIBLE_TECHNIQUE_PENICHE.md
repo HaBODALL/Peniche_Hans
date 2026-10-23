@@ -27,7 +27,7 @@ La transformation d'une péniche au gabarit Freycinet (38,50 m × 5,05 m) en hab
 **A. Les 3 Piliers Réglementaires**
 *   **Standard Européen ES-TRIN (CESNI)**
     *   *Seuil de 20 mètres* : Soumis à l'obtention d'un Titre de Navigation (Certificat Communautaire).
-    *   *Intégrité de la coque (Art. 3.02)* : Épaisseur minimale du bordé d'acier/sole généralement de 3,50 mm à 3,84 mm (ES-TRIN), et jusqu'à 4,00 mm pour l'exigence bancaire du Crédit Maritime *(à vérifier selon l'expert et la banque)*.
+    *   *Intégrité de la coque (Art. 3.02)* : Épaisseur minimale du bordé d'acier/sole de 3,50 mm à 3,84 mm en règle générale, et **4,80 mm pour la virure de bouchain** (zone de transition arrondie soumise aux chocs d'écluses). *Seuil bancaire (Crédit Maritime) : exigence usuelle de 3,80 mm à 4,00 mm minimum à l'expertise.*
     *   *Sécurité électrique* : Séparation physique stricte entre réseau domestique (NFC 15-100) et réseau de propulsion (400V DC).
 *   **Domaine Public Fluvial (VNF / HAROPA Port)**
     *   *COT* : L'amarrage permanent repose sur une Convention d'Occupation Temporaire, précaire et non cessible de plein droit.
@@ -47,14 +47,14 @@ La transformation d'une péniche au gabarit Freycinet (38,50 m × 5,05 m) en hab
 │    Standard ES-TRIN     │               │                  │   COT (VNF / HAROPA Port) │
 ├─────────────────────────┤               │                  ├───────────────────────────┤
 │• Épaisseur coque ≥3,8mm │               ▼                  │• Précaire & Révocable     │
-│• Titre de navigation    │ ┌─────────────────────────────┐  │• Limite 25% pont couvert  │
-│• Séparation 230V / 400V │ │ ASSAINISSEMENT ZÉRO-REJET   │  │• Appel à projet si activité│
-└─────────────────────────┘ │   Eaux grises & noires      │  │  économique (CGPPP)       │
-                            └─────────────────────────────┘  └───────────────────────────┘
+│  (bouchains 4,80 mm)    │ ┌─────────────────────────────┐  │• Limite 25% pont couvert  │
+│• Titre de navigation    │ │ ASSAINISSEMENT ZÉRO-REJET   │  │• Appel à projet si activité│
+│• Séparation 230V / 400V │ │   Eaux grises & noires      │  │  économique (CGPPP)       │
+└─────────────────────────┘ └─────────────────────────────┘  └───────────────────────────┘
 ```
 
 **B. Matrice des Points Bloquants ("No-Go" Légaux)**
-1.  **Refus de Titre ES-TRIN** : Coque < 3,5 mm $\rightarrow$ Interdiction de naviguer/stationner. *Prévention : Audit structurel et sondage ultrasons préalable complet avant achat.*
+1.  **Refus de Titre ES-TRIN** : Coque < 3,5 mm (ou < 4,80 mm au bouchain) $\rightarrow$ Interdiction de naviguer/stationner. *Prévention : Audit structurel et sondage ultrasons préalable complet avant achat.*
 2.  **Perte de COT** : Activité économique non déclarée $\rightarrow$ Expulsion. *Prévention : Valider la COT pour activité mixte.*
 3.  **Blocage Sanitaire** : Absence de système étanche agréé $\rightarrow$ Refus de COT.
 4.  **Non-conformité Urbanisme/PLU** : Marquise dépassant 25 %. *Prévention : Validation des plans 3D extérieurs.*
@@ -149,14 +149,14 @@ Développement d'une plate-forme d'inspection robotisée à flot pour reporter l
 
 ### 2.1 Macro — Réglementation et Interdictions
 *   **Interdiction stricte de rejet brut** : Aucun rejet d'eaux noires brutes (toilettes) n'est toléré dans le réseau fluvial français.
-*   **Tolérance unique d'épuration autonome** : Le seul rejet d'eaux vannes autorisé est celui issu d'une station d'épuration homologuée selon le Chapitre 18 ou Chapitre 14 *(à vérifier sur le texte ES-TRIN exact)* ($\text{DBO}_5 \le 25\text{ mg/L}$, $\text{DCO} \le 125\text{ mg/L}$).
+*   **Tolérance d'épuration autonome (Chapitre 18 ES-TRIN)** : Le seul rejet d'eaux vannes autorisé est celui issu d'une station d'épuration homologuée selon le **Chapitre 18 de l'ES-TRIN (Article 18.01)** ($\text{DBO}_5 \le 25\text{ mg/L}$, $\text{DCO} \le 125\text{ mg/L}$).
 *   **Doctrines Domaniales** : VNF et HAROPA imposent le raccordement direct au réseau d'assainissement collectif urbain à quai ou la rétention totale avec vidange par camion.
 
 ### 2.2 Meso — Comparatif des Filières d'Assainissement
 | Critère d'Analyse | Station Industrielle MBR (Bioréacteur) | Phytoépuration Flottante | Bokashi + Toilettes Sèches (Séparation) |
 | :--- | :--- | :--- | :--- |
 | **Efficacité d'Épuration** | Excellente : $\text{DBO}_5 \le 10\text{ mg/L}$, $> 99,99\%$ élimination bactérienne | Fluctuante : Abattement 75-85%, sensible au froid | Inapplicable sur jus (lixiviat $\text{DCO} > 1000\text{ mg/L}$) |
-| **Conformité VNF / ES-TRIN**| Totale : Homologuée Chapitre 18/14 *(à vérifier)* | Incertaine sans agrément spécifique | Non conforme pour rejets liquides |
+| **Conformité VNF / ES-TRIN**| Totale : Homologuée Chapitre 18 (Art. 18.01) | Incertaine sans agrément spécifique | Non conforme pour rejets liquides |
 | **Encombrement Navals** | Optimisé : Emprise $0,8$ à $1,5\text{ m}^2$ | Incompatible en coque (jusqu'à 7,5 tonnes) | Minimal |
 | **Autonomie Énergétique** | Dépendante : $35\text{ W}$ en continu ($1\text{ kWh/jour}$) | Haute : Passif ($0\text{ kWh/jour}$) | Absolue : $100\%$ manuelle |
 
@@ -176,8 +176,8 @@ Conception de réseaux sanitaires en bi-carburation : un circuit classique gravi
 Pour une péniche Freycinet, l'ES-TRIN impose une étanchéité fonctionnelle absolue.
 *   **Bloc 1 (Habitat)** : 230V AC / 24V DC.
 *   **Bloc 2 (Propulsion)** : 400V DC.
-*   **Régime IT & CPI** : Les réseaux doivent avoir des pôles flottants isolés de la coque en acier. Deux Contrôleurs Permanents d'Isolement (CPI) distincts et découplés doivent être installés.
-*   **Compartimentage (Art. 10.11 - à vérifier sur numérotation exacte)** : Les batteries Lithium $\ge 20\text{ kWh}$ exigent un local protégé classe coupe-feu **A60**, avec ventilation mécanique directe vers le pont ouvert et extinction fixe. *Interdit dans les locaux d'habitation.*
+*   **Régime IT & CPI** : Les réseaux doivent avoir des pôles flottants isolés de la coque en acier. Deux Contrôleurs Permanents d'Isolement (CPI) distincts et découplés doivent être installed.
+*   **Compartimentage (Article 10.11, chiffre 17 de l'ES-TRIN)** : Les batteries Lithium $\ge 20\text{ kWh}$ exigent un local ou un caisson protégé classe coupe-feu **A60**, avec ventilation mécanique directe vers le pont ouvert et système d'extinction d'incendie. *Interdit dans les locaux d'habitation.*
 *   **Délestage** : L'automate (PMS) garantit la priorité absolue à la propulsion, délestant automatiquement l'habitat en cas d'appel de puissance.
 
 ### 3.2 Meso — Rétrofit Professionnel vs Semi-DIY
